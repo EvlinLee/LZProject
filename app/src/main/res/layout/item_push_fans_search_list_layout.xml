@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/select_iv"
+        android:layout_width="@dimen/d_30"
+        android:paddingTop="@dimen/d_10"
+        android:paddingBottom="@dimen/d_10"
+        android:layout_height="wrap_content"
+        android:src="@drawable/share_push_fans_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/item_fans_cl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_fans_cl"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_fans_cl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/withdraw_item_radius_8dp"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingTop="@dimen/d_12"
+        android:paddingRight="@dimen/d_10"
+        android:paddingBottom="@dimen/d_12"
+        app:layout_constraintLeft_toRightOf="@+id/select_iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="8dp">
+
+
+        <com.by.lizhiyoupin.app.component_ui.weight.RoundImageView
+            android:id="@+id/item_fans_photo_iv"
+            android:layout_width="@dimen/d_50"
+            android:layout_height="@dimen/d_50"
+            android:src="@drawable/default_face"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/item_fans_photo_icon_iv"
+            android:layout_width="@dimen/d_16"
+            android:layout_height="@dimen/d_15"
+            android:rotation="10"
+            android:src="@drawable/vip_normal_photo_icon"
+            app:layout_constraintCircle="@id/item_fans_photo_iv"
+            app:layout_constraintCircleAngle="45"
+            app:layout_constraintCircleRadius="@dimen/d_31"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6"/>
+
+        <TextView
+            android:id="@+id/item_fans_name_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/d_10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            app:layout_constraintLeft_toRightOf="@+id/item_fans_photo_iv"
+            app:layout_constraintRight_toLeftOf="@id/guide_line_v"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="name"/>
+
+
+        <TextView
+            android:id="@+id/item_fans_number_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginLeft="@dimen/d_10"
+            android:text="@string/fans_number_text"
+            app:layout_constraintLeft_toRightOf="@id/guide_line_v"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/item_fans_income_last_month_tv"
+            style="@style/default_text_style"
+            android:layout_marginLeft="@dimen/d_10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/item_fans_income_last_month_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/item_fans_photo_iv"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/item_fans_income_this_month_tv"
+            style="@style/default_text_style"
+            android:layout_marginLeft="@dimen/d_10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/item_fans_income_this_month_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintBottom_toBottomOf="@+id/item_fans_photo_iv"
+            app:layout_constraintLeft_toRightOf="@+id/item_fans_photo_iv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

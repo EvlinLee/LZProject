@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:background="@color/white_100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.by.lizhiyoupin.app.component_ui.weight.ArcRectView
+            android:id="@+id/arc_rectView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_100"
+            app:arc_Color="@color/white_100"
+            app:arc_Height="@dimen/d_100"
+            app:rect_Height="@dimen/d_60"/>
+
+        <com.by.lizhiyoupin.app.component_banner.Banner
+            android:id="@+id/top_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_147"
+            android:layout_marginTop="@dimen/d_05"
+            app:indicator_height="@dimen/d_03"
+            app:indicator_unselectd_width="@dimen/d_06"
+            app:indicator_width="@dimen/d_10"/>
+    </FrameLayout>
+
+    <!--icon列表-->
+    <include layout="@layout/tab_fragment_icon_tools"/>
+
+    <View
+        android:background="@color/color_F2F2F5"
+        android:id="@+id/icon_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_08"
+        android:visibility="gone"/>
+</LinearLayout>

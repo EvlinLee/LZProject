@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:id="@+id/smartRefreshLayout"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/last_time_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/d_15"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <TextView
+                android:id="@+id/limit_time_count_time"
+                style="@style/default_text_333_style"
+                android:text="@string/limit_time_count_time_text"
+                android:textSize="@dimen/s_13"
+                app:layout_constraintRight_toLeftOf="@+id/guide_line"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <include
+                android:id="@+id/count_time_view"
+                layout="@layout/count_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_05"
+                app:layout_constraintLeft_toRightOf="@+id/guide_line"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/d_02"
+                android:src="@drawable/limited_time_left_line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/limit_time_count_time"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_02"
+                android:src="@drawable/limited_time_right_line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/count_time_view"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_marginTop="@dimen/d_10"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingRight="@dimen/d_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_80"
+            android:drawableTop="@drawable/empty_income_pic"
+            android:drawablePadding="@dimen/d_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/d_20"
+            android:text="@string/empty_tips_text"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/s_17"
+            android:visibility="gone"/>
+
+        <include
+            layout="@layout/fail_retry_fullscreen"
+            android:visibility="gone"/>
+
+        <include
+            layout="@layout/loading_layout_center"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

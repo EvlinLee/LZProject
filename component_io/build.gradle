@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':common')
+    def app=rootProject.ext.dependencies
+    api app.retrofit
+    api app.retrofit_gson
+    api app.retrofit_adapter
+    api app.rxjava2
+    api app.rxandroid
+    api app.converter_scalars
+    api app.logging_interceptor
+
+    api app.disklrucache
+    implementation app.Android_PickerView
+    api app.glide
+    api app.glide_transformations
+    //annotationProcessor 参与编译 不加入打包
+    annotationProcessor app.glide_compiler
+}
+

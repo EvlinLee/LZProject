@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F2F5"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".user.activity.OrderLogisticsActivity">
+
+    <include layout="@layout/actionbar_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/order_company"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_120"
+        android:layout_marginTop="@dimen/d_20"
+        android:layout_marginRight="@dimen/d_10"
+        android:layout_marginLeft="@dimen/d_10"
+        android:paddingTop="@dimen/d_20"
+        android:paddingLeft="@dimen/d_20"
+        android:background="@drawable/shape_bg_fffff_10_full_corner"
+        >
+
+        <ImageView
+            android:id="@+id/logistics_img"
+            android:layout_width="@dimen/d_45"
+            android:layout_height="@dimen/d_45"
+            android:src="@drawable/shape_bg_twleven_corner_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints"/>
+
+        <TextView
+            android:id="@+id/logistics_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="中通快递"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/logistics_img"
+            android:layout_marginLeft="@dimen/d_15"
+            tools:ignore="MissingConstraints"/>
+
+        <TextView
+            android:id="@+id/logistics_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="官方电话 95311 >"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            android:layout_marginLeft="@dimen/d_15"
+            app:layout_constraintLeft_toRightOf="@+id/logistics_img"
+            app:layout_constraintTop_toBottomOf="@+id/logistics_title"
+            android:layout_marginTop="@dimen/d_05"
+
+            />
+
+        <TextView
+            android:id="@+id/logistics_orderid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="中通快递 75171196345434"
+            android:textColor="#ff333333"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/d_30"
+            app:layout_constraintTop_toBottomOf="@+id/logistics_img"
+            tools:ignore="MissingConstraints"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:background="@drawable/shape_bg_fffff_10_full_corner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_10"
+        android:paddingTop="@dimen/d_40"
+        android:paddingBottom="@dimen/d_40"
+
+        />
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/d_120"
+        android:drawableTop="@drawable/order_null"
+        android:drawablePadding="@dimen/d_20"
+        android:gravity="center_horizontal"
+        android:text="暂无物流信息，请稍后再来"
+        android:textColor="@color/color_666666"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

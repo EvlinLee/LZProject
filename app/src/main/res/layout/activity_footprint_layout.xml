@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_100"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_F2F2F5">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/delete_rl"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ExpandableListView
+                android:id="@+id/expand_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/delete_rl"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ExpandableListView>
+
+            <RelativeLayout
+                android:id="@+id/delete_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_40"
+                android:background="@color/white_100"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <TextView
+                    android:id="@+id/delete_tv"
+                    android:layout_width="@dimen/d_76"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_bg_yellow_gradient"
+                    android:gravity="center"
+                    android:text="@string/delete_txt"
+                    android:textColor="@color/white_100"
+                    android:textSize="@dimen/s_18"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/empty_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_200"
+                android:drawableTop="@drawable/empty_foot_pic"
+                android:drawablePadding="@dimen/d_30"
+                android:gravity="center"
+                android:paddingTop="@dimen/d_30"
+                android:text="@string/empty_footer_record_text"
+                android:textColor="@color/color_555555"
+                android:textSize="@dimen/s_14"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <include
+                layout="@layout/fail_retry_fullscreen"
+                android:visibility="gone"/>
+
+            <include
+                layout="@layout/loading_layout_center"
+                android:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+</LinearLayout>

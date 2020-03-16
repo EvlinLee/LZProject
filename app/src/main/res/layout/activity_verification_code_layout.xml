@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_100"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/status_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white_100"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/actionbar_phone_verification"
+            layout="@layout/actionbar_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/verification_code_tv"
+            style="@style/default_text_title_style"
+            android:layout_marginLeft="@dimen/d_23"
+            android:layout_marginTop="@dimen/d_45"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/login_verification_code_text"
+            android:textColor="@color/color_111111"
+            android:textSize="@dimen/s_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionbar_phone_verification"/>
+
+        <TextView
+            android:id="@+id/verification_send_phone_tip_tv"
+            style="@style/default_text_title_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/login_verification_send_phone_tip_text"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/s_13"
+            app:layout_constraintLeft_toLeftOf="@id/verification_code_tv"
+            app:layout_constraintTop_toBottomOf="@id/verification_code_tv"/>
+
+        <TextView
+            android:id="@+id/verification_code_time_tv"
+            style="@style/default_text_title_style"
+            android:layout_marginTop="@dimen/d_40"
+            android:text="@string/login_verification_time_text"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/s_13"
+            app:layout_constraintLeft_toLeftOf="@id/verification_code_tv"
+            app:layout_constraintTop_toBottomOf="@id/verification_send_phone_tip_tv"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.PwdEditText
+            android:id="@+id/verificationCodeInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_15"
+            android:includeFontPadding="false"
+            android:layout_marginRight="@dimen/d_23"
+            app:backColor="@color/white_100"
+            app:checkedColor="@color/color_D60050"
+            app:isPwd="false"
+            app:isWaitInput="true"
+            app:layout_constraintLeft_toLeftOf="@id/verification_code_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verification_code_time_tv"
+            app:textColor="@color/color_111111"
+            app:textLength="6"
+            app:textSize="@dimen/s_31"
+            app:waitInputColor="@color/color_D60050"/>
+
+        <TextView
+            android:id="@+id/verification_code_error_tv"
+            style="@style/default_text_major_important_style"
+            android:layout_marginTop="@dimen/d_08"
+            android:text="@string/login_verification_code_error"
+            android:textColor="@color/color_EF1818"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="@id/verification_code_tv"
+            app:layout_constraintTop_toBottomOf="@id/verificationCodeInput"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/verification_code_login_tv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_53"
+            android:layout_marginTop="@dimen/d_50"
+            android:layout_marginRight="@dimen/d_18"
+            android:layout_marginLeft="@dimen/d_18"
+            android:background="@drawable/login_next_selector"
+            android:enabled="false"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/login_in_text"
+            android:textColor="@color/login_button_text_color_selector"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verificationCodeInput"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="false"
+             android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_100"
+        android:fadeScrollbars="false"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--当前商品信息-->
+            <FrameLayout
+                android:id="@+id/product_detail_top_container_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--荔枝推荐-->
+            <FrameLayout
+                android:id="@+id/product_detail_recommend_container_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/baby_line_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_08"
+                android:background="@color/color_F4F4F7"/>
+            <!--宝贝详情-->
+            <FrameLayout
+                android:id="@+id/product_detail_baby_detail_container_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_08"
+                android:background="@color/color_F4F4F7"/>
+            <!--猜你喜欢-->
+            <FrameLayout
+                android:id="@+id/detail_guess_you_like_container_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--actionBar + statusBar-->
+    <LinearLayout
+        android:id="@+id/action_bar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_100"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/action_bar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_44"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actionbar_back_tv"
+                style="@style/default_medium_text_style"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/common_back"
+                android:drawablePadding="@dimen/d_05"
+                android:gravity="center"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingRight="@dimen/d_15"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/s_18"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/detail_tabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/d_30"
+                android:layout_toRightOf="@id/actionbar_back_tv"
+                app:tabBackground="@color/transparent"
+                app:tabIndicatorColor="@color/color_D60050"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="@dimen/d_02"
+                app:tabMaxWidth="@dimen/d_60"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabSelectedTextColor="@color/color_D60050"
+                app:tabTextAppearance="@android:style/TextAppearance"
+                app:tabTextColor="@color/color_555555"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/start_back_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/actionbar_back2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d_44"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/d_10"
+                android:src="@drawable/product_detail_back"/>
+
+            <TextView
+                android:id="@+id/detail_recommend_top_tv"
+                android:layout_width="@dimen/d_35"
+                android:layout_height="@dimen/d_35"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/d_10"
+                android:background="@drawable/detail_recommend_circle_bg_selector"
+                android:gravity="center"
+                android:text="@string/detail_recommend_top_text"
+                android:textColor="@color/detail_recommend_color_selector"
+                android:textSize="@dimen/d_17"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--底部固定-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_49"
+        android:layout_gravity="bottom"
+        android:background="@color/white_100"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingRight="@dimen/d_10">
+
+        <TextView
+            android:id="@+id/product_detail_home_tv"
+            style="@style/default_text_style"
+            android:layout_marginLeft="@dimen/d_10"
+            android:drawableTop="@drawable/product_home"
+            android:drawablePadding="@dimen/d_04"
+            android:text="@string/product_home_text"
+            android:textSize="@dimen/s_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/product_detail_shopping_tv"
+            style="@style/default_text_style"
+            android:layout_width="@dimen/d_80"
+            android:drawableTop="@drawable/product_detail_collection_shopping_selector"
+            android:drawablePadding="@dimen/d_04"
+            android:gravity="center"
+            android:text="@string/product_add_to_cart_text"
+            android:textSize="@dimen/s_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/product_detail_home_tv"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/product_share_award_ll"
+            android:layout_width="@dimen/d_115"
+            android:layout_height="@dimen/d_38"
+            android:layout_marginRight="@dimen/d_05"
+            android:background="@drawable/shape_bg_product_yellow_full_four_corner"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/product_buy_save_money_ll"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/default_text_style"
+                android:text="@string/product_share_award_text"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_14"/>
+
+            <TextView
+                android:id="@+id/product_share_award_tv"
+                style="@style/default_text_style"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_14"
+                tools:text="￥201.22"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/product_buy_save_money_ll"
+            android:layout_width="@dimen/d_115"
+            android:layout_height="@dimen/d_38"
+            android:background="@drawable/shape_bg_product_red_full_four_corner"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/default_text_style"
+                android:text="@string/product_buy_save_money_text"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_14"/>
+
+            <TextView
+                android:id="@+id/product_buy_save_price_tv"
+                style="@style/default_text_style"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_14"
+                tools:text="￥201.22"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--loading -->
+    <FrameLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F2F2F5">
+
+        <ImageView
+            android:id="@+id/loading_gif_iv"
+            android:layout_width="@dimen/d_60"
+            android:layout_height="@dimen/d_60"
+            android:layout_gravity="center"
+            android:src="@drawable/loading_dialog_g"/>
+    </FrameLayout>
+
+
+</FrameLayout>

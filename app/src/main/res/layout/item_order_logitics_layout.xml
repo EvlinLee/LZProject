@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/d_15"
+
+    >
+
+    <TextView
+        android:id="@+id/order_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:textSize="@dimen/s_12"
+        android:gravity="right"
+        tools:text="时间"/>
+    
+    <ImageView
+        android:id="@+id/order_img"
+        android:layout_width="@dimen/d_23"
+        android:layout_height="@dimen/d_23"
+        android:src="@drawable/order_logitics"
+        app:layout_constraintLeft_toRightOf="@+id/order_time"
+        android:layout_marginLeft="@dimen/d_05"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:paddingRight="@dimen/d_15"
+        android:id="@+id/order_content"
+        android:layout_width="0dp"
+        android:textColor="#FF333333"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="[郑州市]郑州市场部的尊贵电商[15888888888]已揽收[郑州市]郑州市场部的尊贵电商[15888888888]已揽收"
+        app:layout_constraintLeft_toRightOf="@+id/order_img"
+        android:layout_marginLeft="@dimen/d_05"
+        tools:ignore="MissingConstraints"/>
+    
+    <View
+        android:id="@+id/order_view"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/d_30"
+        app:layout_constraintTop_toBottomOf="@+id/order_img"
+        app:layout_constraintLeft_toRightOf="@+id/order_time"
+        android:layout_marginLeft="@dimen/d_15"
+        android:background="#FFE6E6E6"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

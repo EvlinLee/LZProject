@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#FFF2F2F5"
+    tools:context=".user.activity.OrderActivity">
+    <include layout="@layout/actionbar_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/d_10"
+        >
+        <TextView
+
+            android:textColor="#FF333333"
+            android:textSize="@dimen/s_16"
+            android:id="@+id/order_selfpurchase"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_44"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"
+            android:background="@drawable/commison_item_radius_5dp"
+            android:drawableEnd="@drawable/direction_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/d_20"
+            android:paddingRight="@dimen/d_20"
+            android:text="自购订单"
+            tools:ignore="MissingConstraints"/>
+
+        <TextView
+            android:textColor="#FF333333"
+            android:textSize="@dimen/s_16"
+            android:layout_marginTop="@dimen/d_10"
+            android:id="@+id/order_team"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_44"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"
+            android:background="@drawable/commison_item_radius_5dp"
+            android:drawableEnd="@drawable/direction_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/d_20"
+            android:paddingRight="@dimen/d_20"
+            android:text="团队订单"
+            app:layout_constraintTop_toBottomOf="@+id/order_selfpurchase"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:textColor="#FF333333"
+            android:textSize="@dimen/s_16"
+            android:layout_marginTop="@dimen/d_10"
+            android:id="@+id/order_selfsupport"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_44"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"
+            android:background="@drawable/commison_item_radius_5dp"
+            android:drawableEnd="@drawable/direction_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/d_20"
+            android:paddingRight="@dimen/d_20"
+            android:text="自营订单"
+            app:layout_constraintTop_toBottomOf="@+id/order_team"
+            tools:ignore="MissingConstraints"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

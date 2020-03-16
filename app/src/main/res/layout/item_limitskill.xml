@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/child_01"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/store_img_o"
+            android:layout_width="@dimen/d_100"
+            android:layout_height="@dimen/d_100"
+            android:layout_gravity="center"
+            android:src="@drawable/empty_pic_list"
+            />
+
+        <TextView
+            android:id="@+id/store_title_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/d_10"
+            android:singleLine="true"
+            android:text="冬至时髦饺子"
+            android:textColor="#FF555555"
+            android:textSize="@dimen/s_12"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            >
+
+            <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+                android:id="@+id/store_money_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥0.00"
+                android:textColor="#FFEF1818"
+                android:textSize="@dimen/s_14"
+                app:type_bold="true"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/d_30"
+                android:layout_height="@dimen/d_10"
+                android:layout_marginLeft="@dimen/d_04"
+                android:layout_marginTop="@dimen/d_02"
+                android:src="@drawable/miaosha"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/child_02"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/img_t"
+            android:layout_width="@dimen/d_100"
+            android:layout_height="@dimen/d_100"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/empty_pic_list"
+            />
+
+        <TextView
+            android:id="@+id/store_title_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="冬至时髦饺子"
+            android:textColor="#FF555555"
+            android:textSize="@dimen/s_12"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            >
+
+            <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+                android:id="@+id/store_money_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥0.00"
+                android:textColor="#FFEF1818"
+                android:textSize="@dimen/s_14"
+                app:type_bold="true"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/d_30"
+                android:layout_height="@dimen/d_10"
+                android:layout_marginLeft="@dimen/d_04"
+                android:layout_marginTop="@dimen/d_02"
+                android:src="@drawable/miaosha"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/child_03"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/store_img_t"
+            android:layout_width="@dimen/d_100"
+            android:layout_height="@dimen/d_100"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/empty_pic_list"
+            />
+
+        <TextView
+            android:id="@+id/store_title_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="冬至时髦饺子"
+            android:textColor="#FF555555"
+            android:textSize="@dimen/s_12"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            >
+
+            <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+                android:id="@+id/store_money_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥0.00"
+                android:textColor="#FFEF1818"
+                android:textSize="@dimen/s_14"
+                app:type_bold="true"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/d_30"
+                android:layout_height="@dimen/d_10"
+                android:layout_marginLeft="@dimen/d_04"
+                android:layout_marginTop="@dimen/d_02"
+                android:src="@drawable/miaosha"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

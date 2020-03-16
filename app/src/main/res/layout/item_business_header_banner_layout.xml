@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/search_fl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_34"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_08"
+        android:layout_marginRight="@dimen/d_10"
+        android:background="@drawable/edit_corners_four_shape">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/actionbar_search_iv"
+            android:drawablePadding="@dimen/d_10"
+            android:gravity="center"
+            android:text="@string/business_search_you_want_text"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/s_14"/>
+    </FrameLayout>
+
+    <com.by.lizhiyoupin.app.component_banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_147"
+        android:layout_marginTop="@dimen/d_08"
+        app:indicator_height="@dimen/d_03"
+        app:indicator_unselectd_width="@dimen/d_06"
+        app:indicator_width="@dimen/d_10"/>
+    <!--icon-->
+    <com.by.lizhiyoupin.app.main.weight.ToolsBusinessLayout
+        android:id="@+id/toolsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_108"
+        android:layout_marginTop="@dimen/d_20"
+        android:orientation="vertical"
+        app:column="4"
+        app:perCount="4">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.DotIndicatorView
+            android:id="@+id/indexIndicator"
+            tools:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_03"
+            android:layout_marginTop="@dimen/d_10"
+            android:gravity="center_horizontal"
+            android:visibility="gone"/>
+    </com.by.lizhiyoupin.app.main.weight.ToolsBusinessLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/scroll_root_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/business_collapsed_header_height"
+        android:background="@color/white_100">
+
+        <ImageView
+            android:id="@+id/consultation_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/d_15"
+            android:src="@drawable/litchi_consultation_pic"/>
+
+        <TextView
+            android:id="@+id/consultation_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/direction_right"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/d_15"
+            android:paddingRight="15dp"
+            android:textColor="@color/color_555555"
+            android:textSize="@dimen/s_14"/>
+        <!--滚动资讯-->
+        <com.by.lizhiyoupin.app.main.weight.BusinessSchoolScrollLayout
+            android:id="@+id/scroll_lt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_toLeftOf="@+id/consultation_tv"
+            android:layout_toRightOf="@+id/consultation_iv">
+
+            <com.by.lizhiyoupin.app.component_ui.weight.recyclerview.CannotScrollRecyclerView
+                android:id="@+id/article_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.by.lizhiyoupin.app.main.weight.BusinessSchoolScrollLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/list_line_style"/>
+
+
+</LinearLayout>

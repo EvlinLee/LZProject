@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       xmlns:tools="http://schemas.android.com/tools"
+                                                       android:id="@+id/swipeRefreshLayout"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/vip_scrollview"
+            android:background="@color/color_F2F2F5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/vip_bg_red_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d_205"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/vip_user_bg"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <com.by.lizhiyoupin.app.component_ui.weight.RoundImageView
+                        android:id="@+id/user_photo_iv"
+                        android:layout_width="@dimen/d_50"
+                        android:layout_height="@dimen/d_50"
+                        android:layout_marginLeft="@dimen/d_26"
+                        android:layout_marginTop="@dimen/d_120"
+                        android:src="@drawable/default_face"
+                        app:layout_constraintLeft_toLeftOf="@+id/vip_bg_red_iv"
+                        app:layout_constraintTop_toTopOf="@+id/vip_bg_red_iv"/>
+
+                    <ImageView
+                        android:id="@+id/vip_photo_icon_iv"
+                        android:layout_width="@dimen/d_16"
+                        android:layout_height="@dimen/d_16"
+                        android:rotation="5"
+                        android:src="@drawable/vip_normal_photo_icon"
+                        app:layout_constraintCircle="@id/user_photo_iv"
+                        app:layout_constraintCircleAngle="45"
+                        app:layout_constraintCircleRadius="@dimen/d_28"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/vip_nickName_tv"
+                        style="@style/default_medium_text_style"
+                        android:layout_marginLeft="@dimen/d_15"
+                        android:singleLine="true"
+                        android:textColor="@color/color_D8BC8A"
+                        android:textSize="@dimen/s_16"
+                        android:layout_marginTop="@dimen/d_04"
+                        app:layout_constraintLeft_toRightOf="@+id/user_photo_iv"
+                        app:layout_constraintTop_toTopOf="@+id/user_photo_iv"
+                        tools:text="名称5个字"/>
+
+                    <TextView
+                        android:id="@+id/vip_tag_tv"
+                        style="@style/default_medium_text_333_style"
+                        android:layout_marginLeft="@dimen/d_08"
+                        android:background="@drawable/shape_bg_four_full_yellow"
+                        android:paddingLeft="@dimen/d_05"
+                        android:paddingTop="@dimen/d_01"
+                        android:paddingRight="@dimen/d_05"
+                        android:paddingBottom="@dimen/d_01"
+                        android:singleLine="true"
+                        android:text="@string/vip_normal_text"
+                        app:layout_constraintBaseline_toBaselineOf="@id/vip_nickName_tv"
+                        app:layout_constraintLeft_toRightOf="@id/vip_nickName_tv"/>
+                    <!--会员到期说明 和 填写邀请人获得佣金-->
+                    <TextView
+                        android:id="@+id/vip_expire_tip_tv"
+                        style="@style/default_text_style"
+                        android:layout_marginTop="@dimen/d_10"
+                        android:singleLine="true"
+                        android:textColor="@color/color_D8BC8A"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/vip_nickName_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/vip_nickName_tv"
+                        tools:text="超级会员权益将于2020.10.10到期"/>
+                    <!--填写邀请码-->
+                    <TextView
+                        android:id="@+id/vip_add_code_tv"
+                        style="@style/default_text_style"
+                        android:layout_marginTop="@dimen/d_10"
+                        android:drawableRight="@drawable/vip_code_go"
+                        android:drawablePadding="@dimen/d_08"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/vip_tip_normal_text"
+                        android:textColor="@color/color_D8BC8A"
+                        app:layout_constraintLeft_toLeftOf="@+id/vip_nickName_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/vip_nickName_tv"/>
+                    <!--邀请码 xxx 复制-->
+                    <RelativeLayout
+                        android:id="@+id/vip_invite_rl"
+                        android:layout_width="@dimen/d_155"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d_10"
+                        android:background="@drawable/shape_bg_four_yellow_corner"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/vip_nickName_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/vip_nickName_tv">
+
+                        <TextView
+                            android:id="@+id/vip_yq_tv"
+                            style="@style/default_medium_text_style"
+                            android:layout_marginLeft="@dimen/d_05"
+                            android:singleLine="true"
+                            android:text="@string/vip_invite_id_text"
+                            android:textColor="@color/color_D8BC8A"/>
+
+                        <TextView
+                            android:id="@+id/vip_invite_number_tv"
+                            style="@style/default_medium_text_style"
+                            android:layout_toRightOf="@+id/vip_yq_tv"
+                            android:singleLine="true"
+                            android:textColor="@color/color_D8BC8A"/>
+
+                        <TextView
+                            android:id="@+id/vip_invite_copy_tv"
+                            style="@style/default_medium_text_333_style"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_bg_four_full_yellow_radius03"
+                            android:paddingLeft="@dimen/d_02"
+                            android:paddingRight="@dimen/d_02"
+                            android:singleLine="true"
+                            android:text="@string/copy_text"/>
+                    </RelativeLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!--当前权益-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:layout_marginTop="@dimen/d_20"
+                    android:layout_marginRight="@dimen/d_10"
+                    android:background="@drawable/shape_bg_four_corner"
+                    android:orientation="vertical">
+
+                    <com.by.lizhiyoupin.app.main.weight.GradientTextView
+                        style="@style/default_text_style"
+                        android:layout_marginLeft="@dimen/d_10"
+                        android:layout_marginTop="@dimen/d_20"
+                        android:text="@string/user_present_interest_text"
+                        android:textSize="@dimen/s_17"
+                        app:TextGradientSize="@dimen/d_17"
+                        app:endGradientColor="@color/color_774C24"
+                        app:startGradientColor="@color/color_BD8E60"/>
+
+                    <com.by.lizhiyoupin.app.main.weight.UserToolsLayout
+                        android:id="@+id/vip_present_interest_tools_lt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d_10"
+                        android:orientation="vertical">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewPager"
+                            android:overScrollMode="never"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <net.lucode.hackware.magicindicator.MagicIndicator
+                            android:id="@+id/indexIndicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingTop="@dimen/d_15"
+                            android:paddingBottom="@dimen/d_15"/>
+
+
+                    </com.by.lizhiyoupin.app.main.weight.UserToolsLayout>
+
+
+
+                </LinearLayout>
+
+                <!--购物特权-->
+                <TextView
+                    style="@style/default_medium_text_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/d_30"
+                    android:text="@string/user_shopping_text"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/s_19"/>
+
+                <include layout="@layout/vip_buy_model_layout"/>
+
+                <!--粉丝权益-->
+                <TextView
+                    android:id="@+id/fans_power_tv"
+                    style="@style/default_medium_text_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/d_30"
+                    android:text="@string/user_fans_text"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/s_19"/>
+
+                <include
+                    layout="@layout/vip_fans_equity_model_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <!--超级会员权益-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_30">
+
+                    <TextView
+                        style="@style/default_medium_text_style"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/user_super_member_text"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/s_19"/>
+
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:layout_marginTop="@dimen/d_20"
+                    android:layout_marginRight="@dimen/d_10"
+                    android:background="@drawable/shape_bg_four_corner"
+                    android:paddingBottom="@dimen/d_20">
+
+                    <com.by.lizhiyoupin.app.main.weight.GradientTextView
+                        android:id="@+id/vip_super_member_tv"
+                        style="@style/default_text_style"
+                        android:layout_marginLeft="@dimen/d_10"
+                        android:layout_marginTop="@dimen/d_20"
+                        android:text="@string/user_super_member_interest_text"
+                        android:textColor="@color/color_BD8E60"
+                        android:textSize="@dimen/s_17"
+                        app:TextGradientSize="@dimen/d_17"
+                        app:endGradientColor="@color/color_BD8E60"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:startGradientColor="@color/color_774C24"/>
+
+                    <TextView
+                        android:id="@+id/vip_super_member_more_tv"
+                        style="@style/default_text_style"
+                        android:layout_marginTop="@dimen/d_20"
+                        android:layout_marginRight="@dimen/d_10"
+                        android:drawableRight="@drawable/direction_right"
+                        android:drawablePadding="@dimen/d_05"
+                        android:paddingTop="@dimen/d_05"
+                        android:text="@string/user_load_more_power_text"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/s_13"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/vip_super_member_tv"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <include
+                        android:id="@+id/vip_super_member_tools_lt"
+                        layout="@layout/tab_fragment_user_tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d_10"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vip_super_member_tv"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/vip_bottom_list_title_tv"
+                    style="@style/default_medium_text_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/d_30"
+                    android:gravity="center"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/s_19"
+                    android:textStyle="bold"
+                    tools:text="99礼包"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/vip_list_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:layout_marginTop="@dimen/d_20"
+                    android:layout_marginRight="@dimen/d_10"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/action_bar_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/status_bar_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+            <include layout="@layout/actionbar_layout"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/vip_upgrade_iv"
+            android:layout_width="@dimen/d_50"
+            android:layout_height="@dimen/d_50"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="@dimen/d_100"
+            android:src="@drawable/vip_upgrade_immediately"/>
+    </FrameLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

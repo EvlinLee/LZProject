@@ -1,0 +1,267 @@
+import java.text.SimpleDateFormat
+
+ext{
+    // 编译版本信息配置
+    android = [
+            compileSdkVersion         : 28,
+            buildToolsVersion         : "28.0.3",
+            minSdkVersion             : 19,
+            targetSdkVersion          : 28,
+
+            versionCode               : buildVersionCode(),
+            versionName               : buildVersionName()
+    ]
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    // 主入口APP版本
+    appId = "com.by.lizhiyoupin.app"
+
+    // 配置依赖库版本
+    dependVersion = [
+            androix        : "1.0.0"
+
+    ]
+
+
+    // 配置项目依赖表
+    dependencies = [
+            "appcompat"                  : "androidx.appcompat:appcompat:1.1.0",
+            "desigin"                    : "com.google.android.material:material:1.0.0-rc02",
+            "recyclerview"               : "androidx.recyclerview:recyclerview:1.0.0",
+            "cardview"                   : "androidx.cardview:cardview:1.0.0",
+            "support_annotations"        : "androidx.annotation:annotation:1.1.0",
+            "constraint_layout"          : "androidx.constraintlayout:constraintlayout:1.1.3",
+            "multidex"                   : "androidx.multidex:multidex:2.0.1",
+            "core_ktx"                   : "androidx.core:core-ktx:1.1.0",
+
+
+
+            "retrofit"                   : "com.squareup.retrofit2:retrofit:2.5.0",
+            "retrofit_gson"              : "com.squareup.retrofit2:converter-gson:2.5.0",
+            "retrofit_adapter"           : "com.squareup.retrofit2:adapter-rxjava2:2.5.0",
+            "rxjava2"                    : "io.reactivex.rxjava2:rxjava:2.2.8",
+            "rxandroid"                  : "io.reactivex.rxjava2:rxandroid:2.1.1",
+            "logging_interceptor"        : "com.squareup.okhttp3:logging-interceptor:3.4.1",
+            "converter_scalars"          : "com.squareup.retrofit2:converter-scalars:2.0.0-beta4",
+
+
+            "gson"                       : 'com.google.code.gson:gson:2.7',
+            "disklrucache"               : 'com.jakewharton:disklrucache:2.0.2',
+            "butterknife"                : 'com.jakewharton:butterknife:10.2.0',
+            "butterknife_compiler"       : 'com.jakewharton:butterknife-compiler:10.2.0',
+            "eventbus"                   : 'org.greenrobot:eventbus:3.1.1',
+            "smartRefreshLayout"         : 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0',
+            "ultra"                      : 'in.srain.cube:ultra-ptr:1.0.11',
+           // "banner"                     : 'com.youth.banner:banner:1.4.10',
+            "glide"                      : 'com.github.bumptech.glide:glide:4.9.0',
+            "glide_compiler"             : 'com.github.bumptech.glide:compiler:4.9.0',
+            "arouter_api"                : 'com.alibaba:arouter-api:1.5.0',
+            "arouter_compiler"           : 'com.alibaba:arouter-compiler:1.2.2',
+            "viewpager2"                 : 'androidx.viewpager2:viewpager2:1.0.0',
+            "wechat"                     : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+',
+            "Android_PickerView"         : 'com.contrarywind:Android-PickerView:4.1.8',
+            "MagicIndicator"             : 'com.github.hackware1993:MagicIndicator:1.5.0',
+            "kotlin_stdlib"              : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            //极光推送
+            "jpush"                      : "cn.jiguang.sdk:jpush:3.5.4",
+            "jpush_jcore"                : "cn.jiguang.sdk:jcore:2.2.4",
+            "xiaomi"                     : "cn.jiguang.sdk.plugin:xiaomi:3.5.4",
+            "vivo"                       : "cn.jiguang.sdk.plugin:vivo:3.5.4",
+            "oppo"                       : "cn.jiguang.sdk.plugin:oppo:3.5.4",
+            "meizu"                      : "cn.jiguang.sdk.plugin:meizu:3.5.4",
+            "huawei"                     : "cn.jiguang.sdk.plugin:huawei:3.5.4",
+            //数字滚动
+            "ticker"                     : "com.robinhood.ticker:ticker:2.0.2",
+            //仿QQ等侧滑
+            "SwipeDelMenuLayout"         : "com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0",
+            //流布局，标签
+            "flexbox"                    : "com.google.android:flexbox:1.1.1",
+            "glide_transformations"      : 'jp.wasabeef:glide-transformations:4.0.0',
+            "ActivityLauncher"           : 'com.github.bbssyyuui:ActivityLauncher:1.0.2',
+            "toastUtils"                 : 'com.hjq:toast:8.0',
+            "lottie"                     : 'com.airbnb.android:lottie:3.3.0',
+
+
+            "BaseRecyclerViewAdapterHelper"            : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47',
+
+    ]
+}
+
+subprojects {
+    project.afterEvaluate {
+        if (hasAndroidPlugin(project)) {
+            println "配置：${project.name} " + rootProject.ext.android.compileSdkVersion + " " + rootProject.ext.android.buildToolsVersion
+
+            android {
+                compileSdkVersion rootProject.ext.android.compileSdkVersion
+                buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+                defaultConfig {
+                    minSdkVersion rootProject.ext.android.minSdkVersion
+                    targetSdkVersion rootProject.ext.android.targetSdkVersion
+                    versionCode rootProject.ext.android.versionCode
+                    versionName rootProject.ext.android.versionName
+                    javaCompileOptions {
+                        annotationProcessorOptions {
+                            includeCompileClasspath false
+                        }
+                    }
+                    javaCompileOptions { //arouter
+                        annotationProcessorOptions {
+                            arguments = [AROUTER_MODULE_NAME: project.getName()]
+                        }
+                    }
+
+                }
+                // 当前引用的是 android application 插件, 则处理签名配置
+                if (hasAndroidApplicationPlugin(project)) {
+                    // 读取签名配置信息，位于configs/key/
+                    Properties keyProperties = readKeyProperties(rootProject)
+                    signingConfigs {
+                        release {
+                            storeFile new File(keyProperties.getProperty("storeFile"))
+                            storePassword keyProperties.getProperty("storePassword")
+                            keyAlias keyProperties.getProperty("keyAlias")
+                            keyPassword keyProperties.getProperty("keyPassword")
+                        }
+                    }
+                }
+
+                compileOptions {
+                    sourceCompatibility rootProject.ext.sourceCompatibility
+                    targetCompatibility rootProject.ext.targetCompatibility
+                }
+
+                if (hasAndroidApplicationPlugin(project)) {
+                    buildTypes {
+                        debug {
+                            debuggable true
+                            buildConfigField "boolean", "ENABLE_DEBUG", "true"
+                            if (hasAndroidApplicationPlugin(project)) {
+                                signingConfig signingConfigs.release
+                            }
+                        }
+
+                        release {
+                            debuggable false
+                            zipAlignEnabled true
+                            buildConfigField "boolean", "ENABLE_DEBUG", "false"
+                            if (hasAndroidApplicationPlugin(project)) {
+                                signingConfig signingConfigs.release
+                            }
+                        }
+                        publish{
+                            shrinkResources true
+                            debuggable false
+                            minifyEnabled true
+                            zipAlignEnabled true
+                            buildConfigField "boolean", "ENABLE_DEBUG", "false"
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                            if (hasAndroidApplicationPlugin(project)) {
+                                signingConfig signingConfigs.release
+                            }
+                        }
+                    }
+                } else {
+                    buildTypes {
+                        debug {
+                            debuggable true
+                            minifyEnabled false
+                            //BuildConfig内添加ENABLE_DEBUG 字段用于后期判断
+                            buildConfigField "boolean", "ENABLE_DEBUG", "true"
+                            if (hasAndroidApplicationPlugin(project)) {
+                                signingConfig signingConfigs.release
+                            }
+                        }
+
+                        release {
+                            debuggable false
+                            minifyEnabled true
+                            buildConfigField "boolean", "ENABLE_DEBUG", "false"
+                            if (hasAndroidApplicationPlugin(project)) {
+                                signingConfig signingConfigs.release
+                            }
+                        }
+                        publish {
+                            debuggable false
+                            minifyEnabled false
+                            buildConfigField "boolean", "ENABLE_DEBUG", "false"
+                            if (hasAndroidApplicationPlugin(project)) {
+                                signingConfig signingConfigs.release
+                            }
+
+                        }
+                    }
+                }
+                lintOptions {
+                    checkReleaseBuilds false
+                    abortOnError false
+                }
+
+            }
+        }else {
+            // 当前引用的是 android lib 插件
+
+        }
+    }
+}
+
+
+Properties readKeyProperties(Project rootProject) {
+    Properties keyProperties = new Properties()
+    Properties projectkeyProperties = new Properties()
+    if (rootProject.file('configs/key/sign.properties').exists()) {
+        println "当前存在签名配置文件"
+        projectkeyProperties.load(new FileInputStream(rootProject.file("configs/key/sign.properties")))
+    }
+
+    if (System.getProperty("android.storeFile") != null) {
+        keyProperties.put("storeFile", System.getProperty("android.storeFile"))
+    } else {
+        keyProperties.put("storeFile", rootProject.file(projectkeyProperties.getProperty("storeFile")).absolutePath)
+    }
+
+    if (System.getProperty("android.storePassword") != null) {
+        keyProperties.put("storePassword", System.getProperty("android.storePassword"))
+    } else {
+        keyProperties.put("storePassword", projectkeyProperties.getProperty("storePassword"))
+    }
+
+    if (System.getProperty("android.keyAlias") != null) {
+        keyProperties.put("keyAlias", System.getProperty("android.keyAlias"))
+    } else {
+        keyProperties.put("keyAlias", projectkeyProperties.getProperty("keyAlias"))
+    }
+
+    if (System.getProperty("android.keyPassword") != null) {
+        keyProperties.put("keyPassword", System.getProperty("android.keyPassword"))
+    } else {
+        keyProperties.put("keyPassword", projectkeyProperties.getProperty("keyPassword"))
+    }
+
+    return keyProperties
+}
+
+int buildVersionCode() {
+    def df = new SimpleDateFormat("MMddHH")
+    df.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"))
+    return Integer.parseInt(buildVersionName().replace(".", "") + df.format(new Date()))
+}
+
+String buildVersionName() {
+    if (rootProject.hasProperty("BUILD_VERSION")) {
+        if (BUILD_VERSION != null && BUILD_VERSION != "") {
+            return BUILD_VERSION
+        }
+    }
+    return "2.1.7"
+}
+
+static boolean hasAndroidPlugin(Project project) {
+    project.plugins.hasPlugin('com.android.library') || hasAndroidApplicationPlugin(project)
+}
+static boolean hasAndroidApplicationPlugin(Project project) {
+    project.plugins.hasPlugin('com.android.application')
+}

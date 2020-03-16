@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_top_cl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_300"
+        android:background="@drawable/dewn_load_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/default_medium_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_40"
+            android:gravity="center"
+            android:text="@string/down_load_new_version_title_text"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_30"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/d_15"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/d_30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_tv"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/d_273"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="cancel_tv,update_tv"/>
+
+    <com.by.lizhiyoupin.app.component_ui.weight.IndicateProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/d_42"
+        android:layout_marginLeft="@dimen/d_26"
+        android:layout_marginRight="@dimen/d_26"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guide_line"/>
+
+    <TextView
+        android:id="@+id/cancel_tv"
+        android:layout_width="@dimen/d_135"
+        android:layout_height="@dimen/d_50"
+        android:background="@drawable/update_tips_cancel_bg"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/update_after_text"
+        android:layout_marginRight="@dimen/d_08"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/s_17"
+        android:layout_marginTop="@dimen/d_02"
+        app:layout_constraintRight_toLeftOf="@+id/guide_line_v"
+        app:layout_constraintTop_toTopOf="@+id/guide_line"/>
+
+    <TextView
+        android:id="@+id/update_tv"
+        android:layout_width="@dimen/d_135"
+        android:layout_height="@dimen/d_50"
+        android:background="@drawable/update_tips_confirm_bg"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/d_08"
+        android:includeFontPadding="false"
+        android:text="@string/update_bottom_text"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/s_17"
+        android:layout_marginTop="@dimen/d_02"
+        app:layout_constraintLeft_toLeftOf="@+id/guide_line_v"
+        app:layout_constraintTop_toTopOf="@+id/guide_line"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_71"
+        android:gravity="center"
+        android:text="@string/down_load_suggest_wifi_text"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/s_11"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_top_cl"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

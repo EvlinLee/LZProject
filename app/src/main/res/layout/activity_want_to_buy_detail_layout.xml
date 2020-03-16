@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/white_100"
+                                                   android:fitsSystemWindows="true"
+                                                   android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/actionbar_back_tv"
+            style="@style/default_medium_text_style"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/common_back"
+            android:drawablePadding="@dimen/d_16"
+            android:gravity="center"
+            android:paddingLeft="@dimen/d_15"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/s_18"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/actionbar_title_tv"
+            style="@style/default_medium_text_style"
+            android:layout_width="@dimen/d_200"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="文章详情"
+            android:textSize="@dimen/s_18"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_20"
+            android:padding="@dimen/d_12">
+
+            <ImageView
+                android:id="@+id/item_daily_avatar_iv"
+                android:layout_width="@dimen/d_42"
+                android:layout_height="@dimen/d_42"
+                android:layout_marginTop="@dimen/d_04"
+                android:src="@drawable/default_face"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/item_daily_name_tv"
+                style="@style/default_medium_text_style"
+                android:layout_marginLeft="@dimen/d_10"
+                android:textSize="@dimen/s_16"
+                app:layout_constraintLeft_toRightOf="@id/item_daily_avatar_iv"
+                app:layout_constraintTop_toTopOf="@id/item_daily_avatar_iv"
+                tools:text="name"/>
+
+            <TextView
+                android:id="@+id/item_daily_time_tv"
+                style="@style/default_text_style"
+                android:textColor="@color/color_555555"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/item_daily_avatar_iv"
+                app:layout_constraintLeft_toLeftOf="@+id/item_daily_name_tv"
+                tools:text="2018-02-12 12:02:12"/>
+
+            <TextView
+                android:id="@+id/item_daily_see_number_tv"
+                style="@style/default_text_style"
+                android:background="@drawable/shape_bg_daily_child_share_corner"
+                android:paddingLeft="@dimen/d_10"
+                android:paddingTop="@dimen/d_05"
+                android:paddingRight="@dimen/d_10"
+                android:paddingBottom="@dimen/d_05"
+                android:text="@string/precise_want_to_buy_detail_see_text"
+                android:textColor="@color/color_FFFF005F"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/item_daily_avatar_iv"/>
+
+            <TextView
+                android:id="@+id/daily_content_tv"
+                style="@style/default_text_style"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_10"
+                android:textColor="@color/color_555555"
+                android:textSize="@dimen/s_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_daily_avatar_iv"
+                tools:text="文本内容"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/daily_content_tv">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/d_10"/>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <!--loading -->
+    <FrameLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F2F2F5">
+
+        <ImageView
+            android:id="@+id/loading_gif_iv"
+            android:layout_width="@dimen/d_60"
+            android:layout_height="@dimen/d_60"
+            android:layout_gravity="center"
+            android:src="@drawable/loading_dialog_g"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F2F5"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".main.activity.CommissionInformationActivity">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        android:layout_below="@+id/actionbar"
+        android:background="#FFFFFFFF"
+        >
+
+        <LinearLayout
+            android:layout_width="@dimen/d_200"
+            android:layout_height="@dimen/d_33"
+            android:layout_centerInParent="true"
+            android:background="@drawable/commison_bg_title"
+            >
+
+            <TextView
+                android:id="@+id/general_commisson"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/commison_item_radius_5dp"
+                android:gravity="center"
+                android:text="普通佣金"
+                android:textColor="#FFFF005E"
+                android:textSize="@dimen/s_14"
+                />
+
+            <TextView
+                android:id="@+id/preferred_commisson"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="优选佣金"
+                android:textColor="#ff111111"
+                android:textSize="@dimen/s_14"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_below="@+id/actionbar"
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/d_10"
+        android:id="@+id/commission_rcy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/d_10"
+        android:id="@+id/commission_rcy2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab"
+        android:visibility="gone"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/empty_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/d_20"
+                android:drawableTop="@drawable/emity_notice_icon"
+                android:gravity="center"
+                android:text="暂无佣金消息，赶紧去下单吧"
+                android:visibility="gone"
+                />
+            <TextView
+                android:visibility="gone"
+                android:text="@string/fail_retry_fullscreen"
+                android:textColor="@color/gray_40"
+                android:textSize="@dimen/s_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/empty_income_pic"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/d_20"
+                android:gravity="center"
+                />
+
+
+
+            <include
+                layout="@layout/loading_layout_center"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

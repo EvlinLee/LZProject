@@ -1,0 +1,246 @@
+<resources>
+    <string name="app_name">荔枝优品</string>
+    <string name="login_in_text">登录</string>
+    <string name="main_tab_home_home">省钱</string>
+    <string name="main_tab_name_entrance">超级购</string>
+    <string name="main_tab_name_vip">升级VIP</string>
+    <string name="main_tab_name_find">发圈</string>
+    <string name="main_tab_name_user">我的</string>
+    <string name="copy_text">复制</string>
+    <string name="login_bind_phone_text">绑定手机号</string>
+    <string name="login_with_phone_text">手机号登录</string>
+    <string name="login_bind_phone_hint">请输入手机号码</string>
+    <string name="login_inviter_li_zhi">%s邀请您加入荔枝优品</string>
+    <string name="login_next_step">下一步</string>
+    <string name="login_bind_phone_error">手机号码错误，请重新输入</string>
+    <string name="login_agreement_privacy">下一步即代表同意《荔枝优品用户协议》和《隐私政策》</string>
+    <string name="empty_load_more_text">人家是有底线的！</string>
+    <string name="empty_tips_text">暂无数据！</string>
+    <string name="empty_footer_record_text">足迹空空如也，赶紧去浏览商品吧</string>
+    <string name="empty_sort_product_list_text">该类目商品还未上架，看看其他的吧</string>
+    <string name="empty_search_result_text">没有匹配的结果哦，请重新搜索</string>
+    <string name="empty_data_please_later">暂无数据，请稍后再来</string>
+    <string name="text_init_number_0">0</string>
+    <!-- behavior start-->
+    <string name="header_scrolling_behavior">com.by.lizhiyoupin.app.main.behavior.FansHeaderScrollingBehavior</string>
+    <string name="business_header_scrolling_behavior">com.by.lizhiyoupin.app.main.behavior.BusinessHeaderScrollingBehavior</string>
+    <string name="header_actionBar_behavior">com.by.lizhiyoupin.app.main.behavior.ActionBarBehavior</string>
+    <string name="superheader_scrolling_behavior">com.by.lizhiyoupin.app.main.behavior.SuperHeaderScrollingBehavior</string>
+
+
+    <!-- behavior end-->
+
+
+    <string name="login_verification_code_text">请输入验证码</string>
+    <string name="login_verification_send_phone_tip_text">验证码已发送至+%1$s %2$s</string>
+    <string name="login_verification_time_text">%d后重新发送</string>
+    <string name="login_verification_time_retry_text">重新发送</string>
+    <string name="login_verification_code_error">验证码错误，请重新输入</string>
+    <string name="login_invitation_code_text">请输入邀请码</string>
+    <string name="login_invitation_code_hint">请输入邀请码或邀请人手机号</string>
+    <string name="login_invitation_code_next">提交</string>
+    <string name="actionbar_jump_text">跳过</string>
+    <string name="wx_one_click_login">微信一键登录</string>
+    <string name="phone_fast_login_text">手机快速登录</string>
+
+    <string name="search_clip_content_tip_text">搜索平台</string>
+    <string name="search_clip_platform_taobao">淘宝</string>
+    <string name="search_clip_platform_pindd">拼多多</string>
+    <string name="search_clip_platform_jingd">京东</string>
+
+    <string name="search_clip_platform_lz">荔枝自营</string>
+
+
+    <string name="about_agreement_of_user">荔枝优品用户协议</string>
+    <string name="home_actionbat_title_text">搜索隐藏优惠券</string>
+    <string name="list_volume_text">月销%s</string>
+    <string name="list_payment_text">%s付款</string>
+    <string name="comprehensive_text">综合</string>
+    <string name="sales_volume_text">销量</string>
+    <string name="post_coupon_price_text">券后价</string>
+    <string name="post_par_value_text">券面值</string>
+    <string name="commission_text">佣金</string>
+    <string name="show_only_coupon_items_text">仅显示优惠券商品</string>
+    <string name="product_coupon_price">%s元券</string>
+    <string name="product_commission_price">返红包%s元</string>
+    <string name="product_commission2_price">返%s元</string>
+    <string name="product_commission_rate_price">佣金比例%1$s%2$s</string>
+
+    <string name="user_present_interest_text">当前权益</string>
+    <string name="user_super_member_interest_text">超级会员权益</string>
+    <string name="user_load_more_power_text">查看更多权益</string>
+    <string name="user_shopping_text">购物特权</string>
+    <string name="user_fans_text">粉丝权益</string>
+    <string name="user_super_member_text">了解荔枝优品超级会员\n最新权益</string>
+    <string name="detail_image_text">图文详情</string>
+    <string name="detail_recommend_top_text">荐</string>
+    <string name="detail_recommend_success_text">推荐成功\n您的粉丝将会在首页达人推荐中可看到该商品</string>
+    <string name="detail_recommend_cancel_text">取消推荐\n该商品将不会出现在首页达人推荐中</string>
+
+    <string name="vip_normal_text">普通会员</string>
+    <string name="vip_super_text">超级会员</string>
+    <string name="vip_plus_super_text">PLUS超级会员</string>
+    <string name="vip_invite_id_text">邀请ID：</string>
+    <string name="vip_shopping_awards_text">购物奖励</string>
+    <string name="vip_share_awards_text">分享奖励</string>
+    <string name="vip_more_coupon_text">海量优惠券</string>
+    <string name="vip_plus_coupon_text">PLUS奖励</string>
+    <string name="vip_more_save_money_text">省¥9800+/年</string>
+    <string name="vip_exclusive_9_text">专属9%</string>
+    <string name="vip_exclusive_20_text">专属20%</string>
+    <string name="vip_normal_0_text">普通0%</string>
+    <string name="vip_normal_18_text">普通18%</string>
+    <string name="vip_highest_900_text">最高900</string>
+    <string name="vip_highest_18900_text">最高18900</string>
+    <string name="vip_power_title_text">尊享权益</string>
+    <string name="vip_power_actionbar_title_text">荔枝权益</string>
+    <string name="vip_tip_normal_text">填写邀请人获得佣金</string>
+    <string name="vip_tip_vip_power_text">%1$s权益将于%2$s到期</string>
+    <string name="vip_list_item_normal_text">送365天VIP权益</string>
+    <string name="vip_item_reward_text">推广奖励¥%s</string>
+    <string name="vip_tip_vip_overdue_text">%1$s权益将于%2$s到期</string>
+
+
+    <string name="product_detail_guess_like_text">猜你喜欢</string>
+    <string name="product_detail_recommend_text">荔枝推荐</string>
+    <string name="product_detail_into_store_text">进入店铺</string>
+    <string name="product_detail_baby_desc_text">宝贝描述</string>
+    <string name="product_expand_baby_details_text">展开宝贝详情</string>
+    <string name="product_close_baby_details_text">收起宝贝详情</string>
+    <string name="product_after_coupon_text">券后</string>
+    <string name="product_monthly_sales_text">月销%s</string>
+    <string name="product_red_packet_text">返红包%s元</string>
+    <string name="product_upgrade_now_text">立即升级</string>
+    <string name="product_coupon_text">优惠券</string>
+    <string name="product_go_and_get_text">立即领取</string>
+    <string name="product_tab_baby_text">宝贝</string>
+    <string name="product_tab_detail_text">详情</string>
+    <string name="product_tab_recommend_text">推荐</string>
+    <string name="product_home_text">首页</string>
+    <string name="product_add_to_cart_text">加入购物车</string>
+    <string name="product_has_add_cart_text">已加购</string>
+    <string name="product_buy_save_money_text">购买立省</string>
+    <string name="product_share_award_text">分享奖励</string>
+    <string name="product_share_return_red_packet_text">预估返红包：%s元</string>
+    <string name="product_share_current_price_text">【在售价】%s元</string>
+    <string name="product_share_after_price_text">【券后价】%s元</string>
+    <string name="product_share_download_return_text">【下载荔枝优品再返】%s元</string>
+    <string name="product_share_invitation_code_text">【邀请码】%s</string>
+    <string name="product_share_download_link_text">【下载地址】%s</string>
+    <string name="product_share_copy_text">复制这条信息€bzvVbrEBs2k€，打开【手机淘宝】即可查看</string>
+    <string name="product_share_taobao_copy_all_text">%1$s\n【在售价】%2$s元\n【券后价】%3$s元\n【下载荔枝优品再返】%4$s元\n【邀请码】%5$s\n【下载地址】%6$s\n —————————————————— \n复制这条信息%7$s，打开【手机淘宝】即可查看</string>
+    <string name="product_share_jd_pdd_copy_all_text">%1$s\n【在售价】%2$s元\n【券后价】%3$s元\n【下载荔枝优品再返】%4$s元\n【邀请码】%5$s\n【下载地址】%6$s\n【抢购地址】%7$s</string>
+    <string name="share_picture_text">分享图片</string>
+    <string name="share_copy_command_text">复制淘口令</string>
+    <string name="share_picture_selected_number_text">（已选%d张图片）</string>
+    <string name="product_detail_buy_text">立即购买</string>
+    <string name="product_detail_spread_text">推广奖¥%s</string>
+    <string name="product_detail_limit_time_text">%1$s—%2$s</string>
+
+
+    <string name="pay_order_setting_receiving_address_text">设置收货地址</string>
+    <string name="pay_order_receiving_name_text">收货人：%s</string>
+    <string name="pay_order_receiving_address_text">收货地址：</string>
+    <string name="pay_order_goods_norms_text">规格：%s件</string>
+    <string name="pay_order_goods_norms_number_text">x %s</string>
+    <string name="pay_order_goods_total_desc_text">商品总价</string>
+    <string name="pay_order_pay_type_text">支付方式</string>
+    <string name="pay_order_pay_alipay_text">支付宝</string>
+    <string name="pay_order_pay_wechat_text">微信</string>
+    <string name="pay_order_pay_final_pay_desc_text">需付款：</string>
+    <string name="pay_order_pay_final_submit_text">提交订单</string>
+    <string name="pay_order_pay_confirm_order_text">确认订单</string>
+    <string name="pay_order_price_text">¥%s</string>
+
+    <string name="order_address_receiving_name_text">收货人</string>
+    <string name="order_address_receiving_name_hint">请填写收货人</string>
+    <string name="order_address_receiving_phone_text">手机号</string>
+    <string name="order_address_receiving_phone_hint">请填写您的手机号</string>
+    <string name="order_address_receiving_selected_address_text">选择地区</string>
+    <string name="order_address_receiving_selected_address_hint">省-市-区</string>
+    <string name="order_address_receiving_detail_address_text">详细地址</string>
+    <string name="order_address_receiving_detail_address_hint">请填写详细地址</string>
+    <string name="order_address_save_text">保存</string>
+    <string name="order_address_receiving_edit_text">编辑收货地址</string>
+
+
+    <string name="save_money_title_text">累计省钱</string>
+    <string name="save_money_total_text">累计省钱: </string>
+    <string name="save_money_item_create_time_text">创建时间: %s</string>
+    <string name="save_money_item_order_number_text">订单号: %s</string>
+    <string name="save_money_item_paid_in_amount_text">实付金额：</string>
+    <string name="save_money_item_actual_income_text">实际收益：</string>
+    <string name="save_money_item_estimate_actual_income_text">预估收益：</string>
+    <string name="save_money_item_empty_text">咦～，还没有省钱记录哦，赶紧去下单吧</string>
+    <string name="income_record_sum_money_text">累计收益金额（元）</string>
+    <string name="income_record_with_drawable_amount_text">可提现金额（元）</string>
+    <string name="income_record_cash_out_text">提现</string>
+    <string name="income_record_has_cash_out_text">已提现金额</string>
+    <string name="income_record_amount_in_withdrawal_text">提现中金额</string>
+    <string name="income_record_last_month_profit_text">上月预估收益</string>
+    <string name="income_record_last_month_settlement_text">上月结算收益</string>
+    <string name="income_record_this_month_profit_text">本月预估收益</string>
+    <string name="income_record_total_payments_text">总付款笔数</string>
+    <string name="income_record_number_of_fans_payments_text">粉丝付款笔数</string>
+    <string name="income_record_total_estimated_revenue_text">总预估收益</string>
+    <string name="income_record_fans_total_estimated_revenue_text">粉丝预估收益</string>
+    <string name="item_load_more_text">查看更多</string>
+    <string name="income_record_actionbar_title_text">收益记录</string>
+    <string name="income_record_detail_actionbar_title_text">收益明细</string>
+    <string name="income_record_actionbar_right_text">明细</string>
+    <string name="income_record_exclusive_number_of_fans_payments_text">专属粉丝付款笔数</string>
+    <string name="income_record_exclusive_fans_total_estimated_revenue_text">专属粉丝预估收益</string>
+    <string name="income_record__normal_number_of_fans_payments_text">普通粉丝付款笔数</string>
+    <string name="income_record_normal_fans_estimated_revenue_text">普通粉丝预估收益</string>
+    <string name="income_record_empty_text">还没有收益记录，赶紧下单吧！</string>
+    <string name="income_data_total_revenue_text">预估总收益</string>
+    <string name="income_data_shopping_guide_text">预估导购订单佣金</string>
+    <string name="income_data_taobao_order_text">预估淘宝订单佣金</string>
+    <string name="income_data_pindd_order_text">预估拼多多订单佣金</string>
+    <string name="income_data_jingd_order_text">预估京东订单佣金</string>
+    <string name="income_data_optimization_order_text">预估优选订单佣金</string>
+    <string name="income_notice_empty_text">暂无佣金消息，赶紧下单吧</string>
+
+    <string name="fans_main_title_text">我的粉丝</string>
+    <string name="fans_my_number_text">我的粉丝：%s</string>
+    <string name="fans_exclusive_number_text">专属粉丝</string>
+    <string name="fans_normal_number_text">普通粉丝</string>
+    <string name="fans_look_my_inviter_text">查看我的邀请人</string>
+    <string name="fans_join_time_text">加入时间(%s)</string>
+    <string name="fans_total_income_text">累计收益</string>
+    <string name="fans_amount_text">粉丝量</string>
+    <string name="fans_number_text">粉丝数:%s</string>
+    <string name="fans_empty_text">还没有粉丝哦，赶紧去邀请吧</string>
+    <string name="fans_search_empty_text">没有匹配的粉丝哦，请重新搜索</string>
+    <string name="item_fans_income_last_month_text">上月预估收益：%s元</string>
+    <string name="item_fans_income_this_month_text">本月预估收益：%s元</string>
+    <string name="fans_search_hint_text">可输入粉丝手机号/昵称搜索</string>
+    <string name="order_find_hint_text">请输入淘宝订单编号</string>
+    <string name="order_find_search_text">查询</string>
+    <string name="order_find_get_order_id_text">如何获取订单编号？</string>
+    <string name="order_find_first_text">打开手机“淘宝APP”-我的淘宝\n查看我的订单</string>
+    <string name="order_find_second_text">复制订单编号</string>
+    <string name="limit_time_spike_title_text">限时秒杀</string>
+    <string name="limit_time_count_time_text">距离下场</string>
+    <string name="limit_time_spike_text">马上抢</string>
+    <string name="limit_time_spike_remind_text">提醒我</string>
+    <string name="limit_time_spike_has_remind_text">已设置</string>
+    <string name="limit_time_spike_has_cancle_text">已提醒</string>
+
+    <string name="shake_coupon_goto_buy_text">去购买</string>
+    <string name="shake_coupon_copy_writing_text">文案</string>
+    <string name="shake_shopping_cart_text">购物车</string>
+    <string name="shake_shopping_cart_empty_text">购物车空空如也，赶紧去加购吧</string>
+    <string name="foot_print_red_coupon_text">最高返红包 ¥%s</string>
+    <string name="foot_print_expired_text">已失效</string>
+    <string name="foot_print_title_text">足迹</string>
+    <string name="foot_print_edit_text">编辑</string>
+    <string name="shopping_cart_buy_text">立即\n购买</string>
+
+    <string name="push_edit_tips_text">温馨提示：每日可推送消息%s条，特殊节假日平台会设置多条~</string>
+    <string name="sign_in_statistics_day_text">签到领红包，本周已签%d天</string>
+    <string name="sign_in_remind_text">签到提醒</string>
+    <string name="sign_in_get_price">%s元</string>
+
+
+</resources>

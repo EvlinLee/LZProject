@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:orientation="vertical"
+                                                   android:paddingBottom="@dimen/d_25">
+
+    <TextView
+        android:id="@+id/dialog_title_tv"
+        style="@style/default_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_40"
+        android:gravity="center"
+        android:paddingLeft="@dimen/d_27"
+        android:paddingRight="@dimen/d_27"
+        android:textSize="@dimen/s_18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="title"/>
+
+    <TextView
+        android:id="@+id/content_Message_tv"
+        style="@style/default_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_40"
+        android:gravity="center|left"
+        android:lines="2"
+        android:paddingLeft="@dimen/d_27"
+        android:paddingRight="@dimen/d_27"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title_tv"
+        tools:text="clip搜索内容"/>
+
+    <View
+        style="@style/list_line_style"
+        android:layout_width="@dimen/d_40"
+        android:layout_marginRight="@dimen/d_10"
+        app:layout_constraintBottom_toBottomOf="@+id/search_clip_tip_tv"
+        app:layout_constraintRight_toLeftOf="@+id/search_clip_tip_tv"
+        app:layout_constraintTop_toTopOf="@+id/search_clip_tip_tv"/>
+
+
+    <TextView
+        android:id="@+id/search_clip_tip_tv"
+        style="@style/default_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_40"
+        android:text="@string/search_clip_content_tip_text"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/s_11"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_Message_tv"/>
+
+    <View
+        style="@style/list_line_style"
+        android:layout_width="@dimen/d_40"
+        android:layout_marginLeft="@dimen/d_10"
+        app:layout_constraintBottom_toBottomOf="@+id/search_clip_tip_tv"
+        app:layout_constraintLeft_toRightOf="@+id/search_clip_tip_tv"
+        app:layout_constraintTop_toTopOf="@+id/search_clip_tip_tv"/>
+
+    <TextView
+        android:id="@+id/search_taobao_tv"
+        style="@style/default_text_style"
+        android:layout_width="@dimen/d_68"
+        android:layout_height="@dimen/d_69"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_25"
+        android:background="@drawable/shape_bg_search_clip_gray_corner"
+        android:drawableTop="@drawable/search_clip_taobao"
+        android:gravity="center"
+        android:paddingTop="@dimen/d_05"
+        android:text="@string/search_clip_platform_taobao"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/search_pingdd_tv"
+        app:layout_constraintTop_toBottomOf="@+id/search_clip_tip_tv"/>
+
+    <TextView
+        android:id="@+id/search_pingdd_tv"
+        style="@style/default_text_style"
+        android:layout_width="@dimen/d_68"
+        android:layout_height="@dimen/d_69"
+        android:layout_marginTop="@dimen/d_25"
+        android:background="@drawable/shape_bg_search_clip_gray_corner"
+        android:drawableTop="@drawable/search_clip_pindd"
+        android:gravity="center"
+        android:paddingTop="@dimen/d_05"
+        android:text="@string/search_clip_platform_pindd"
+        app:layout_constraintLeft_toRightOf="@+id/search_taobao_tv"
+        app:layout_constraintRight_toLeftOf="@+id/search_jind_tv"
+        app:layout_constraintTop_toBottomOf="@+id/search_clip_tip_tv"/>
+
+    <TextView
+        android:id="@+id/search_jind_tv"
+        style="@style/default_text_style"
+        android:layout_width="@dimen/d_68"
+        android:layout_height="@dimen/d_69"
+        android:layout_marginTop="@dimen/d_25"
+        android:layout_marginRight="@dimen/d_10"
+        android:background="@drawable/shape_bg_search_clip_gray_corner"
+        android:drawableTop="@drawable/search_clip_jd"
+        android:gravity="center"
+        android:paddingTop="@dimen/d_05"
+        android:text="@string/search_clip_platform_jingd"
+        app:layout_constraintLeft_toRightOf="@+id/search_pingdd_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_clip_tip_tv"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

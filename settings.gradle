@@ -1,0 +1,2 @@
+include ':app', ':common', ':component_ui', ':component_io', ':message_box', ':component_umeng', ':component_video',
+        ':commponent_sdk', ':component_banner'

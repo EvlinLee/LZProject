@@ -1,0 +1,183 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="normal_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+
+    <style name="main_activity_theme_start" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!--启动页-->
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@drawable/bg_app_start</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="transparentBar_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--沉浸式状态栏 主题-->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--和  代码中设置效果一样-->
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+    </style>
+
+    <style name="default_swipe_back_activity_theme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--windowIsTranslucent=true与screenOrientation 同事设置在manifest冲突 可以一个代码设置 一个清单文件设置-->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+
+
+    <style name="default_activity_theme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@color/splash_bg_default</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="dialog_center_theme" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@color/black_40</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+    <style name="dialog_bottom_theme" parent="@style/dialog_center_theme">
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <style name="detail_dialog_center_theme" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@color/black_40</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="NoAnimationDialog" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <style name="tabLayout_TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="list_line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d_01</item>
+        <item name="android:background">@color/list_divider</item>
+    </style>
+
+    <style name="default_text_title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_111111</item>
+        <item name="android:textSize">@dimen/s_18</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+    <style name="default_medium_text_title_style" parent="default_text_title_style">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="default_text_style">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_111111</item>
+        <item name="android:textSize">@dimen/s_12</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="default_text_333_style" parent="default_text_style">
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="default_medium_text_style" parent="default_text_style">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="default_medium_text_333_style" parent="default_text_style">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <style name="default_tint_color_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:textSize">@dimen/s_12</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+    <!--重要-->
+    <style name="default_text_important_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/default_text_important_color</item>
+        <item name="android:textSize">@dimen/s_14</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+    <!--次级重要-->
+    <style name="default_text_major_important_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/default_text_major_important_color</item>
+        <item name="android:textSize">@dimen/s_12</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+    <!--次要-->
+    <style name="default_text_secondary_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/default_text_secondary_color</item>
+        <item name="android:textSize">@dimen/s_11</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <style name="tab_layout_size_style">
+        <item name="android:textSize">@dimen/s_14</item>
+    </style>
+
+    <style name="push_setting_checkbox_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingRight">@dimen/d_15</item>
+        <item name="android:drawableRight">@drawable/setting_switch_selector</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:button">@null</item>
+        <item name="android:checked">true</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="setting_dialog_modify_avatar_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/list_item_bg</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#fd7736</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

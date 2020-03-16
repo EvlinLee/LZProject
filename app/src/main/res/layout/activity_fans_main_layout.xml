@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/color_F2F2F5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fans_header_cl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fans_header_height"
+            android:background="@drawable/fans_main_bg_pic"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_line_top_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.35"/>
+
+            <TextView
+                android:id="@+id/fans_my_number_tv"
+                style="@style/default_medium_text_style"
+                android:text="@string/fans_my_number_text"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_24"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guide_line_top_h"/>
+
+            <View
+                android:id="@+id/fans_top_view"
+                android:layout_width="@dimen/d_01"
+                android:layout_height="@dimen/d_20"
+                android:layout_marginTop="@dimen/d_30"
+                android:background="@color/color_DBAA50"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fans_my_number_tv"/>
+
+            <TextView
+                android:id="@+id/fans_exclusive_number"
+                style="@style/default_text_style"
+                android:layout_marginTop="@dimen/d_20"
+                android:text="@string/fans_exclusive_number_text"
+                android:textColor="@color/color_999999"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/fans_top_view"
+                app:layout_constraintTop_toBottomOf="@+id/fans_my_number_tv"/>
+
+            <TextView
+                android:id="@+id/fans_exclusive_number_tv"
+                style="@style/default_text_style"
+                android:layout_marginTop="@dimen/d_08"
+                android:text="@string/text_init_number_0"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_17"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/fans_top_view"
+                app:layout_constraintTop_toBottomOf="@+id/fans_exclusive_number"/>
+
+
+            <TextView
+                android:id="@+id/fans_normal_number"
+                style="@style/default_text_style"
+                android:layout_marginTop="@dimen/d_20"
+                android:text="@string/fans_normal_number_text"
+                android:textColor="@color/color_999999"
+                app:layout_constraintLeft_toLeftOf="@+id/fans_top_view"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fans_my_number_tv"/>
+
+            <TextView
+                android:id="@+id/fans_normal_number_tv"
+                style="@style/default_text_style"
+                android:layout_marginTop="@dimen/d_08"
+                android:text="@string/text_init_number_0"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_17"
+                app:layout_constraintLeft_toLeftOf="@+id/fans_top_view"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fans_normal_number"/>
+
+            <TextView
+                android:id="@+id/fans_go_to_inviter_tv"
+                style="@style/default_text_style"
+                android:layout_marginTop="@dimen/d_20"
+                android:drawableRight="@drawable/fans_go_right"
+                android:drawablePadding="@dimen/d_08"
+                android:text="@string/fans_look_my_inviter_text"
+                android:textColor="@color/color_999999"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fans_normal_number_tv"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fans_content_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/header_scrolling_behavior">
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magicIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_44"
+                android:background="@color/default_content_bg"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/fans_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <include layout="@layout/behavior_action_bar"/>
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

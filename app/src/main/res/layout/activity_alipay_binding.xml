@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".user.activity.AlipayBindingActivity">
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_50"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_10"
+                android:background="@drawable/withdraw_bg"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:text="真实姓名："
+                    android:textColor="#ff111111"
+                    android:textSize="@dimen/s_16"
+                    />
+
+                <EditText
+                    android:id="@+id/alipay_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/withdraw_bg"
+                    android:hint="请输入支付宝认证的姓名"
+                    android:textSize="@dimen/s_15"
+                    android:textCursorDrawable="@drawable/cursor_bg_size"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_50"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_10"
+                android:background="@drawable/withdraw_bg"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:text="支付宝号："
+                    android:textColor="#ff111111"
+                    android:textSize="@dimen/s_16"
+                    />
+
+                <EditText
+                    android:id="@+id/alipay_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/withdraw_bg"
+                    android:hint="请输入支付宝账号"
+                    android:textSize="@dimen/s_15"
+                    android:textCursorDrawable="@drawable/cursor_bg_size"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_50"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_10"
+                android:background="@drawable/withdraw_bg"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:text="身份证号："
+                    android:textColor="#ff111111"
+                    android:textSize="@dimen/s_16"
+                    />
+
+                <EditText
+                    android:id="@+id/alipay_idcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/withdraw_bg"
+                    android:hint="请输入身份证号"
+                    android:textSize="@dimen/s_15"
+                    android:maxLength="18"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@drawable/cursor_bg_size"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_170"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/d_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/withdraw_bg"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/id_img"
+                        android:layout_width="@dimen/d_150"
+                        android:layout_height="@dimen/d_100"
+                        android:layout_marginLeft="@dimen/d_16"
+                        android:layout_marginTop="@dimen/d_16"
+                        android:src="@drawable/idcard"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_img"
+                        android:layout_marginLeft="@dimen/d_40"
+                        android:layout_marginTop="@dimen/d_05"
+                        android:text="上传正面身份证"
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/s_15"
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/d_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/withdraw_bg"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/id_img2"
+                        android:layout_width="@dimen/d_154"
+                        android:layout_height="@dimen/d_100"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/d_16"
+                        android:layout_marginTop="@dimen/d_16"
+                        android:src="@drawable/idcard_false"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/id_img2"
+                        android:layout_marginRight="@dimen/d_40"
+                        android:layout_marginTop="@dimen/d_05"
+                        android:text="上传反面身份证"
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/s_15"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_50"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_10"
+                android:background="@drawable/withdraw_bg"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:text="手机号码："
+                    android:textColor="#ff111111"
+                    android:textSize="@dimen/s_16"
+                    />
+
+                <TextView
+                    android:id="@+id/alipay_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/withdraw_bg"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/s_16"
+                    android:textColor="#ff111111"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_50"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_10"
+                android:background="@drawable/withdraw_bg"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:text="验证码："
+                    android:textColor="#ff111111"
+                    android:textSize="@dimen/s_16"
+                    />
+
+                <EditText
+                    android:id="@+id/alipay_sms"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/withdraw_bg"
+                    android:hint="请输入验证码"
+                    android:textSize="@dimen/s_15"
+                    android:textCursorDrawable="@drawable/cursor_bg_size"
+                    android:maxLength="6"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/d_30"
+                    android:layout_marginRight="@dimen/d_20"
+                    android:background="#D8D8D8"
+                    />
+
+                <TextView
+                    android:id="@+id/getsms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d_20"
+                    android:text="获取验证码"
+                    android:textColor="#FFC8A859"
+                    android:textSize="@dimen/s_12"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_12"
+                android:gravity="center_vertical"
+                >
+
+
+                <CheckBox
+                    android:id="@+id/alipay_check_xy"
+                    android:layout_width="@dimen/d_15"
+                    android:layout_height="@dimen/d_15"
+                    android:background="@drawable/checkbox_style_1"
+                    android:button="@null"
+                    android:layout_centerVertical="true"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_08"
+                    android:text="我同意"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_15"
+                    />
+
+                <TextView
+                    android:id="@+id/freelance_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="【自由职业者服务协议】"
+                    android:textColor="#FF5491EF"
+                    android:textSize="@dimen/s_15"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="并签约"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_15"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alipay_sub"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_50"
+                android:layout_marginBottom="@dimen/d_10"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_20"
+                android:background="@drawable/nickname_bg_button"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/bind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立即绑定"
+                    android:textColor="#ffffffff"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alipay_bind"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_50"
+                android:layout_marginBottom="@dimen/d_10"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_20"
+                android:background="@drawable/nickname_bg_button_red"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/bind2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立即绑定"
+                    android:textColor="#ffffffff"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

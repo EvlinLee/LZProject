@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/article_tv"
+        style="@style/default_text_style"
+        android:textSize="@dimen/s_14"
+        tools:text="滚动资讯"
+        android:textColor="@color/color_555555"/>
+
+</LinearLayout>

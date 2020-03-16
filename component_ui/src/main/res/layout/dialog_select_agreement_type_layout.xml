@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d_500"
+              android:background="@drawable/shape_bg_white_8_full_corner"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="温馨提示"
+        android:textColor="#ff111111"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/s_18"
+        android:layout_marginTop="@dimen/d_30"
+        />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="@dimen/d_240"
+        android:layout_height="@dimen/d_300"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:paddingRight="@dimen/d_01"
+        android:layout_marginTop="@dimen/d_14"
+        android:text=" "
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="#ff111111"
+        android:textSize="@dimen/s_15"
+        android:scrollbars="vertical"
+        />
+
+    <TextView
+        android:id="@+id/agree"
+        android:layout_width="@dimen/d_230"
+        android:layout_height="@dimen/d_44"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/d_30"
+        android:text="同意"
+        android:gravity="center"
+        android:textSize="@dimen/s_18"
+        android:background="@drawable/shape_bg_four_corner25_full_red"
+        android:textColor="#FFFFFFFF"
+
+        />
+
+    <TextView
+        android:id="@+id/agree_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/d_20"
+        android:text="不同意"
+        android:textSize="@dimen/s_16"
+        />
+</LinearLayout>

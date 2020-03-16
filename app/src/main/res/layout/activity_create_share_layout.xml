@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/default_content_bg"
+                                                   android:fitsSystemWindows="true"
+                                                   android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/share_return_tv"
+        style="@style/default_medium_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_34"
+        android:background="@color/color_F8EEF2"
+        android:gravity="center"
+        android:text="@string/product_share_return_red_packet_text"
+        android:textColor="@color/color_D60050"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/share_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/d_100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/share_return_tv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/share_copy_tv"
+                style="@style/default_text_style"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_10"
+                android:background="@drawable/shape_bg_share_gray_four_corner"
+                android:padding="@dimen/d_15"
+                android:text="@string/product_share_taobao_copy_all_text"
+                android:textColor="@color/color_555555"
+
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/share_tip_copy_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_10"
+                android:background="@drawable/shape_bg_share_gray_four_corner"
+                android:padding="@dimen/d_15"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/share_tip_title_tv"
+                    style="@style/default_text_title_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:textColor="@color/color_555555"
+                    android:textSize="@dimen/s_12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="iPhoneX钢化膜11promax苹果Xs手机贴膜iPhoneXsMax全屏覆盖11pro/7/8plus防偷窥防窥i、蓝光XR保护8p X【包邮】"/>
+
+                <TextView
+                    android:id="@+id/share_tip_current_price_tv"
+                    style="@style/default_text_style"
+                    android:lines="1"
+                    android:text="@string/product_share_current_price_text"
+                    android:textColor="@color/color_555555"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/share_tip_title_tv"/>
+
+                <TextView
+                    android:id="@+id/share_tip_after_price_tv"
+                    style="@style/default_text_style"
+                    android:lines="1"
+                    android:text="@string/product_share_after_price_text"
+                    android:textColor="@color/color_555555"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/share_tip_current_price_tv"/>
+
+                <TextView
+                    android:id="@+id/share_tip_download_return_tv"
+                    style="@style/default_text_style"
+                    android:lines="1"
+                    android:text="@string/product_share_download_return_text"
+                    android:textColor="@color/color_555555"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/share_tip_after_price_tv"/>
+
+                <TextView
+                    android:id="@+id/share_tip_invitation_code_tv"
+                    style="@style/default_text_style"
+                    android:lines="1"
+                    android:text="@string/product_share_invitation_code_text"
+                    android:textColor="@color/color_555555"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/share_tip_download_return_tv"/>
+
+                <TextView
+                    android:id="@+id/share_tip_download_link_tv"
+                    style="@style/default_text_style"
+                    android:lines="1"
+                    android:text="@string/product_share_download_link_text"
+                    android:textColor="@color/color_555555"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/share_tip_invitation_code_tv"/>
+
+                <TextView
+                    android:id="@+id/share_tip_line_tv"
+                    style="@style/default_text_style"
+                    android:lines="1"
+                    android:text="——————————————————"
+                    android:textColor="@color/color_555555"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/share_tip_download_link_tv"/>
+
+                <TextView
+                    android:id="@+id/share_tip_share_copy_tv"
+                    style="@style/default_text_style"
+                    android:lines="1"
+                    android:text="@string/product_share_copy_text"
+                    android:textColor="@color/color_555555"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/share_tip_line_tv"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/default_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_picture_text"
+                    android:textSize="@dimen/s_17"/>
+
+                <TextView
+                    android:id="@+id/share_picture_selected_number_tv"
+                    style="@style/default_text_style"
+                    android:layout_marginLeft="@dimen/d_05"
+                    android:text="@string/share_picture_selected_number_text"
+                    android:textColor="@color/color_999999"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/share_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_20"
+                android:overScrollMode="never"
+                android:paddingBottom="@dimen/d_44"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/d_05"
+        android:textColor="@color/white_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/share_copy_tip_tv"
+            style="@style/default_text_style"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_44"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_05"
+            android:layout_marginBottom="@dimen/d_05"
+            android:background="@drawable/shape_bg_product_yellow_full_four_corner"
+            android:gravity="center"
+            android:text="@string/share_copy_command_text"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/share_img_tv"/>
+
+        <TextView
+            android:id="@+id/share_img_tv"
+            style="@style/default_text_style"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_44"
+            android:layout_marginLeft="@dimen/d_05"
+            android:layout_marginRight="@dimen/d_10"
+            android:layout_marginBottom="@dimen/d_05"
+            android:background="@drawable/shape_bg_product_red_full_four_corner"
+            android:gravity="center"
+            android:text="@string/share_picture_text"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/share_copy_tip_tv"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/loading_view"
+        android:background="@color/color_F2F2F5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/loading_gif_iv"
+            android:layout_gravity="center"
+            android:src="@drawable/loading_dialog_g"
+            android:layout_width="@dimen/d_60"
+            android:layout_height="@dimen/d_60"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

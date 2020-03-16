@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="product_money01">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="product_money02">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="product_money03">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#D60050</item>
+    </style>
+    <style name="product_money17">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#D60050</item>
+    </style>
+    <style name="product_money04">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#D60050</item>
+    </style>
+
+    <style name="product_money05">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#E41B26</item>
+    </style>
+    <style name="product_money20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#C4171E</item>
+    </style>
+    <style name="product_money25">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">#C4171E</item>
+    </style>
+    <style name="product_money26_C4171E">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">#C4171E</item>
+    </style>
+    <style name="product_money26">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">#D60050</item>
+    </style>
+
+    <style name="product_money06">
+        <item name="android:textSize">33sp</item>
+        <item name="android:textColor">#E41B26</item>
+    </style>
+    <style name="product_money22_FF005F">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FF005F</item>
+    </style>
+    <style name="product_money11_FF005F">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#FF005F</item>
+    </style>
+    <style name="product_money14_FF005F">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FF005F</item>
+    </style>
+    <style name="product_money15_FF005F">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FF005F</item>
+    </style>
+
+    <style name="product_money11_BF4335">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#BF4335</item>
+    </style>
+    <style name="product_money13_BF4335">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#BF4335</item>
+    </style>
+    <style name="product_money14white">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="product_money14_111111">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+    <style name="product_money15red">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#D60050</item>
+    </style>
+    <style name="product_money18red">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#D60050</item>
+    </style>
+    <style name="product_money18_E41B26">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#E41B26</item>
+    </style>
+    <style name="product_money18_111111">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+    <style name="product_money33_E41B26">
+        <item name="android:textSize">33sp</item>
+        <item name="android:textColor">#E41B26</item>
+    </style>
+
+
+</resources>

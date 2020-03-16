@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    tools:context=".user.activity.WithdrawDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_130"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_10"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_130"
+        android:background="@drawable/withdraw_item_radius_8dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_12"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/system_notice_icon"
+                android:drawablePadding="8dp"
+                android:paddingLeft="@dimen/d_12"
+                android:text="系统通知"
+                android:textColor="#ff111111"
+                android:textSize="@dimen/s_15"
+                />
+
+            <TextView
+                android:id="@+id/system_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/d_12"
+                android:text="10/28 16:00"
+                android:textColor="#ff999999"
+                android:textSize="@dimen/s_11"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/d_12"
+            android:layout_marginRight="@dimen/d_12"
+            android:layout_marginTop="@dimen/d_12"
+            android:background="#FFF8F8F8"
+            />
+
+        <TextView
+            android:id="@+id/system_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/d_12"
+            android:text="您的粉丝【粉丝昵称】2019.12.12 12:12:12 推广成功，预计团队补贴1.11元，预计结算时间：收货后次月25日结算"
+            android:textColor="#ff555555"
+            android:lineSpacingExtra="@dimen/d_04"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/d_12"
+            android:layout_marginRight="@dimen/d_12"
+            />
+
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notice_dot"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</LinearLayout>

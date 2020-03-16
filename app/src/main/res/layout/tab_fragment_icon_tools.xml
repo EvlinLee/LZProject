@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.by.lizhiyoupin.app.main.weight.IconToolsLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                    xmlns:tools="http://schemas.android.com/tools"
+                                                    android:id="@+id/iconToolsLayout"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:background="@color/white_100"
+                                                    android:paddingTop="15dp"
+                                                    android:paddingBottom="15dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/icon_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.by.lizhiyoupin.app.weight.IconIndicatorView
+        android:id="@+id/iconIndicator"
+        android:layout_width="@dimen/d_40"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/d_10"
+        android:visibility="gone"
+        app:regularWidth="@dimen/d_26"
+        tools:visibility="visible"/>
+
+</com.by.lizhiyoupin.app.main.weight.IconToolsLayout>

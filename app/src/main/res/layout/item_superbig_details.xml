@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".user.activity.WithdrawDetailsActivity">
+
+
+    <com.by.lizhiyoupin.app.component_ui.weight.RoundImageView
+        android:id="@+id/super_img"
+        android:layout_width="@dimen/d_45"
+        android:layout_height="@dimen/d_45"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/d_20"
+        android:src="@drawable/empty_pic_list"
+        />
+
+    <TextView
+        android:id="@+id/super_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="淘票票"
+        android:textColor="#ff111111"
+        android:textSize="@dimen/s_14"
+
+        />
+
+    <TextView
+        android:id="@+id/super_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="最高返佣90%"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/s_11"
+        />
+
+
+</LinearLayout>

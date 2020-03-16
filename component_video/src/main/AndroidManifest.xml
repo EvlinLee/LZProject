@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.by.lizhiyoupin.app.component_video">
+
+    <application>
+
+    </application>
+   <!-- 项目中的AndroidManifest.xml和第三方库的AndroidManifest.xml合并时可以忽略最低版本限制-->
+    <uses-sdk tools:overrideLibrary="tv.danmaku.ijk.media.exo2,
+    com.shuyu.gsyvideoplayer,
+    shuyu.com.androidvideocache,
+    com.shuyu.gsyvideoplayer.armv7a,
+    com.shuyu.gsyvideoplayer.ex_so,
+    com.shuyu.gsy.base"/>
+</manifest>

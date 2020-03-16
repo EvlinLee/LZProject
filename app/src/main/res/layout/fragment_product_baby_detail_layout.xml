@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_cl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/d_10"
+    android:layout_marginRight="@dimen/d_10">
+
+    <TextView
+        android:id="@+id/detail_current_store_name_tv"
+        style="@style/default_text_style"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/d_20"
+        android:drawableLeft="@drawable/temp_detail_tao_big_pic"
+        android:drawablePadding="@dimen/d_10"
+        android:gravity="center_vertical"
+        android:maxWidth="@dimen/d_300"
+        android:paddingRight="@dimen/d_10"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/s_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/detail_current_store_into_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="店铺名称"/>
+
+    <TextView
+        android:id="@+id/detail_current_store_into_tv"
+        style="@style/default_text_style"
+        android:layout_marginTop="@dimen/d_20"
+        android:drawableRight="@drawable/direction_right"
+        android:drawablePadding="@dimen/d_10"
+        android:text="@string/product_detail_into_store_text"
+        android:textColor="@color/color_555555"
+        android:textSize="@dimen/s_16"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--店铺评分-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detail_current_store_services_Rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/d_15"
+        android:overScrollMode="never"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_current_store_into_tv"/>
+
+    <View
+        android:id="@+id/detail_baby_details_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/d_15"
+        android:background="@color/color_E8E8EB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_current_store_services_Rv"/>
+
+    <TextView
+        android:id="@+id/detail_baby_details_expand_tv"
+        style="@style/default_text_style"
+        android:layout_height="@dimen/d_48"
+        android:drawableRight="@drawable/product_baby_details_down"
+        android:drawablePadding="@dimen/d_10"
+        android:gravity="center_vertical"
+        android:text="@string/product_expand_baby_details_text"
+        android:textColor="@color/color_D60050"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_baby_details_view"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detail_baby_details_img_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_baby_details_expand_tv"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

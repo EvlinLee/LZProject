@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d_44"
+              android:background="@color/default_content_bg"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/title_comprehensive_tv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/comprehensive_text"
+        android:textColor="@color/title_text_color_selector"
+        android:textSize="@dimen/s_14"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/d_10"
+        android:background="@color/color_E8E8EB"/>
+
+    <LinearLayout
+        android:id="@+id/title_sales_volume_ll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title_sales_volume_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/sales_volume_text"
+            android:textColor="@color/title_text_color_selector"
+            android:textSize="@dimen/s_14"/>
+
+        <ImageView
+            android:id="@+id/title_sales_volume_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_05"
+            android:src="@drawable/sort_normal"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/d_10"
+        android:background="@color/color_E8E8EB"/>
+
+    <LinearLayout
+        android:id="@+id/title_post_coupon_price__ll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title_post_coupon_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/post_coupon_price_text"
+            android:textColor="@color/title_text_color_selector"
+            android:textSize="@dimen/s_14"/>
+
+        <ImageView
+            android:id="@+id/title_post_coupon_price_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_05"
+            android:src="@drawable/sort_normal"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/d_10"
+        android:background="@color/color_E8E8EB"/>
+
+    <LinearLayout
+        android:id="@+id/title_commission_ll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title_commission_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/commission_text"
+            android:textColor="@color/title_text_color_selector"
+            android:textSize="@dimen/s_14"/>
+
+        <ImageView
+            android:id="@+id/title_commission_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_05"
+            android:src="@drawable/sort_normal"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/d_10"
+        android:background="@color/color_E8E8EB"/>
+
+    <LinearLayout
+        android:id="@+id/title_sort_etc_ll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/title_sort_etc_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sort_etc"/>
+    </LinearLayout>
+
+</LinearLayout>

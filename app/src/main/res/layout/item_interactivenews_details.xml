@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_10"
+        android:background="@drawable/withdraw_item_radius_8dp"
+        android:paddingBottom="@dimen/d_10"
+        >
+
+        <TextView
+            android:id="@+id/explosions_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d_16"
+            android:paddingTop="@dimen/d_10"
+            android:text="2019.12.31 12:12:12"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/d_13"
+
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/explosions_time"
+            android:layout_marginLeft="@dimen/d_16"
+            android:layout_marginRight="@dimen/d_16"
+            android:layout_marginTop="@dimen/d_10"
+            android:background="#E6E6E6"
+            />
+
+
+        <ImageView
+            android:id="@+id/explosions_img"
+            android:layout_width="@dimen/d_120"
+            android:layout_height="@dimen/d_120"
+            android:layout_below="@+id/view"
+            android:layout_marginLeft="@dimen/d_16"
+            android:layout_marginTop="@dimen/d_10"
+            android:src="@drawable/empty_pic_list"
+            />
+
+        <TextView
+            android:id="@+id/explosions_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginLeft="@dimen/d_14"
+            android:layout_marginRight="@dimen/d_17"
+            android:layout_marginTop="@dimen/d_12"
+            android:layout_toRightOf="@+id/explosions_img"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="您的粉丝【粉丝昵称】2019.12.12 12:12:12 "
+            android:textColor="#ff555555"
+            android:textSize="14sp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explosions_content"
+            android:layout_marginLeft="@dimen/d_14"
+            android:layout_marginTop="@dimen/d_37"
+            android:layout_toRightOf="@+id/explosions_img"
+            android:gravity="center_vertical"
+            >
+
+
+                <TextView
+                    android:id="@+id/interactive_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="#ff555555"
+                    android:textSize="14sp"
+
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/interactive_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="44.44"
+                    android:textColor="#ff555555"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/interactive_juanhou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_04"
+                    android:text="券后"
+                    android:textColor="#FF555555"
+                    android:textSize="14sp"
+                    />
+
+
+            <TextView
+                android:id="@+id/interactive_vonum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_08"
+                android:text="月销1234"
+                android:textColor="#FF999999"
+                android:textSize="14sp"
+
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/interactive_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear1"
+            android:layout_marginLeft="@dimen/d_14"
+            android:layout_marginTop="@dimen/d_06"
+            android:layout_toRightOf="@+id/explosions_img"
+            android:background="@drawable/item_list_red_bg_pic"
+            android:gravity="center"
+            android:text="20元劵"
+            android:textColor="@color/color_FCEFF4"
+            android:textSize="12sp"
+            />
+
+
+        <TextView
+            android:id="@+id/interactive_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear1"
+            android:layout_marginLeft="@dimen/d_14"
+            android:layout_marginTop="@dimen/d_06"
+            android:layout_toRightOf="@+id/interactive_coupon"
+            android:background="@drawable/shape_bg_four_corner_red"
+            android:paddingLeft="@dimen/d_05"
+            android:paddingRight="@dimen/d_05"
+            tools:text="返红包"
+            android:textColor="#FFFF005F"
+            android:textSize="12sp"/>
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/explosions_img"
+            android:layout_marginLeft="@dimen/d_16"
+            android:layout_marginRight="@dimen/d_16"
+            android:layout_marginTop="@dimen/d_10"
+            android:background="#E6E6E6"
+            />
+
+        <com.by.lizhiyoupin.app.component_ui.weight.ExpandTextView
+            android:id="@+id/interactive_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/d_16"
+            android:layout_marginRight="@dimen/d_16"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="您的粉丝【粉丝昵称】2019.12.12 12:12:12 推广成功，预计团队补贴1.11元，预计结算时间…，预计团队补贴1.11fdfgdfdfd"
+            android:textColor="#FF111111"
+            android:textSize="14sp"
+            android:lineSpacingExtra="@dimen/d_03"
+            app:collapsedLines="2"
+            app:collapsedText="立即购买>"
+            app:expandedText="立即购买>"
+            app:tipsClickable="false"
+            app:tipsColor="#FFFF005E"
+            />
+
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/notice_dot"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

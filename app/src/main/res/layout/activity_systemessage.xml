@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".main.activity.SystemessageActivity">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_below="@+id/actionbar"
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/system_rcy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_10"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/empty_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/d_20"
+            android:drawableTop="@drawable/emity_notice_icon"
+            android:gravity="center"
+            android:text="@string/income_notice_empty_text"
+            android:visibility="gone"
+            />
+        <TextView
+            android:visibility="gone"
+            android:text="@string/fail_retry_fullscreen"
+            android:textColor="@color/gray_40"
+            android:textSize="@dimen/s_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/empty_income_pic"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/d_20"
+            android:gravity="center"
+            />
+
+        <include
+        layout="@layout/loading_layout_center"
+        android:visibility="gone"/>
+    </FrameLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</RelativeLayout>

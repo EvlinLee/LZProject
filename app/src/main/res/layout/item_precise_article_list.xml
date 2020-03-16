@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:id="@+id/double_cl"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="@dimen/d_301"
+                                                   android:background="@drawable/shape_bg_four_corner"
+                                                   android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/d_10"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/d_10"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/shape_list_article_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/item_article_title_tv"
+        style="@style/default_text_style"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/d_10"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:lineSpacingMultiplier="1"
+        android:lines="2"
+        android:textSize="@dimen/s_13"
+        app:layout_constraintLeft_toLeftOf="@id/guide_line_b"
+        app:layout_constraintRight_toRightOf="@+id/guide_line_e"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="商品title最多\n显示2行"/>
+
+    <ImageView
+        android:id="@+id/item_article_top_iv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/d_110"
+        android:layout_marginLeft="@dimen/d_05"
+        android:layout_marginTop="@dimen/d_65"
+        android:layout_marginRight="@dimen/d_05"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/temp_list_detail_pic"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

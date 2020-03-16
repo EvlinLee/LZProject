@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/about_title"
+        android:singleLine="true"
+        style="@style/default_text_style"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="@dimen/s_22"
+        tools:text="标题头"/>
+
+    <TextView
+        android:id="@+id/about_intro"
+        style="@style/default_text_style"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:lineSpacingMultiplier="1.3"
+        android:paddingBottom="10dp"
+        android:textColor="@color/color_545259"
+        android:textSize="@dimen/s_14"
+        tools:text="说明介绍"/>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fans_header_height">252dp</dimen>
+    <dimen name="fans_collapsed_header_height">44dp</dimen>
+    <dimen name="business_collapsed_header_height">48dp</dimen>
+    <dimen name="super_header_height">350dp</dimen>
+
+</resources>

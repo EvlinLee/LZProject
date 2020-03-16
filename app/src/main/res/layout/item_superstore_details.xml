@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d_230"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/d_10"
+    android:layout_marginTop="@dimen/d_14"
+    android:layout_marginRight="@dimen/d_10"
+    android:background="@drawable/withdraw_item_radius_8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_45"
+        android:background="@drawable/super_store_bg">
+
+        <ImageView
+            android:id="@+id/store_logo"
+            android:layout_width="@dimen/d_60"
+            android:layout_height="@dimen/d_30"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/d_10"
+            android:scaleType="fitXY"
+            android:src="@drawable/store_suit"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/shop_into"
+            android:layout_toRightOf="@+id/store_logo"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="马克华菲旗舰店"
+                android:textColor="#ff111111"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/shop_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全场低至5折"
+                android:textColor="#ff555555"
+                android:textSize="13sp"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/shop_into"
+            android:layout_width="@dimen/d_78"
+            android:layout_height="@dimen/d_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d_10"
+            android:src="@drawable/store_into"
+            />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/store_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_10"/>
+
+
+</LinearLayout>

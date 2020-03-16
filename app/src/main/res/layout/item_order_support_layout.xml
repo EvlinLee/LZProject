@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:background="@drawable/shape_bg_save_money_item_full_corner"
+                                                   android:orientation="vertical"
+                                                   android:paddingBottom="@dimen/d_08"
+                                                   android:paddingTop="@dimen/d_10"
+    >
+
+
+    <ImageView
+        android:id="@+id/item_save_money_iv"
+        android:layout_width="@dimen/d_116"
+        android:layout_height="@dimen/d_100"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_12"
+        android:src="@drawable/empty_pic_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_view"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/d_100"
+        android:layout_marginRight="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_12"
+        android:background="@drawable/shape_save_money_item_purple_right_corner"
+        android:paddingLeft="@dimen/d_08"
+        app:layout_constraintLeft_toRightOf="@+id/item_save_money_iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_view">
+
+        <TextView
+            android:id="@+id/item_title_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/d_10"
+            android:singleLine="true"
+            android:textSize="@dimen/s_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="罗衣轻奢系列48支双股100%"/>
+
+        <TextView
+            android:id="@+id/item_create_time_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_08"
+            android:singleLine="true"
+            android:text="@string/save_money_item_create_time_text"
+            android:textColor="@color/color_666666"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_title_tv"/>
+
+        <TextView
+            android:id="@+id/item_order_number_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_07"
+            android:singleLine="true"
+            android:text="@string/save_money_item_order_number_text"
+            android:textColor="@color/color_666666"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_create_time_tv"/>
+
+        <TextView
+            android:id="@+id/item_paid_in_amount_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_08"
+            android:text="@string/save_money_item_paid_in_amount_text"
+            android:textColor="@color/color_666666"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_order_number_tv"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/item_amount_tv"
+            style="@style/default_text_style"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/d_15"
+            android:textColor="@color/color_EF1818"
+            app:layout_constraintBaseline_toBaselineOf="@+id/item_paid_in_amount_tv"
+            app:layout_constraintLeft_toRightOf="@+id/item_paid_in_amount_tv"
+            tools:text="￥10.02"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/item_actual_income_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_07"
+            android:text="@string/save_money_item_actual_income_text"
+            android:textColor="@color/color_666666"
+            app:layout_constraintLeft_toLeftOf="@+id/item_paid_in_amount_tv"
+            app:layout_constraintTop_toBottomOf="@+id/item_paid_in_amount_tv"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/item_pay_tv"
+            style="@style/default_text_style"
+            android:layout_width="0dp"
+            android:layout_height="11dp"
+            android:visibility="gone"
+            android:textColor="@color/color_EF1818"
+            app:layout_constraintBaseline_toBaselineOf="@+id/item_actual_income_tv"
+            app:layout_constraintLeft_toRightOf="@+id/item_actual_income_tv"
+            tools:text="￥12.12"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/see_logistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看物流"
+        android:textSize="@dimen/s_12"
+        android:paddingTop="@dimen/d_06"
+        android:paddingBottom="@dimen/d_06"
+        android:paddingRight="@dimen/d_08"
+        android:paddingLeft="@dimen/d_08"
+        android:textColor="@color/color_333333"
+        android:background="@drawable/shape_bg_twleven_corner_black"
+        app:layout_constraintTop_toBottomOf="@+id/layout"
+        android:layout_marginTop="@dimen/d_08"
+        android:layout_marginRight="@dimen/d_14"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

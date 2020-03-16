@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".user.activity.Revise_NicknameActivity">
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <EditText
+        android:id="@+id/nickname_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_50"
+        android:background="@drawable/withdraw_bg"
+        android:layout_marginTop="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_10"
+        android:layout_marginLeft="@dimen/d_10"
+        android:hint="请输入您要修改的昵称"
+        android:paddingLeft="@dimen/d_10"
+        android:textSize="@dimen/s_16"
+        android:textCursorDrawable="@drawable/cursor_bg_size"
+        >
+
+
+    </EditText>
+    
+    <LinearLayout
+        android:id="@+id/name_sub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_50"
+        android:background="@drawable/nickname_bg_button"
+        android:layout_marginTop="@dimen/d_35"
+        android:layout_marginRight="@dimen/d_10"
+        android:layout_marginLeft="@dimen/d_10"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认提交"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/name_submit"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_50"
+        android:background="@drawable/nickname_bg_button_red"
+        android:layout_marginTop="@dimen/d_25"
+        android:layout_marginRight="@dimen/d_10"
+        android:layout_marginLeft="@dimen/d_10"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认提交"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/space_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_260"
+        android:background="@color/default_content_bg"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingRight="@dimen/d_10">
+
+        <TextView
+            android:id="@+id/pay_title_tv"
+            style="@style/default_text_333_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_25"
+            android:text="@string/select_pay_type_title_text"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RelativeLayout
+            android:id="@+id/ali_pay_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginTop="@dimen/d_25"
+            android:padding="@dimen/d_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pay_title_tv">
+
+            <ImageView
+                android:id="@+id/ali_pay_pic_iv"
+                android:layout_width="@dimen/d_25"
+                android:layout_height="@dimen/d_25"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/pay_alipay_icon"/>
+
+            <TextView
+                style="@style/default_text_333_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_toRightOf="@+id/ali_pay_pic_iv"
+                android:text="@string/alipay_text"
+                android:textSize="@dimen/s_16"/>
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/ali_checkBox"
+                android:layout_width="@dimen/d_25"
+                android:layout_height="@dimen/d_25"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/share_img_selector"
+                android:checked="true"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/pay_type_line"
+            style="@style/list_line_style"
+            android:layout_marginTop="@dimen/d_05"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ali_pay_rl"/>
+
+        <RelativeLayout
+            android:id="@+id/wechat_pay_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginTop="@dimen/d_05"
+            android:padding="@dimen/d_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pay_type_line">
+
+            <ImageView
+                android:id="@+id/wechat_pic_iv"
+                android:layout_width="@dimen/d_25"
+                android:layout_height="@dimen/d_25"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/pay_wechat_icon"/>
+
+            <TextView
+                style="@style/default_text_333_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_toRightOf="@+id/wechat_pic_iv"
+                android:text="@string/wechat_text"
+                android:textSize="@dimen/s_16"/>
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/wechat_checkBox"
+                android:layout_width="@dimen/d_25"
+                android:layout_height="@dimen/d_25"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/share_img_selector"
+                android:checked="false"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/select_pay_confirm_tv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_48"
+            android:layout_marginBottom="@dimen/d_08"
+            android:background="@drawable/vip_pay_true"
+            android:gravity="center"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/d_52"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:paddingLeft="@dimen/d_10"
+          android:paddingRight="@dimen/d_10"
+          android:orientation="vertical"
+          android:textColor="@color/color_5491FE"
+          android:textSize="@dimen/s_18"
+          tools:text="分享内容"/>

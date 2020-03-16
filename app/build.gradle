@@ -1,0 +1,228 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+// 使用Kotlin Android扩展插件 省去findViewById
+apply plugin: 'kotlin-android-extensions'
+//华为 hms
+apply plugin: 'com.huawei.agconnect'
+def outputDirName = ""
+def versionCodeStr = ''
+android {
+
+    defaultConfig {
+        applicationId "com.by.lizhiyoupin.app"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : rootProject.ext.appId,
+                JPUSH_APPKEY  : "0a58ad79abdc4ab3f8830696", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+
+                // 设置manifest.xml中的变量
+                HUAWEI_APPID  : "appid=101044935", // 华为平台注册的appid
+
+                // 设置manifest.xml中的变量
+                XIAOMI_APPKEY : "MI-5741813757226", // 小米平台注册的appkey
+                XIAOMI_APPID  : "MI-2882303761518137226", // 小米平台注册的appid
+
+                // 设置manifest.xml中的变量
+                VIVO_APPKEY   : "136770f6-9ba9-448c-8dbc-21890db31b34", // VIVO平台注册的appkey
+                VIVO_APPID    : "17784", // VIVO平台注册的appid
+
+                // 设置manifest.xml中的变量
+                OPPO_APPKEY   : "OP-372af36ca7e949fbbbc6f89459efedb7", // OPPO平台注册的appkey
+                OPPO_APPID    : "OP-30178101", // OPPO平台注册的appid
+                OPPO_APPSECRET: "OP-c4c1d56d2013420087aebd2d083b6469",//OPPO平台注册的appsecret
+
+                // 设置manifest.xml中的变量
+                MEIZU_APPKEY  : "MZ-4ba389d71079494985ca03ce8d52bc50", // 魅族平台注册的appkey
+                MEIZU_APPID   : "MZ-126654", // 魅族平台注册的appid
+        ]
+    }
+    // 配置CMakeLists.txt路径
+    /*  externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"  // 设置所要编写的c源码位置，以及编译后so文件的名字
+        }
+    }*/
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            debuggable false
+            minifyEnabled false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['debug', 'release', "publish"]
+        }
+        debug {
+            shrinkResources false
+            debuggable true
+            minifyEnabled false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['debug', 'release', "publish"]
+        }
+        publish {
+            shrinkResources true
+            debuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['debug', 'release', 'publish']
+        }
+
+    }
+
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    //构建变体，可以打出不同包名模块的app
+    flavorDimensions "default"//,"try2"
+    productFlavors {
+        market {
+            //正常打包
+            dimension "default"
+            //versionName "release_" + "${rootProject.ext.android.versionCode}"
+        }
+        /* development {
+             dimension "default"
+         }
+ */
+        /*  app2 {
+            dimension "try2"
+            applicationId "com.by.lizhiyoupin.app2"
+        }*/
+    }
+    variantFilter { variant ->
+        def buildType = variant.buildType.name
+        def flavorName = variant.getFlavors().get(0).name
+
+        // 根据构建类型，自动过滤渠道
+        if (buildType.equals('release')) {
+            variant.setIgnore(!flavorName.equals('market'))
+        } else if (buildType.equals('publish')) {
+            variant.setIgnore(!flavorName.equals('market'))
+        } else { //"debug"版本
+            // variant.setIgnore(!flavorName.equals('development'))
+        }
+    }
+//指定release 存放包路径
+    applicationVariants.all { variant ->
+
+        variant.outputs.all { output ->
+            String buildTypeName = "${variant.buildType.name}"
+            versionCodeStr = rootProject.ext.android.versionCode
+            println "buildTypeName is " + buildTypeName
+            if (buildTypeName == "publish") {
+                variant.getPackageApplicationProvider().get().outputDirectory = new File(project.rootDir.absolutePath + "/apk")
+                def fileName = "lizhi-${versionCodeStr}-${variant.buildType.name}.apk"
+                outputFileName = fileName
+                println "outputDirName path is " + outputDirName
+            } else if (buildTypeName == "release") {
+                variant.getPackageApplicationProvider().get().outputDirectory = new File(project.rootDir.absolutePath + "/apk")
+                def fileName = "lizhi-${versionCodeStr}-${buildTypeName}.apk"
+                outputFileName = fileName
+                println "outputDirName path is " + outputDirName
+            } else {
+                println "buildTypeName is debug finally"
+            }
+        }
+    }
+    /*  configurations.all {
+        resolutionStrategy.eachDependency {   details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '25.3.0'
+                }
+            }
+        }
+    }*/
+
+}
+
+dependencies {
+    def app = rootProject.ext.dependencies
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':component_ui')
+    implementation project(':component_io')
+    implementation project(':component_umeng')
+    implementation project(':component_video')
+    implementation project(':commponent_sdk')
+
+    implementation app.appcompat
+    implementation app.constraint_layout
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation app.arouter_api
+    annotationProcessor app.arouter_compiler
+
+    implementation app.butterknife
+    annotationProcessor app.butterknife_compiler
+    //kotlin
+    implementation app.core_ktx
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // 此处以JPush
+    implementation app.jpush
+    implementation app.jpush_jcore
+    implementation app.xiaomi
+    implementation 'com.huawei.hms:push:3.0.3.301'
+    implementation app.huawei
+    implementation app.oppo
+    implementation app.vivo
+    implementation app.meizu
+    //item侧滑
+    implementation app.SwipeDelMenuLayout
+    //数字滚动
+    implementation app.ticker
+    //Sophix
+    implementation('com.aliyun.ams:alicloud-android-hotfix:3.2.12') {
+        //与阿里百川 ut冲突
+        exclude(module: 'alicloud-android-utdid')
+        exclude(module: 'alicloud-android-ut')
+    }
+
+
+}
+
+
+//使用jenkins时需要执行该task，用于获取version
+/*task generateVersionFiles << {
+
+    File latestFile
+    File outputDir = new File(outputDirName)
+    outputDir.listFiles(new FileFilter() {
+        @Override
+        boolean accept(File file) {
+            if ((jiaguApk == null || file.lastModified() > jiaguApk.lastModified()) && file.getName().endsWith("apk")) {
+                latestFile = file
+            }
+            return false
+        }
+    })
+
+    //删除多余的打包文件
+    if (latestFile != null) {
+        new File(outputDirName).eachFile {
+            if (it.name != latestFile.getName() && it.name.endsWith("apk")) {
+                it.delete()
+            }
+        }
+    }
+}*/

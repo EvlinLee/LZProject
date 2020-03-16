@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/search_ll"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d_44"
+              android:orientation="horizontal"
+              android:paddingLeft="@dimen/d_10"
+              android:paddingRight="@dimen/d_10">
+
+    <ImageView
+        android:id="@+id/actionbar_search_back_iv"
+        android:layout_width="@dimen/d_44"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="@dimen/d_10"
+        android:paddingRight="@dimen/d_10"
+        android:paddingBottom="@dimen/d_10"
+        android:src="@drawable/common_back"/>
+
+    <EditText
+        android:id="@+id/actionbar_search_et"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/d_34"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/edit_bussiness_search_corners_four_shape"
+        android:drawableLeft="@drawable/actionbar_search_iv"
+        android:drawablePadding="@dimen/d_06"
+        android:hint="@string/home_search_top_hint_text"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="@dimen/d_12"
+        android:singleLine="true"
+        android:textCursorDrawable="@drawable/cursor_bg_size"
+        android:textColorHint="@color/color_CCCCCC"
+        android:textSize="@dimen/s_14"/>
+
+    <TextView
+        android:id="@+id/actionbar_search_cancel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:paddingLeft="@dimen/d_15"
+        android:paddingTop="@dimen/d_10"
+        android:paddingBottom="@dimen/d_10"
+        android:text="@string/cancel_txt"
+        android:textColor="@color/color_555555"
+        android:textSize="@dimen/s_16"/>
+
+</LinearLayout>

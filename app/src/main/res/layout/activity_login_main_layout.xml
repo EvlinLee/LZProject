@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_content_bg">
+
+        <ImageView
+            android:layout_width="@dimen/d_104"
+            android:layout_height="@dimen/d_130"
+            android:layout_marginTop="@dimen/d_95"
+            android:src="@drawable/login_logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <FrameLayout
+            android:id="@+id/login_wx_fl"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_53"
+            android:layout_marginLeft="@dimen/d_18"
+            android:layout_marginRight="@dimen/d_18"
+            android:layout_marginBottom="@dimen/d_15"
+            android:background="@drawable/login_next_selector"
+            app:layout_constraintBottom_toTopOf="@+id/login_phone_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/wx_logo"
+                android:drawablePadding="@dimen/d_05"
+                android:enabled="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/wx_one_click_login"
+                android:textColor="@color/login_button_text_color_selector"
+                android:textSize="@dimen/s_17"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/login_phone_tv"
+            style="@style/default_text_style"
+            android:layout_marginBottom="@dimen/d_134"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingRight="@dimen/d_10"
+            android:paddingBottom="@dimen/d_10"
+            android:text="@string/phone_fast_login_text"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/s_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="false"
+             android:orientation="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="415dp"
+            android:background="@drawable/shape_bg_signin_gradient_f45e4d_ff005e">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/d_80"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/d_10"
+                        android:layout_marginTop="@dimen/d_15"
+                        android:layout_marginRight="@dimen/d_10"
+                        android:layout_marginBottom="@dimen/d_16"
+                        android:background="@drawable/shape_bg_signin_gradient_fff2f0_ffe5e1"
+                        android:paddingLeft="@dimen/d_10"
+                        android:paddingTop="@dimen/d_37"
+                        android:paddingRight="@dimen/d_10"
+                        android:paddingBottom="@dimen/d_20"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide_line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.75"/>
+
+                        <com.by.lizhiyoupin.app.component_ui.weight.AutoFitTextView
+                            android:id="@+id/sign_in_tip_gift_tv"
+                            style="@style/default_medium_text_style"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="@dimen/d_05"
+                            android:text="周一至周六签满6天，周日额外瓜分5千万"
+                            android:textColor="@color/color_A61048"
+                            android:textSize="@dimen/d_13"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="@+id/guide_line"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+
+                        <CheckBox
+                            android:id="@+id/sign_in_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableLeft="@drawable/sigin_switch_selector"
+                            android:drawablePadding="@dimen/d_05"
+                            android:gravity="center_vertical"
+                            android:text="@string/sign_in_remind_text"
+                            android:textColor="@color/color_A61048"
+                            android:textSize="@dimen/d_11"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/d_20"
+                            android:paddingBottom="@dimen/d_20"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sign_in_tip_gift_tv">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/sign_week_recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/statistics_top_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/sign_in_title_pic"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/statistics_top_day_tv"
+                        style="@style/default_medium_text_style"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="@string/sign_in_statistics_day_text"
+                        android:textColor="@color/color_A61048"
+                        android:textSize="@dimen/s_16"
+                        app:layout_constraintBottom_toBottomOf="@+id/statistics_top_pic"
+                        app:layout_constraintLeft_toLeftOf="@+id/statistics_top_pic"
+                        app:layout_constraintRight_toRightOf="@+id/statistics_top_pic"
+                        app:layout_constraintTop_toTopOf="@+id/statistics_top_pic"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/guess_like_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"/>
+
+            <TextView
+                android:id="@+id/empty_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_200"
+                android:drawableTop="@drawable/empty_foot_pic"
+                android:drawablePadding="@dimen/d_30"
+                android:gravity="center"
+                android:paddingTop="@dimen/d_30"
+                android:text="@string/empty_data_please_later"
+                android:textColor="@color/color_555555"
+                android:textSize="@dimen/s_14"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <include
+                layout="@layout/fail_retry_fullscreen"
+                android:visibility="gone"/>
+
+            <include
+                layout="@layout/loading_layout_center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/sign_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FF005E"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/status_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <include layout="@layout/actionbar_layout"/>
+    </LinearLayout>
+
+
+</FrameLayout>

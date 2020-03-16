@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/no_more_text"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:clickable="true">
+    <View
+        android:visibility="gone"
+        android:id="@+id/line"
+        style="@style/list_line_style"/>
+    <TextView
+        android:id="@+id/more"
+        android:textSize="@dimen/s_12"
+        android:textColor="@color/color_999999"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/d_01"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

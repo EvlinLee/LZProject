@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_marginTop="@dimen/d_08"
+                                                   android:layout_width="wrap_content"
+                                                   android:layout_height="wrap_content"
+                                                   android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/foot_iv"
+        android:scaleType="fitXY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/empty_pic_list"
+        app:layout_constraintBottom_toTopOf="@+id/coupon_tv"
+        android:layout_marginBottom="@dimen/d_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/expired_tv"
+        style="@style/default_text_style"
+        android:layout_marginLeft="@dimen/d_08"
+        android:layout_marginTop="@dimen/d_08"
+        android:background="@drawable/shape_foot_expired_corner"
+        android:padding="@dimen/d_02"
+        android:text="@string/foot_print_expired_text"
+        android:textColor="@color/white_100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/item_foot_check_iv"
+        android:layout_width="@dimen/d_20"
+        android:layout_height="@dimen/d_20"
+        android:layout_marginTop="@dimen/d_06"
+        android:layout_marginRight="@dimen/d_06"
+        android:scaleType="fitXY"
+        android:src="@drawable/share_foot_selector"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/coupon_tv"
+        style="@style/default_text_style"
+        android:text="@string/post_coupon_price_text"
+        android:layout_marginLeft="@dimen/d_08"
+        android:layout_marginBottom="@dimen/d_05"
+        android:textColor="@color/color_555555"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/item_red_coupon_tv"/>
+
+    <TextView
+        android:id="@+id/after_coupon_tv"
+        style="@style/default_text_style"
+        android:layout_marginLeft="@dimen/d_04"
+        android:textSize="@dimen/s_18"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/coupon_tv"
+        app:layout_constraintBaseline_toBaselineOf="@id/coupon_tv"
+        tools:text="￥99"/>
+
+    <TextView
+        android:id="@+id/item_red_coupon_tv"
+        style="@style/default_text_style"
+        android:layout_marginBottom="@dimen/d_10"
+        android:background="@drawable/shape_bg_four_corner_red"
+        android:gravity="center"
+        android:paddingLeft="@dimen/d_06"
+        android:paddingRight="@dimen/d_06"
+        android:text="@string/foot_print_red_coupon_text"
+        android:textColor="@color/color_D60050"
+        app:layout_constraintLeft_toLeftOf="@+id/coupon_tv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

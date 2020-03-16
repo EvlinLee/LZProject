@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d_15"
+        android:paddingTop="@dimen/d_10"
+        android:paddingRight="@dimen/d_10"
+        android:paddingBottom="@dimen/d_20"
+        android:src="@drawable/invitation_code_close"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginTop="@dimen/d_30"
+        android:gravity="center"
+        android:text="@string/order_search_not_find_title"
+        android:textColor="@color/color_D8BC8A"
+        android:textSize="@dimen/s_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/content_title_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginTop="@dimen/d_15"
+        android:gravity="left"
+        android:text="@string/order_search_not_find_reason_title"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv"/>
+
+    <TextView
+        android:id="@+id/tips_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginTop="@dimen/d_05"
+        android:gravity="left"
+        android:paddingBottom="@dimen/d_20"
+        android:text="@string/order_find_error_content"
+        android:textColor="@color/color_999999"
+        app:layout_constraintLeft_toLeftOf="@id/content_title_tv"
+        app:layout_constraintTop_toBottomOf="@id/content_title_tv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    def app = rootProject.ext.dependencies
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':common')
+    implementation app.recyclerview
+    implementation app.constraint_layout
+    implementation app.support_annotations
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // 必选，内部默认使用系统mediaplayer进行解码
+    api 'com.github.dueeeke.dkplayer:dkplayer-java:3.1.4'
+    // 可选，包含StandardVideoController的实现
+    api 'com.github.dueeeke.dkplayer:dkplayer-ui:3.1.4'
+    //可选，使用exoplayer进行解码（推荐）
+    api 'com.github.dueeeke.dkplayer:player-exo:3.1.4'
+    // 可选，使用ijkplayer进行解码
+   // api 'com.github.dueeeke.dkplayer:player-ijk:3.1.4'
+    // 可选，如需要缓存或者抖音预加载功能请引入此库
+    api 'com.github.dueeeke.dkplayer:videocache:3.1.4'
+    //边播边缓存
+    //api 'com.danikula:videocache:2.7.1'
+}

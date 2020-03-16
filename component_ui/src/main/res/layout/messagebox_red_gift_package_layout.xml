@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_40"
+        android:src="@drawable/red_gift_package_pic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginTop="@dimen/d_137"
+        android:text="@string/red_gift_package_title_text"
+        android:textColor="@color/color_D1302D"
+        android:textSize="@dimen/s_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/order_number_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginTop="@dimen/d_05"
+        android:text="@string/red_gift_package_order_number_text"
+        android:textColor="@color/color_D1302D"
+        android:textSize="@dimen/s_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv"/>
+
+    <TextView
+        android:id="@+id/order_price_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginTop="@dimen/d_05"
+        android:singleLine="true"
+        android:textColor="@color/color_D1302D"
+        android:textSize="62sp"
+        android:text="***"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/unit_tv"
+        app:layout_constraintTop_toBottomOf="@+id/order_number_tv"/>
+
+    <TextView
+        android:id="@+id/unit_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginLeft="@dimen/d_01"
+        android:singleLine="true"
+        android:text="元"
+        android:textColor="@color/color_D1302D"
+        android:textSize="@dimen/s_18"
+        app:layout_constraintBaseline_toBaselineOf="@+id/order_price_tv"
+        app:layout_constraintLeft_toRightOf="@+id/order_price_tv"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/add_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginBottom="@dimen/d_30"
+        android:background="@drawable/red_gitf_package_btn"
+        android:gravity="center"
+        android:text="@string/red_gift_package_add_text"
+        android:textColor="@color/color_CD4E42"
+        android:textSize="@dimen/d_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

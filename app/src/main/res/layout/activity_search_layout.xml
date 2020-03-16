@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/default_content_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+
+    <include layout="@layout/actionbar_search_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingRight="@dimen/d_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/video_play_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_10">
+
+                <ImageView
+                    android:id="@+id/image_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_147"
+                    android:src="@drawable/banner02"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/video_start_play"/>
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_05"
+                android:layout_marginTop="@dimen/d_40"
+                android:layout_marginRight="@dimen/d_05">
+
+                <TextView
+                    style="@style/default_text_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="@dimen/d_10"
+                    android:text="@string/search_history_txt"
+                    android:textSize="@dimen/s_16"/>
+
+                <ImageView
+                    android:id="@+id/delete_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/d_05"
+                    android:src="@drawable/search_delete"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_history_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_05"
+                android:layout_marginRight="@dimen/d_05"/>
+
+            <TextView
+                style="@style/default_text_style"
+                android:layout_marginLeft="@dimen/d_05"
+                android:layout_marginTop="@dimen/d_30"
+                android:paddingBottom="@dimen/d_10"
+                android:text="@string/search_history_all_txt"
+                android:textSize="@dimen/s_16"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_recommend_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_05"
+                android:layout_marginRight="@dimen/d_05"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">荔枝优品</string>
+    <string name="loading">正在加载...</string>
+    <string name="no_more">没有更多了</string>
+    <string name="fail_retry">重新加载</string>
+    <string name="press_back_one_more_time_to_exit">再按一次退出APP</string>
+    <string name="value_null">--</string>
+    <string name="down_load_suggest_wifi_text">建议在开启网络或WIFI的情况下更新哦～</string>
+    <string name="down_load_new_version_title_text">新版本上线啦</string>
+    <string name="cancel_txt">取消</string>
+    <string name="confirm_txt">确定</string>
+    <string name="delete_txt">删除</string>
+    <string name="finish_txt">完成</string>
+    <string name="callback_txt">返回</string>
+    <string name="submit_text">提交</string>
+    <string name="search_txt">搜索</string>
+    <string name="jump_txt">跳过</string>
+    <string name="more_txt">更多</string>
+    <string name="goto_home_txt">去首页</string>
+    <string name="splash_goto_txt">立即进入</string>
+    <string name="search_history_txt">搜索历史</string>
+    <string name="search_history_all_txt">大家都在搜</string>
+    <string name="home_search_top_hint_text">粘贴宝贝标题，先领券再购物</string>
+    <string name="actionbar_close_text">关闭</string>
+    <string name="share_qq_zone">QQ空间</string>
+    <string name="share_wechat_moments">朋友圈</string>
+    <string name="share_wechat">微信</string>
+    <string name="share_sina_weibo">新浪微博</string>
+    <string name="share_qq">QQ</string>
+    <string name="invitation_code_hint">请输入您上级邀请码</string>
+    <string name="invitation_code_by_official_text">您可输入官方邀请码：SE612X</string>
+    <string name="select_pay_type_title_text">请选择付款方式</string>
+    <string name="alipay_text">支付宝</string>
+    <string name="wechat_text">微信</string>
+    <string name="fail_retry_fullscreen">加载失败，点击重试！</string>
+    <string name="fans_detail_code_text">微信号：%s</string>
+    <string name="fans_detail_all_text">累计贡献(元)</string>
+    <string name="fans_detail_last_month_for_me_text">上月为我贡献(元)</string>
+    <string name="fans_detail_this_month_for_me_text">本月为我贡献(元)</string>
+    <string name="fans_detail_registration_time_text">注册时间：%s</string>
+    <string name="red_gift_package_title_text">恭喜您获得</string>
+    <string name="red_gift_package_order_number_text">共%s笔订单，合计红包</string>
+    <string name="red_gift_package_add_text">收入钱包</string>
+
+    <!--订单-->
+    <string name="order_search_number_hint">请输入订单编号</string>
+    <string name="order_search_back_title">订单找回</string>
+    <string name="order_search_not_find_title">未查询到该订单</string>
+    <string name="order_search_not_find_reason_title">未查询到订单的可能原因：</string>
+    <string name="order_find_error_content">1、订单有延迟，建议下单30分钟后在查询；\n2、非您购买或推广的订单；\n3、不是通过荔枝优品APP下的订单；\n4、其他，请联系客服；</string>
+    <string name="order_find_success_content">恭喜您，成功找回订单\n马上去</string>
+
+
+    <!--发圈-->
+    <string name="daily_share_red_text">分享返红包</string>
+    <string name="daily_price_text">%s元</string>
+    <string name="business_search_you_want_text">搜索你想要的</string>
+    <string name="business_litchi_consultation_text">玩转新型社交电商，让生意更简单！</string>
+    <string name="business_item_share_text">分享</string>
+    <string name="litchi_information_text">荔枝资讯</string>
+    <string name="search_you_want_text">搜索你想要的</string>
+    <string name="business_title_text">商学院</string>
+
+    <string name="precise_want_to_buy_detail_see_text">浏览量:%s</string>
+
+    <string name="push_manager_select_tip_text">请选择</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/d_12">
+
+    <com.by.lizhiyoupin.app.component_ui.weight.RoundImageView
+        android:id="@+id/inviter_photo_iv"
+        android:layout_width="@dimen/d_50"
+        android:layout_height="@dimen/d_50"
+        android:src="@drawable/default_face"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/inviter_detail_name_tv"
+        style="@style/default_medium_text_333_style"
+        android:layout_marginLeft="@dimen/d_16"
+        android:textSize="@dimen/s_17"
+        app:layout_constraintLeft_toRightOf="@+id/inviter_photo_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="name"/>
+
+    <TextView
+        android:id="@+id/inviter_detail_code"
+        style="@style/default_text_333_style"
+        android:paddingTop="@dimen/d_05"
+        android:text="微信号："
+        android:textSize="@dimen/s_14"
+        app:layout_constraintLeft_toLeftOf="@+id/inviter_detail_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/inviter_detail_name_tv"/>
+
+    <TextView
+        android:id="@+id/inviter_detail_code_tv"
+        style="@style/default_text_333_style"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/d_90"
+        android:paddingTop="@dimen/d_05"
+        android:singleLine="true"
+        android:textSize="@dimen/s_12"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inviter_detail_code"
+        app:layout_constraintLeft_toRightOf="@+id/inviter_detail_code"
+        tools:text="112215151"/>
+
+    <TextView
+        android:id="@+id/inviter_copy_tv"
+        style="@style/default_text_333_style"
+        android:layout_marginLeft="@dimen/d_10"
+        android:background="@drawable/shape_inviter_yellow_corner"
+        android:maxWidth="@dimen/d_100"
+        android:paddingLeft="@dimen/d_03"
+        android:paddingRight="@dimen/d_03"
+        android:singleLine="true"
+        android:text="复制"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inviter_detail_code_tv"
+        app:layout_constraintLeft_toRightOf="@+id/inviter_detail_code_tv"/>
+
+
+    <ImageView
+        android:id="@+id/inviter_close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d_15"
+        android:paddingTop="@dimen/d_20"
+        android:paddingBottom="@dimen/d_20"
+        android:src="@drawable/inviter_close_pic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

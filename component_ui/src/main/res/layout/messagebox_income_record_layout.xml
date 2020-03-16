@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d_15"
+        android:paddingTop="@dimen/d_10"
+        android:paddingRight="@dimen/d_10"
+        android:paddingBottom="@dimen/d_20"
+        android:src="@drawable/invitation_code_close"
+        android:layout_alignParentRight="true"
+      />
+<!--style="@style/default_medium_text_style"-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="累计收益金额：从注册起至当\n前时间，用户所有已经结算的\n订单收益(含订单返佣与平台\n津贴)"
+        android:layout_marginTop="@dimen/d_60"
+        android:paddingBottom="@dimen/d_10"
+        android:textSize="@dimen/s_14"
+        android:layout_centerInParent="true"
+        android:textColor="#ff333333"
+
+
+
+        />
+  <!--  <TextView
+        android:id="@+id/tips_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:paddingBottom="@dimen/d_20"
+        android:textColor="#FF333333"
+        android:textSize="@dimen/s_14"
+        android:layout_centerInParent="true"
+        tools:text="累计收益金额：从注册起至当\n前时间，用户所有已经结算的\n订单收益(含订单返佣与平台津贴)"/>-->
+
+</RelativeLayout>

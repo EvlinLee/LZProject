@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#88000000"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/space_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_220"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingRight="@dimen/d_10"
+
+     >
+
+        <LinearLayout
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_60"
+            android:gravity="center"
+            android:background="@drawable/select_bg_avatar_top_radius13"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="从相册选择"
+                android:textColor="#ff0f72e2"
+                android:textSize="20sp"
+
+                />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/pay_type_line"
+            style="@style/list_line_style"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ali_pay_rl"/>
+        <LinearLayout
+            android:id="@+id/makephoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_60"
+            android:gravity="center"
+            android:background="@drawable/select_bg_avatar_bottom_radius13"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拍照"
+                android:textColor="#ff0f72e2"
+                android:textSize="20sp"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cancle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_60"
+            android:gravity="center"
+            android:background="@drawable/select_bg_avatar_radius13"
+            android:layout_marginTop="@dimen/d_10"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="#ff0f72e2"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

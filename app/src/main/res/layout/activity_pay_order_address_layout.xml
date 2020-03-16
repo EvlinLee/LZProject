@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:background="@color/default_content_gray_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_10"
+        android:background="@color/default_content_bg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingRight="@dimen/d_10">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"/>
+
+        <TextView
+            style="@style/default_medium_text_333_style"
+            android:paddingTop="@dimen/d_12"
+            android:paddingBottom="@dimen/d_12"
+            android:text="@string/order_address_receiving_name_text"
+            android:textSize="@dimen/s_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/order_address_receiving_name_et"
+            style="@style/default_medium_text_333_style"
+            android:layout_width="0dp"
+            android:background="@null"
+            android:hint="@string/order_address_receiving_name_hint"
+            android:paddingTop="@dimen/d_12"
+            android:paddingBottom="@dimen/d_12"
+            android:singleLine="true"
+            android:textSize="@dimen/s_16"
+            android:textCursorDrawable="@drawable/cursor_bg_size"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/line1"
+            style="@style/list_line_style"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/order_address_receiving_name_et"/>
+
+
+        <TextView
+            style="@style/default_medium_text_333_style"
+            android:paddingTop="@dimen/d_12"
+            android:paddingBottom="@dimen/d_12"
+            android:text="@string/order_address_receiving_phone_text"
+            android:textSize="@dimen/s_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line1"/>
+
+        <EditText
+            android:id="@+id/order_address_receiving_phone_et"
+            style="@style/default_medium_text_333_style"
+            android:layout_width="0dp"
+            android:background="@null"
+            android:hint="@string/order_address_receiving_phone_hint"
+            android:maxLength="11"
+            android:inputType="phone"
+            android:paddingTop="@dimen/d_12"
+            android:paddingBottom="@dimen/d_12"
+            android:singleLine="true"
+            android:textSize="@dimen/s_16"
+            android:textCursorDrawable="@drawable/cursor_bg_size"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line1"/>
+
+        <View
+            android:id="@+id/line2"
+            style="@style/list_line_style"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/order_address_receiving_phone_et"/>
+
+
+        <TextView
+            style="@style/default_medium_text_333_style"
+            android:paddingTop="@dimen/d_12"
+            android:paddingBottom="@dimen/d_12"
+            android:text="@string/order_address_receiving_selected_address_text"
+            android:textSize="@dimen/s_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line2"/>
+
+        <TextView
+            android:id="@+id/order_address_receiving_selected_address_et"
+            style="@style/default_medium_text_333_style"
+            android:layout_width="0dp"
+            android:background="@null"
+            android:hint="@string/order_address_receiving_selected_address_hint"
+            android:paddingTop="@dimen/d_12"
+            android:paddingBottom="@dimen/d_12"
+            android:textSize="@dimen/s_16"
+            android:textCursorDrawable="@drawable/cursor_bg_size"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line2"/>
+
+        <View
+            android:id="@+id/line3"
+            style="@style/list_line_style"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/order_address_receiving_selected_address_et"/>
+
+
+        <TextView
+            style="@style/default_medium_text_333_style"
+            android:paddingTop="@dimen/d_12"
+            android:paddingBottom="@dimen/d_12"
+            android:text="@string/order_address_receiving_detail_address_text"
+            android:textSize="@dimen/s_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line3"/>
+
+        <EditText
+            android:id="@+id/order_address_receiving_detail_et"
+            style="@style/default_medium_text_333_style"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_120"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/order_address_receiving_detail_address_hint"
+            android:paddingTop="@dimen/d_12"
+            android:paddingBottom="@dimen/d_10"
+            android:textSize="@dimen/s_16"
+            android:textCursorDrawable="@drawable/cursor_bg_size"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line3"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/order_address_save_tv"
+        style="@style/default_text_style"
+        android:layout_width="@dimen/d_336"
+        android:layout_height="@dimen/d_45"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/d_35"
+        android:background="@drawable/shape_bg_four_corner25_full_red"
+        android:enabled="true"
+        android:gravity="center"
+        android:text="@string/order_address_save_text"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/s_17"/>
+
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".user.activity.CashDetailsActivity">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/group1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_50"
+                android:src="@drawable/examine_details"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_16"
+                android:text="审核中"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/s_21"
+                />
+
+            <TextView
+                android:id="@+id/cash_uptime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="提交时间：2019.01.02 12:12:12"
+                android:textColor="#ff999999"
+                android:textSize="@dimen/s_18"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/group2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/d_40"
+            android:layout_marginLeft="@dimen/d_31"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/cash_details_success"
+                    android:layout_width="@dimen/d_44"
+                    android:layout_height="@dimen/d_44"
+                    android:src="@drawable/cash_details_success"
+                    />
+
+                <TextView
+                    android:id="@+id/tixian_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提现成功"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/s_18"
+                    android:layout_toRightOf="@+id/cash_details_success"
+                    android:layout_marginLeft="8dp"
+                    />
+                <TextView
+                    android:id="@+id/cash_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2019.01.02 12:12:12"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_14"
+                    android:layout_below="@+id/tixian_success"
+                    android:layout_toRightOf="@+id/cash_details_success"
+                    android:layout_marginLeft="8dp"
+                    />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="1.5dp"
+                    android:layout_height="@dimen/d_55"
+                    android:src="@drawable/verticaline"
+                    android:layout_marginLeft="@dimen/d_21"
+                    android:layout_marginTop="3dp"
+                    />
+                <TextView
+                    android:id="@+id/faile_result"
+                    android:visibility="gone"
+                    android:layout_width="226dp"
+                    android:layout_height="wrap_content"
+                    android:text="失败原因：**********************
+******************"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_14"
+                    android:layout_marginLeft="@dimen/d_29"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                >
+                <ImageView
+                    android:id="@+id/auditing"
+                    android:layout_width="@dimen/d_25"
+                    android:layout_height="@dimen/d_25"
+                    android:src="@drawable/auditing"
+                    android:layout_marginLeft="@dimen/d_10"
+
+                    />
+                <TextView
+                    android:id="@+id/auding_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="审核中"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_18"
+                    android:layout_toRightOf="@+id/auditing"
+                    android:layout_marginLeft="@dimen/d_15"
+                    />
+                <TextView
+                    android:id="@+id/cash_tijao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提交时间：2019.01.02 12:12:12"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_14"
+                    android:layout_below="@+id/auding_tv"
+                    android:layout_toRightOf="@+id/auditing"
+                    android:layout_marginLeft="@dimen/d_15"
+                    android:layout_marginTop="8dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_160"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"
+            android:layout_marginTop="@dimen/d_30"
+            android:background="@drawable/user_savemoney"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/d_20"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_16"
+                android:layout_marginTop="@dimen/d_20"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="提现金额"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_18"
+
+                    />
+
+                <TextView
+                    android:id="@+id/cash_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d_16"
+                    android:text="¥ 123.00"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_16"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="手续费"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_18"
+
+                    />
+
+                <TextView
+                    android:id="@+id/cash_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d_16"
+                    android:text="¥ 123.00"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_16"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="实际到账"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_18"
+
+                    />
+
+                <TextView
+                    android:id="@+id/cash_actual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d_16"
+                    android:text="¥ 123.00"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_16"
+                android:layout_marginTop="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/pay_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="支付宝"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_18"
+
+                    />
+
+                <TextView
+                    android:id="@+id/pay_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d_16"
+                    android:text="1234****7890"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

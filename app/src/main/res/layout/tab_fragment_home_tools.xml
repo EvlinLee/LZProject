@@ -1,0 +1,20 @@
+<com.by.lizhiyoupin.app.main.weight.HomeToolsLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                          xmlns:tools="http://schemas.android.com/tools"
+                                          android:id="@+id/homeToolsLayout"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.by.lizhiyoupin.app.component_ui.weight.DotIndicatorView
+        android:id="@+id/indexIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_03"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+</com.by.lizhiyoupin.app.main.weight.HomeToolsLayout>

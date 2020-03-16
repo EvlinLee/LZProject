@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_lt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/super_header_cl"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/super_header_height"
+                        android:background="@drawable/super_go_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide_line_top_h"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_percent="0.2"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d_220"
+                            android:layout_marginLeft="@dimen/d_10"
+                            android:layout_marginRight="@dimen/d_10"
+                            android:layout_marginTop="@dimen/d_25"
+                            android:background="@drawable/withdraw_item_radius_8dp"
+                            app:layout_constraintTop_toBottomOf="@+id/guide_line_top_h">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/super_icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d_50"
+                        android:layout_below="@+id/view"
+                        app:layout_collapseMode="none"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/magicIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_44"
+                    android:background="@color/default_content_bg"/>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:background="@color/color_F2F2F5"
+                android:id="@+id/fans_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_44"
+            android:background="@color/white_100"
+            android:gravity="center"
+            android:text="超级大牌"
+            android:textColor="#ff111111"
+            android:textSize="18sp"/>
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

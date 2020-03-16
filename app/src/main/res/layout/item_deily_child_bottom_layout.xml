@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="@dimen/d_92"
+                                                   android:layout_marginTop="@dimen/d_06"
+                                                   android:background="@drawable/shape_bg_f2f2f2_4_four_corner"
+                                                   android:padding="@dimen/d_06">
+
+    <ImageView
+        android:id="@+id/daily_commend_iv"
+        android:layout_width="@dimen/d_80"
+        android:layout_height="@dimen/d_80"
+        android:src="@drawable/empty_pic_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/daily_commend_title_tv"
+        style="@style/default_medium_text_333_style"
+        android:layout_width="0dp"
+        android:layout_marginLeft="@dimen/d_08"
+        android:layout_marginTop="@dimen/d_05"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintLeft_toRightOf="@+id/daily_commend_iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="title"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/d_45"
+        android:layout_marginLeft="@dimen/d_08"
+        android:layout_marginBottom="@dimen/d_04"
+        android:background="@drawable/shape_bg_daily_ff005f_four_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/daily_commend_iv"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.64"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="1.5dp"
+            android:layout_marginTop="1.5dp"
+            android:layout_marginBottom="1.5dp"
+            android:background="@color/white_100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/guide_line_v2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/post_coupon_price_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center|bottom"
+            android:textColor="@color/color_FF005F"
+            android:textSize="@dimen/s_15"
+            app:layout_constraintBottom_toTopOf="@+id/guide_line_h"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/guide_line_v1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="￥99.23"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center|top"
+            android:text="@string/post_coupon_price_text"
+            android:textColor="@color/color_555555"
+            android:textSize="@dimen/s_11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/guide_line_v1"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_h"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/d_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line_v1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/daily_par_value_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center|bottom"
+            android:textColor="@color/color_FF005F"
+            android:textSize="@dimen/s_15"
+            app:layout_constraintBottom_toTopOf="@+id/guide_line_h"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v1"
+            app:layout_constraintRight_toLeftOf="@+id/guide_line_v2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="￥99.23"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center|top"
+            android:text="@string/post_par_value_text"
+            android:textColor="@color/color_555555"
+            android:textSize="@dimen/s_11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v1"
+            app:layout_constraintRight_toLeftOf="@+id/guide_line_v2"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_h"/>
+        <!--边框边距1，所以显示原角，需要margin 1-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/d_01"
+            android:background="@drawable/shape_daily_gradient_red_full"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="@string/daily_share_red_text"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_12"
+            app:layout_constraintBottom_toTopOf="@+id/guide_line_h"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/daily_red_price_tv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="top|center_horizontal"
+            android:text="@string/daily_price_text"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_h"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

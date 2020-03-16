@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MessageBoxActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:text="透明弹窗"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:text="消息内容弹框"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:text="圆角无按钮，无标题"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:text="圆角无按钮，有标题"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:text="圆角无按钮，有标题，自定义内容"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:text="自定义内容弹框"
+        android:layout_height="wrap_content"/>
+
+
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:text="下次彈框"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

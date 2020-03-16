@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:background="@color/white_100"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_34"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginTop="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_15">
+
+        <TextView
+            android:id="@+id/search_tv"
+            android:layout_width="@dimen/d_60"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_search_business_txt"
+            android:gravity="center"
+            android:text="@string/search_txt"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_14"/>
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/search_tv"
+            android:background="@drawable/edit_bussiness_search_corners_four_shape"
+            android:drawableLeft="@drawable/actionbar_search_iv"
+            android:drawablePadding="@dimen/d_06"
+            android:hint="@string/search_you_want_text"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/d_15"
+            android:textCursorDrawable="@drawable/cursor_bg_size"
+            android:singleLine="true"
+            android:textColorHint="@color/color_CCCCCC"
+            android:textSize="@dimen/s_14"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingRight="@dimen/d_10">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_05"
+            android:layout_marginTop="@dimen/d_40"
+            android:layout_marginRight="@dimen/d_05">
+
+            <TextView
+                style="@style/default_text_style"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/d_10"
+                android:text="@string/search_history_txt"
+                android:textSize="@dimen/s_16"/>
+
+            <ImageView
+                android:id="@+id/delete_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/d_05"
+                android:src="@drawable/search_delete"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_history_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_05"
+            android:layout_marginRight="@dimen/d_05"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

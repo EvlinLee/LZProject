@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_F2F2F5"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        android:background="@color/white_100">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/actionbar_back_tv"
+            style="@style/default_medium_text_style"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/common_back"
+            android:drawablePadding="@dimen/d_05"
+            android:gravity="center"
+            android:paddingLeft="@dimen/d_15"/>
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magicIndicator"
+            android:layout_width="@dimen/d_230"
+            android:layout_height="@dimen/d_34"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_bg_sales_list_title_corner"/>
+
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/d_10"/>
+
+
+</LinearLayout>

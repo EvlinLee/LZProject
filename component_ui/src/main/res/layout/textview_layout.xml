@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:background="@drawable/shape_bg_four_yellow_corner"
+          android:orientation="vertical"
+          tools:text="优选"
+          android:textSize="@dimen/s_10"
+          android:paddingLeft="@dimen/d_05"
+          android:paddingTop="@dimen/d_02"
+          android:paddingRight="@dimen/d_05"
+          android:paddingBottom="@dimen/d_02">
+
+</TextView>

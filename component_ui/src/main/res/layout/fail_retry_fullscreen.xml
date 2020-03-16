@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fail_retry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp"
+        android:src="@drawable/empty_income_pic"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:text="@string/fail_retry_fullscreen"
+        android:textColor="@color/gray_40"
+        android:textSize="@dimen/s_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"/>
+</FrameLayout>

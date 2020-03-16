@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingTop="@dimen/d_40"
+              android:paddingBottom="@dimen/d_40">
+
+
+    <TextView
+        android:id="@+id/content_tv"
+        style="@style/default_text_title_style"
+        android:layout_width="@dimen/d_195"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_20"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:lines="3"
+        tools:text="复制文案制文案案制文案案制内容文案案制文案内容"/>
+
+
+    <TextView
+        android:id="@+id/goto_tv"
+        style="@style/default_text_title_style"
+        android:layout_height="@dimen/d_44"
+        android:layout_marginTop="@dimen/d_30"
+        android:background="@drawable/shape_bg_product_red_full_four_22corner"
+        android:gravity="center"
+        android:paddingLeft="@dimen/d_30"
+        android:paddingRight="@dimen/d_30"
+        android:text="复制文案，分享赚钱"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/s_17"/>
+
+</LinearLayout>

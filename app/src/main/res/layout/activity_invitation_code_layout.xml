@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_100"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/status_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white_100"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/actionbar_phone_login"
+            layout="@layout/actionbar_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/invitation_code_tv"
+            style="@style/default_text_title_style"
+            android:layout_marginLeft="@dimen/d_23"
+            android:layout_marginTop="@dimen/d_45"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/login_invitation_code_text"
+            android:textColor="@color/color_111111"
+            android:textSize="@dimen/s_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionbar_phone_login"/>
+
+
+        <EditText
+            android:id="@+id/invitation_code_input_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_30"
+            android:layout_marginRight="@dimen/d_23"
+            android:background="@drawable/shape_et_underline"
+            android:hint="@string/login_invitation_code_hint"
+            android:maxLength="11"
+            android:paddingBottom="@dimen/d_14"
+            android:singleLine="true"
+            android:textSize="@dimen/s_18"
+            app:layout_constraintLeft_toLeftOf="@+id/invitation_code_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/invitation_code_tv"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/invitation_code_from_cv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_90"
+            android:layout_marginTop="@dimen/d_20"
+            android:visibility="gone"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintLeft_toLeftOf="@+id/invitation_code_input_et"
+            app:layout_constraintRight_toRightOf="@id/invitation_code_input_et"
+            app:layout_constraintTop_toBottomOf="@+id/invitation_code_input_et"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.by.lizhiyoupin.app.component_ui.weight.RoundImageView
+                    android:id="@+id/face_iv"
+                    android:layout_width="@dimen/d_50"
+                    android:layout_height="@dimen/d_50"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/d_20"
+                    android:src="@drawable/default_face"/>
+
+                <TextView
+                    android:id="@+id/introduction_tv"
+                    style="@style/default_text_style"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/d_12"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/login_inviter_li_zhi"
+                    android:textSize="@dimen/s_14"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/invitation_code_next_tv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_53"
+            android:layout_marginLeft="@dimen/d_18"
+            android:layout_marginTop="@dimen/d_50"
+            android:layout_marginRight="@dimen/d_18"
+            android:background="@drawable/login_next_selector"
+            android:enabled="false"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/login_invitation_code_next"
+            android:textColor="@color/login_button_text_color_selector"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/invitation_code_from_cv"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

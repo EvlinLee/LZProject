@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    android:fitsSystemWindows="false"
+    tools:context=".detail.activity.PaySuccessActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_175"
+        android:background="#FFFF5F33"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_57"
+            android:drawableLeft="@drawable/paysuccess"
+            android:drawablePadding="@dimen/d_07"
+            android:text="支付成功"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_16"
+            android:text="下方有可能会有您心仪的商品哦～"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/s_12"
+            />
+
+        <TextView
+            android:id="@+id/back_home"
+            android:layout_width="@dimen/d_75"
+            android:layout_height="@dimen/d_22"
+            android:layout_marginTop="@dimen/d_16"
+            android:background="@drawable/pay_white_bg_13dp"
+            android:gravity="center"
+            android:text="返回首页"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+    <!--猜你喜欢-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_55"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/guess_like_litchi_pic"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:overScrollMode="never"
+        android:id="@+id/guess_you_like_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_10"
+        />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/d_50"/>
+
+</LinearLayout>

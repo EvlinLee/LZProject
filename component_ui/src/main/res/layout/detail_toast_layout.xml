@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_bg_toast_corner10"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/d_12"
+              android:layout_gravity="center"
+              android:paddingTop="@dimen/d_30"
+              android:paddingRight="@dimen/d_12"
+              android:paddingBottom="@dimen/d_30">
+
+    <TextView
+        android:id="@+id/message_tv"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/d_16"
+        android:layout_width="@dimen/d_200"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:drawableTop="@drawable/toast_close"
+        android:drawablePadding="@dimen/d_15"
+        android:text="提示"/>
+
+</LinearLayout>

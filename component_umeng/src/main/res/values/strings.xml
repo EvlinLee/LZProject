@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">荔枝优品</string>
+    <string name="not_install_wechat">未安装微信</string>
+    <string name="not_install_qq">未安装QQ</string>
+    <string name="share_back_error_text">分享出错</string>
+    <string name="sina_weibo_share_success">微博分享成功</string>
+
+</resources>

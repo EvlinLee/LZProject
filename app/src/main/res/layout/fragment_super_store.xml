@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/store_rcy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_60"
+        android:drawableTop="@drawable/empty_income_pic"
+        android:drawablePadding="@dimen/d_30"
+        android:gravity="center"
+        android:paddingTop="@dimen/d_20"
+        android:text="暂无数据，请稍后再来"
+
+        />
+
+    <include
+        layout="@layout/fail_retry_fullscreen"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/loading_layout_center"
+        android:visibility="gone"/>
+</LinearLayout>
+

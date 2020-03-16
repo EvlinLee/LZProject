@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/d_10"
+    android:layout_marginRight="@dimen/d_10"
+    android:background="@drawable/withdraw_item_radius_8dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/explosions_time"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d_16"
+        android:paddingTop="@dimen/d_10"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/s_13"
+        tools:text="2019.12.31 12:12:12"/>
+
+        <TextView
+            android:id="@+id/explosions_push"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d_16"
+            android:paddingTop="@dimen/d_10"
+            android:textColor="#ff999999"
+            android:gravity="end"
+            android:layout_marginRight="@dimen/d_16"
+            android:textSize="@dimen/s_13"
+            tools:text="未发送"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/d_16"
+        android:layout_marginTop="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_16"
+        android:background="#E6E6E6"/>
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/item_push_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/d_10">
+
+
+            <ImageView
+                android:id="@+id/explosions_img"
+                android:layout_width="@dimen/d_120"
+                android:layout_height="@dimen/d_120"
+                android:layout_marginTop="@dimen/d_10"
+                android:src="@drawable/empty_pic_list"/>
+
+            <TextView
+                android:id="@+id/explosions_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_14"
+                android:layout_marginTop="@dimen/d_12"
+                android:layout_marginRight="@dimen/d_17"
+                android:layout_toRightOf="@+id/explosions_img"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#ff555555"
+                android:textSize="14sp"
+                tools:text="您的粉丝【粉丝昵称】2019.12.12 12:12:12 "/>
+
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/explosions_content"
+                android:layout_marginLeft="@dimen/d_14"
+                android:layout_marginTop="@dimen/d_35"
+                android:layout_toRightOf="@+id/explosions_img"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/interactive_qian"
+                    style="@style/default_text_style"
+                    android:layout_gravity="bottom"
+                    android:text="￥"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+                    android:id="@+id/interactive_price"
+                    style="@style/default_text_style"
+                    android:textSize="@dimen/s_18"
+                    app:type_bold="true"
+                    tools:text="15.11"/>
+
+                <TextView
+                    android:id="@+id/interactive_juanhou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_04"
+                    android:text="券后"
+                    android:textColor="#FF555555"
+                    android:textSize="14sp"/>
+
+
+                <TextView
+                    android:id="@+id/interactive_vonum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_08"
+                    android:layout_marginTop="@dimen/d_01"
+                    android:textColor="#FF999999"
+                    android:textSize="14sp"
+                    tools:text="月销1234"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/interactive_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:layout_marginLeft="@dimen/d_14"
+                android:layout_marginTop="@dimen/d_06"
+                android:layout_toRightOf="@+id/explosions_img"
+                android:background="@drawable/item_list_red_bg_pic"
+                android:gravity="center"
+                android:textColor="@color/color_FCEFF4"
+                android:textSize="12sp"
+                tools:text="20元劵"/>
+
+
+            <TextView
+                android:id="@+id/interactive_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:layout_marginLeft="@dimen/d_14"
+                android:layout_marginTop="@dimen/d_06"
+                android:layout_toRightOf="@+id/interactive_coupon"
+                android:textColor="#FFFF005F"
+                android:textSize="12sp"
+                tools:text="佣金比例30%"
+                />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/explosions_img"
+                android:layout_marginLeft="@dimen/d_06"
+                android:layout_marginTop="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_06"
+                android:background="#E6E6E6"
+                />
+
+            <com.by.lizhiyoupin.app.component_ui.weight.ExpandTextView
+                android:id="@+id/interactive_descibe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/d_06"
+                android:layout_marginTop="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_06"
+                android:lineSpacingExtra="@dimen/d_03"
+                android:textColor="#FF111111"
+                android:textSize="14sp"
+                app:collapsedLines="2"
+                app:collapsedText="立即购买>"
+                app:expandedText="立即购买>"
+                app:tipsClickable="false"
+                app:tipsColor="#FFFF005E"
+                tools:text="您的粉丝【粉丝昵称】2019.12.12 12:12:12 推广成功，预计团队补贴1.11元，预计结算时间…，预计团队补贴1.11"
+                />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/item_shopping_delete_tv"
+            android:layout_width="@dimen/d_68"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_bg_shopping_cart_delete_red"
+            android:gravity="center"
+            android:text="@string/delete_txt"
+            android:textColor="@color/white_100"/>
+
+
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</LinearLayout>

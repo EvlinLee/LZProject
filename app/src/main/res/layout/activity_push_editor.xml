@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF2F2F5"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/actionbar_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/top_tips_tv"
+        style="@style/default_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_34"
+        android:background="@color/color_FFF5F9"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/d_15"
+        android:paddingRight="@dimen/d_15"
+        android:singleLine="true"
+        android:text="@string/push_edit_tips_text"
+        android:textColor="@color/color_B3597D"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionbar_rl"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_fl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_tips_tv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--添加商品-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_30"
+                android:layout_marginRight="@dimen/d_15"
+                android:layout_marginBottom="@dimen/d_15">
+
+                <TextView
+                    android:id="@+id/item_tip_1"
+                    style="@style/default_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请添加商品"
+                    android:textSize="@dimen/s_16"/>
+
+                <TextView
+                    style="@style/default_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/d_15"
+                    android:layout_marginRight="@dimen/d_15"
+                    android:layout_toRightOf="@+id/item_tip_1"
+                    android:text="每条推送只能添加一个商品"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/s_13"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/more_push_product_tv"
+                    style="@style/default_text_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:drawableRight="@drawable/direction_right"
+                    android:drawablePadding="@dimen/d_05"
+                    android:text="@string/more_txt"
+                    android:textColor="@color/color_555555"
+                    android:textSize="@dimen/s_14"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/select_goods_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:src="@drawable/push_empty_add"/>
+
+            <include
+                layout="@layout/item_push_single_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_140"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_15"
+                android:background="@drawable/shape_bg_four_corner"
+                android:visibility="gone"/>
+
+
+            <!--推送对象-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_15">
+
+                <TextView
+                    style="@style/default_text_style"
+                    android:text="请选择推送对象"
+                    android:textSize="@dimen/s_16"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/more_push_people_tv"
+                    style="@style/default_text_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:drawableRight="@drawable/direction_right"
+                    android:drawablePadding="@dimen/d_05"
+                    android:text="@string/more_txt"
+                    android:textColor="@color/color_555555"
+                    android:textSize="@dimen/s_14"/>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/select_people_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:src="@drawable/push_empty_add"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/select_people_Rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_15"
+                android:visibility="gone"/>
+            <!--推送内容-->
+            <TextView
+                style="@style/default_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_15"
+                android:text="请选择推送内容"
+                android:textSize="@dimen/s_16"/>
+
+            <RelativeLayout
+                android:id="@+id/content_select_Rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_44"
+                android:layout_marginTop="@dimen/d_15"
+                android:background="@color/white_100"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingRight="@dimen/d_15">
+
+                <TextView
+                    android:id="@+id/push_content_tag_tv"
+                    style="@style/default_text_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/push_manager_select_tip_text"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/s_16"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="@dimen/d_20"
+                    android:src="@drawable/direction_right"/>
+
+            </RelativeLayout>
+
+            <!--推送时间-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_30"
+                android:layout_marginRight="@dimen/d_15"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/default_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择推送时间"
+                    android:textSize="@dimen/s_16"/>
+
+                <TextView
+                    style="@style/default_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/d_15"
+                    android:layout_marginRight="@dimen/d_15"
+                    android:gravity="bottom"
+                    android:text="只能推送未来3天内的消息"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/s_13"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/time_select_Rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_44"
+                android:layout_marginTop="@dimen/d_15"
+                android:background="@color/white_100"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingRight="@dimen/d_15">
+
+                <TextView
+                    android:id="@+id/time_select_tv"
+                    style="@style/default_text_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/push_manager_select_tip_text"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/s_16"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="@dimen/d_20"
+                    android:src="@drawable/direction_right"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_100"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottom_fl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_49"
+        android:background="@color/white_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/submit_tv"
+            style="@style/default_medium_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_41"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"
+            android:background="@drawable/shape_bg_splash_4_ff005e_full_four_corner"
+            android:gravity="center"
+            android:text="@string/submit_text"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_16"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

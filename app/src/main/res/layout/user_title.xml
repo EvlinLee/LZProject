@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d_205"
+    android:background="@mipmap/user_backgroud">
+
+    <ImageView
+        android:id="@+id/user_touxiang"
+        android:layout_width="@dimen/d_50"
+        android:layout_height="@dimen/d_50"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/d_27"
+        android:src="@drawable/default_face"/>
+
+    <TextView
+        android:id="@+id/user_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/d_16"
+        android:layout_toRightOf="@+id/user_touxiang"
+        android:text="立即登录"
+        android:textColor="#ffffffff"
+        android:textSize="22sp"/>
+
+    <ImageView
+        android:id="@+id/user_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/d_27"
+        android:src="@mipmap/right_arrow"/>
+
+    <RelativeLayout
+        android:id="@+id/user_vip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/user_vip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_42"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="0元升级超级会员权益"
+            android:textColor="#874700"
+            android:textSize="@dimen/s_18"/>
+
+        <TextView
+            android:layout_width="@dimen/d_64"
+            android:layout_height="@dimen/d_19"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/d_61"
+            android:layout_marginTop="@dimen/d_13"
+            android:layout_marginRight="@dimen/d_51"
+            android:background="@drawable/user_instant"
+            android:gravity="center"
+            android:text="立即参与"
+            android:textColor="#F6DBA8"
+            android:textSize="@dimen/s_12"/>
+
+    </RelativeLayout>
+</RelativeLayout>
+

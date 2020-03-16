@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_F2F2F5"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout"/>
+
+    <include layout="@layout/actionbar_search_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginTop="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"
+            android:layout_marginBottom="@dimen/d_50"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <include layout="@layout/recyclerview_empty_load_layout"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_49"
+            android:background="@color/white_100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <TextView
+                android:id="@+id/select_all_tv"
+                style="@style/default_text_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="全选"
+                android:textSize="@dimen/s_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/submit_tv"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/submit_tv"
+                style="@style/default_medium_text_style"
+                android:layout_width="@dimen/d_273"
+                android:layout_height="@dimen/d_44"
+                android:layout_marginRight="@dimen/d_10"
+                android:background="@drawable/button_ff005e_cccccc_4dp_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/submit_text"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/normal_group"
+                android:layout_width="wrap_content"
+                app:constraint_referenced_ids="select_all_tv,submit_tv"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/invite_tv"
+                style="@style/default_medium_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_44"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:background="@drawable/button_ff005e_cccccc_4dp_selector"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="邀请好友"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/s_16"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

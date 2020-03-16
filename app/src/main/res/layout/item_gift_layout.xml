@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="@dimen/d_10"
+              android:paddingRight="@dimen/d_10"
+              android:paddingBottom="@dimen/d_10"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/time_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingTop="@dimen/d_15"
+            android:paddingBottom="@dimen/d_15"
+            android:textSize="@dimen/s_18"
+            tools:text="今日"/>
+
+        <TextView
+            android:id="@+id/load_more_tv"
+            style="@style/default_text_333_style"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingTop="@dimen/d_15"
+            android:paddingBottom="@dimen/d_15"
+            android:text="@string/item_load_more_text"
+            android:textColor="@color/color_D6B667"
+            android:textSize="@dimen/s_14"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_commission_full_corner"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingTop="@dimen/d_20"
+        android:paddingRight="@dimen/d_10"
+        android:paddingBottom="@dimen/d_20">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55"/>
+
+        <TextView
+            android:id="@+id/total_payments_text"
+            style="@style/default_text_style"
+            android:text="@string/income_record_total_payments_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/total_payments_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:type_bold="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total_payments_text"
+            tools:text="102"/>
+
+
+        <TextView
+            android:id="@+id/fans_payments_text"
+            style="@style/default_text_style"
+            android:text="@string/income_record_exclusive_number_of_fans_payments_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line_v"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/exclusive_number_fans_payments_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:type_bold="true"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line_v"
+            app:layout_constraintTop_toBottomOf="@+id/fans_payments_text"
+            tools:text="102"/>
+
+        <TextView
+            android:id="@+id/normal_fans_payments_text"
+            style="@style/default_text_style"
+            android:text="@string/income_record__normal_number_of_fans_payments_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line_v2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/normal_number_fans_payments_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:type_bold="true"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line_v2"
+            app:layout_constraintTop_toBottomOf="@+id/normal_fans_payments_text"
+            tools:text="102"/>
+
+
+        <TextView
+            android:id="@+id/total_estimated_text"
+            style="@style/default_text_style"
+            android:text="@string/income_record_total_estimated_revenue_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_h"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/total_estimated_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:type_bold="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total_estimated_text"
+            tools:text="102"/>
+
+
+        <TextView
+            android:id="@+id/exclusive_fans_total_estimated_text"
+            style="@style/default_text_style"
+            android:text="@string/income_record_exclusive_fans_total_estimated_revenue_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_h"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/exclusive_fans_total_estimated_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:type_bold="true"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v"
+            app:layout_constraintTop_toBottomOf="@+id/exclusive_fans_total_estimated_text"
+            tools:text="102"/>
+
+
+        <TextView
+            android:id="@+id/normal_fans_estimated_text"
+            style="@style/default_text_style"
+            android:text="@string/income_record_normal_fans_estimated_revenue_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v2"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_h"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/normal_fans_estimated_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:type_bold="true"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v2"
+            app:layout_constraintTop_toBottomOf="@+id/normal_fans_estimated_text"
+            tools:text="102"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

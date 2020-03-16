@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/item_shake_barrage_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_24"
+        android:layout_marginTop="@dimen/d_08"
+        android:background="@drawable/shape_bg_shake_barrage_12"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/user_iv"
+            android:layout_width="@dimen/d_20"
+            android:layout_height="@dimen/d_20"
+            android:layout_marginLeft="@dimen/d_02"
+            android:src="@drawable/default_face"/>
+
+        <TextView
+            android:id="@+id/user_name_tv"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:paddingLeft="@dimen/d_05"
+            android:paddingRight="@dimen/d_05"
+            android:layout_marginLeft="@dimen/d_05"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_13"
+            tools:text="小米**好好"/>
+
+        <TextView
+            android:id="@+id/user_action_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/d_06"
+            android:background="@drawable/shape_barrage_buying"
+            android:gravity="center"
+            android:paddingLeft="@dimen/d_08"
+            android:paddingRight="@dimen/d_08"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_13"
+            tools:text="正在购买"/>
+    </LinearLayout>
+
+
+</LinearLayout>

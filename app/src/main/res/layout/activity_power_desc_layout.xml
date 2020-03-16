@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/power_top_iv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/power_top_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/power_bottom_bg"
+                android:paddingBottom="@dimen/d_30"
+                android:scaleType="fitXY"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/power_top_iv">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d_05"
+                    android:src="@drawable/power_stop_left"
+                    app:layout_constraintBottom_toBottomOf="@+id/power_tips_tv"
+                    app:layout_constraintRight_toLeftOf="@+id/power_tips_tv"
+                    app:layout_constraintTop_toTopOf="@+id/power_tips_tv"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_05"
+                    android:src="@drawable/power_stop_right"
+                    app:layout_constraintBottom_toBottomOf="@+id/power_tips_tv"
+                    app:layout_constraintLeft_toRightOf="@+id/power_tips_tv"
+                    app:layout_constraintTop_toTopOf="@+id/power_tips_tv"/>
+
+                <TextView
+                    android:id="@+id/power_tips_tv"
+                    style="@style/default_medium_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vip_power_title_text"
+                    android:textColor="@color/color_F9DE93"
+                    android:textSize="@dimen/s_23"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+                <View
+                    android:id="@+id/power_view"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/d_278"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:layout_marginTop="@dimen/d_20"
+                    android:background="@drawable/shape_bg_power_left_corner"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@+id/guide_line_v"
+                    app:layout_constraintTop_toBottomOf="@+id/power_tips_tv"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/d_278"
+                    android:layout_marginTop="@dimen/d_20"
+                    android:layout_marginRight="@dimen/d_10"
+                    android:background="@drawable/shape_bg_power_right_corner"
+                    app:layout_constraintLeft_toLeftOf="@+id/guide_line_v"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/power_tips_tv"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/power_rv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/d_20"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:layout_marginRight="@dimen/d_10"
+                    android:minHeight="@dimen/d_278"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/power_view"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

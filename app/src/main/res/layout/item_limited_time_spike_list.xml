@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_140"
+        android:layout_marginLeft="@dimen/d_04"
+        android:background="@drawable/shape_bg_four_corner"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="140dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/d_10"/>
+
+        <ImageView
+            android:id="@+id/item_list_top_iv"
+            android:layout_width="@dimen/d_120"
+            android:layout_height="@dimen/d_120"
+            android:layout_marginLeft="@dimen/d_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/temp_list_detail_pic"/>
+
+
+        <TextView
+            android:id="@+id/item_list_title_tv"
+            style="@style/default_text_style"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/d_10"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:lines="2"
+            android:textSize="@dimen/s_14"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line_b"
+            app:layout_constraintRight_toRightOf="@+id/guide_line_e"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="商品title最多\n显示2行"/>
+
+        <ImageView
+            android:id="@+id/item_list_name_icon_iv"
+            android:layout_width="@dimen/d_14"
+            android:layout_height="@dimen/d_14"
+            android:src="@drawable/temp_detail_tao_pic"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/item_list_name_tv"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line_b"
+            app:layout_constraintTop_toTopOf="@+id/item_list_name_tv"/>
+
+        <TextView
+            android:id="@+id/item_list_name_tv"
+            style="@style/default_tint_color_text_style"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/d_05"
+            android:layout_marginTop="@dimen/d_58"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/item_list_name_icon_iv"
+            app:layout_constraintRight_toRightOf="@id/guide_line_e"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="商户名称"/>
+
+        <ProgressBar
+            android:id="@+id/progress1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/d_120"
+            android:layout_height="@dimen/d_11"
+            android:layout_marginTop="@dimen/d_58"
+            android:background="@drawable/progress_color_radius7dp"
+            android:max="100"
+            android:progress="30"
+            android:progressDrawable="@drawable/limit_time_prograss_bg"
+            app:layout_constraintLeft_toRightOf="@id/guide_line_b"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/item_list_progress_tv"
+            style="@style/default_tint_color_text_style"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/d_05"
+            android:layout_marginTop="@dimen/d_57"
+            android:textColor="#FFE62E35"
+            android:textSize="@dimen/s_10"
+            app:layout_constraintLeft_toRightOf="@id/progress1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="等待开抢"/>
+
+        <!--Y246 券后 月销10万+  start-->
+
+        <TextView
+            android:id="@+id/item_list_price_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_18"
+            android:textColor="#FFFF005F"
+            android:textSize="@dimen/s_22"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line_b"
+            app:layout_constraintTop_toBottomOf="@+id/progress1"
+            tools:text="246"/>
+
+        <TextView
+            android:id="@+id/item_list_after_ticket_tv"
+            style="@style/default_text_style"
+            android:layout_marginLeft="@dimen/d_06"
+            android:layout_marginTop="@dimen/d_10"
+            android:background="@drawable/litmit_skill_price"
+            android:gravity="center"
+            android:paddingBottom="@dimen/d_02"
+            android:paddingTop="@dimen/d_02"
+            android:textColor="#FFE62E35"
+            android:textSize="@dimen/s_12"
+            app:layout_constraintLeft_toRightOf="@+id/item_list_price_tv"
+            app:layout_constraintTop_toBottomOf="@+id/progress1"
+            tools:text="券后4.9"/>
+
+        <TextView
+            android:id="@+id/item_list_volume_tv"
+            style="@style/default_tint_color_text_style"
+            android:layout_marginLeft="@dimen/d_08"
+            android:text="@string/list_volume_text"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@+id/item_list_price_tv"
+            app:layout_constraintLeft_toRightOf="@+id/item_list_after_ticket_tv"
+            app:layout_constraintTop_toBottomOf="@+id/item_list_name_tv"/>
+
+        <!--Y246 券后 月销10万+  end-->
+
+
+        <TextView
+            android:id="@+id/item_list_bottom_left_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_08"
+            android:background="@drawable/item_list_red_bg_pic"
+            android:gravity="center"
+            android:textColor="@color/color_FCEFF4"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line_b"
+            app:layout_constraintTop_toBottomOf="@+id/item_list_price_tv"
+            tools:text="20元券"/>
+
+
+        <TextView
+            android:id="@+id/item_list_bottom_right_tv"
+            style="@style/default_text_style"
+            android:layout_marginLeft="@dimen/d_05"
+            android:layout_marginTop="@dimen/d_08"
+            android:background="@drawable/shape_bg_four_corner_red"
+            android:gravity="center"
+            android:paddingBottom="@dimen/d_01"
+            android:paddingLeft="@dimen/d_06"
+            android:paddingRight="@dimen/d_06"
+            android:paddingTop="@dimen/d_01"
+            android:textColor="@color/color_D60050"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/item_list_bottom_left_tv"
+            app:layout_constraintTop_toBottomOf="@+id/item_list_price_tv"
+            tools:text="返红包24元"/>
+
+        <TextView
+            android:id="@+id/item_onlynum"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:textColor="#ffe62e35"
+            android:textSize="@dimen/s_13"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line_b"
+            app:layout_constraintTop_toBottomOf="@+id/item_list_price_tv"
+            tools:text="仅剩6498件"
+            />
+
+        <TextView
+            android:id="@+id/item_rob_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_limited_time_red_circular"
+            android:gravity="center"
+            android:paddingBottom="@dimen/d_07"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingRight="@dimen/d_10"
+            android:paddingTop="@dimen/d_07"
+            android:text="@string/limit_time_spike_text"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_16"
+            app:layout_constraintBottom_toBottomOf="@id/item_onlynum"
+            app:layout_constraintRight_toRightOf="@id/guide_line_e"/>
+
+
+        <TextView
+            android:id="@+id/item_remind_tv"
+            style="@style/default_text_style"
+            android:background="@drawable/shape_bg_limited_time_green_four"
+            android:gravity="center"
+            android:paddingBottom="@dimen/d_07"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingRight="@dimen/d_10"
+            android:paddingTop="@dimen/d_07"
+            android:text="@string/limit_time_spike_remind_text"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/s_16"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/item_onlynum"
+            app:layout_constraintRight_toRightOf="@id/guide_line_e"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/limit_discount"
+        android:layout_width="@dimen/d_46"
+        android:layout_height="@dimen/d_24"
+        android:layout_marginTop="@dimen/d_10"
+        android:background="@drawable/limit_skill_coupurl"
+        android:gravity="center"
+        android:paddingBottom="@dimen/d_04"
+        android:text="0.4折"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/s_12"
+        />
+</FrameLayout>

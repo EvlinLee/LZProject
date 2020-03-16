@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/detail_current_store_desc_tv"
+        style="@style/default_text_style"
+        android:text="@string/product_detail_baby_desc_text"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/detail_current_store_score_tv"
+        style="@style/default_text_style"
+        android:layout_marginLeft="@dimen/d_05"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintBaseline_toBaselineOf="@id/detail_current_store_desc_tv"
+        app:layout_constraintLeft_toRightOf="@id/detail_current_store_desc_tv"
+        tools:text="4.7"/>
+
+    <TextView
+        android:id="@+id/detail_current_store_level_tv"
+        style="@style/default_text_style"
+        android:layout_marginLeft="@dimen/d_05"
+        android:background="@drawable/shape_bg_gray_four_corner"
+        android:padding="@dimen/d_02"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/s_10"
+        app:layout_constraintBaseline_toBaselineOf="@id/detail_current_store_score_tv"
+        app:layout_constraintLeft_toRightOf="@id/detail_current_store_score_tv"
+        tools:text="低"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

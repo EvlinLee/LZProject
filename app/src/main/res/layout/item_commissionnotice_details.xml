@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    tools:context=".user.activity.WithdrawDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_10"
+        android:background="@drawable/withdraw_item_radius_8dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/d_14"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_12"
+            android:layout_marginTop="@dimen/d_14"
+            >
+
+            <ImageView
+                android:id="@+id/commission_avar"
+                android:layout_width="@dimen/d_53"
+                android:layout_height="53dp"
+                android:src="@drawable/default_face"
+                />
+
+            <TextView
+                android:id="@+id/commission_content"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                tools:text="您的粉丝【粉丝昵称】2019.12.12 12:12:12推广成功，预计普通佣金1.11元
+预计结算时间：收货后次月25日结算"
+                android:lineSpacingExtra="@dimen/d_04"
+                android:textColor="#ff555555"
+                android:textSize="@dimen/s_14"
+                />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/d_77"
+            android:layout_marginTop="@dimen/d_14"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单号"
+                android:textColor="#ff999999"
+                android:textSize="@dimen/s_12"
+                />
+            <TextView
+                android:id="@+id/commssion_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12321414213"
+                android:maxEms="7"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#ff111111"
+                android:textSize="@dimen/s_14"
+                android:layout_marginTop="6dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/d_14"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/d_95"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单类型"
+                android:textColor="#ff999999"
+                android:textSize="@dimen/s_12"
+                />
+            <TextView
+                android:id="@+id/commssion_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天猫"
+                android:textColor="#ff111111"
+                android:textSize="@dimen/s_14"
+                android:layout_marginTop="6dp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/d_77"
+                android:layout_marginTop="@dimen/d_14"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单金额"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_12"
+                    />
+                <TextView
+                    android:id="@+id/commssion_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14.5元"
+                    android:textColor="#ff111111"
+                    android:textSize="@dimen/s_14"
+                    android:layout_marginTop="6dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/d_14"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/d_95"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获得佣金"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/s_12"
+                    />
+                <TextView
+                    android:id="@+id/commssion_yonjin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11.11元"
+                    android:textColor="#ff111111"
+                    android:textSize="@dimen/s_14"
+                    android:layout_marginTop="6dp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notice_dot"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

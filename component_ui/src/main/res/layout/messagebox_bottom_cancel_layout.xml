@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/share_close_iv"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/d_08"
+              android:layout_marginBottom="@dimen/d_10"
+              android:background="@drawable/shape_bg_white_13_full_corner">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_52"
+        android:gravity="center"
+        android:text="@string/cancel_txt"
+        android:textColor="@color/color_5491FE"
+        android:textSize="@dimen/s_18"/>
+</LinearLayout>

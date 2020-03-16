@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:background="@color/color_F2F2F5"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/d_15"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingRight="@dimen/d_10"/>
+
+    <TextView
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_80"
+        android:drawableTop="@drawable/empty_income_pic"
+        android:drawablePadding="@dimen/d_30"
+        android:gravity="center"
+        android:paddingTop="@dimen/d_20"
+        android:text="@string/empty_tips_text"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/s_17"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/fail_retry_fullscreen"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/loading_layout_center"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d_77"
+    android:layout_marginLeft="@dimen/d_10"
+    android:layout_marginTop="@dimen/d_12"
+    android:layout_marginRight="@dimen/d_10"
+    android:background="@drawable/user_savemoney"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:id="@+id/save_money"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/money_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="累计省钱(元)"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/d_20"
+        android:layout_gravity="center_vertical"
+        android:background="#ffdbaa50"
+        />
+
+    <LinearLayout
+        android:id="@+id/make_money"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/moeny_make"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="累计赚钱(元)"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/d_20"
+        android:layout_gravity="center_vertical"
+        android:background="#ffdbaa50"
+        />
+
+    <LinearLayout
+        android:id="@+id/accument_fans"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/fans_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="累计粉丝(人)"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+

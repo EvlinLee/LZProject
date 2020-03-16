@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="primary_orange">#fd7736</color>
+
+    <color name="bg_activity">#f0f0f0</color><!-- activity 背景色 -->
+    <color name="bg_title_bar">@color/primary_orange</color><!-- 标题栏背景色 -->
+    <color name="bg_navigation_bar">#fff</color><!-- 底部导航栏背景色 -->
+    <color name="bg_content">#fff</color><!-- 内容背景色 -->
+    <color name="bg_pop_cover">#b3000000</color><!-- 遮罩层颜色 -->
+    <color name="bg_pop_window">#fff</color><!-- 弹出层背景色 -->
+    <color name="bg_dialog">#fff</color><!-- 对话框背景色 -->
+</resources>

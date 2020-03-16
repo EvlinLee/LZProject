@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d_205"
+    android:background="@mipmap/user_backgroud"
+    >
+
+    <ImageView
+        android:id="@+id/user_avatar"
+        android:layout_width="@dimen/d_50"
+        android:layout_height="@dimen/d_50"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/d_27"
+        android:src="@drawable/default_face"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/d_16"
+        android:layout_toRightOf="@+id/user_avatar"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#ffd8bc8a"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/user_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/shape_bg_four_full_yellow"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="普通会员"
+                android:textColor="#ff333333"
+                android:textSize="12sp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_invate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/vip_code_go"
+                android:drawablePadding="4dp"
+                android:text="邀请ID：输入邀请码省钱赚佣金"
+                android:textColor="#ffd8bc8a"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/user_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_10"
+            android:singleLine="true"
+            android:text="您的权益将于2019.10.10到期"
+            android:textColor="@color/color_D8BC8A"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/user_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/invate_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/user_invate_code"
+                android:paddingLeft="6dp"
+                android:text="邀请ID：DZ9ZKW"
+                android:textColor="#D8BC8A"
+                android:textSize="12sp"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_vip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/user_vip"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_42"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="0元升级超级会员权益"
+            android:textColor="#874700"
+            android:textSize="@dimen/s_18"
+            />
+
+        <TextView
+            android:layout_width="@dimen/d_64"
+            android:layout_height="@dimen/d_19"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/d_61"
+            android:layout_marginTop="@dimen/d_13"
+            android:layout_marginRight="@dimen/d_51"
+            android:background="@drawable/user_instant"
+            android:gravity="center"
+            android:text="立即参与"
+            android:textColor="#F6DBA8"
+            android:textSize="@dimen/s_12"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
+

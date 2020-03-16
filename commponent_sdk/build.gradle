@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':common')
+    //基础安全组件（必选)
+    api 'com.taobao.android:securityguardaar3:5.4.171@aar'
+    api 'com.taobao.android:securitybodyaar3:5.4.99@aar'
+    api 'com.taobao.android:avmpaar3:5.4.36@aar'
+    api 'com.taobao.android:sgmiddletieraar3:5.4.9@aar'
+    //mtop（必选）
+    api 'com.taobao.android:mtopsdk_allinone_open:3.1.2.5@jar'
+    //登录授权（必选）
+    api 'com.ali.auth.sdk:alibabauth_core:2.0.0.6@aar'
+    api 'com.ali.auth.sdk:alibabauth_ui:2.0.0.6@aar'
+    api 'com.ali.auth.sdk:alibabauth_ext:2.0.0.6@aar'
+    //appLink（必选）
+    api 'com.alibaba.sdk.android:alibc_link_partner:4.1.11@aar'
+    //基础电商组件（必选）
+    api 'com.alibaba.sdk.android:AlibcTradeCommon:4.0.0.2@aar'
+    api 'com.alibaba.sdk.android:AlibcTradeBiz:4.0.0.2@aar'
+    api 'com.alibaba.sdk.android:nb_trade:4.0.0.2@aar'
+    //ut
+    api 'com.taobao.android:utdid4all:1.1.5.3_proguard'
+    api 'com.alibaba.mtl:app-monitor-sdk:2.6.4.5_for_bc'
+    //支付宝（可选）
+    api 'com.alipay.android.app.cashier:standardcashier-single:15.6.5@aar'
+    compileOnly 'com.alipay.mobile.android.securitysdk:apsecuritysdk-all:3.3.0'
+    //登陆
+    api 'com.ali.auth.sdk:alibabauth_core:2.0.0.6@aar'
+    api 'com.ali.auth.sdk:alibabauth_ui:2.0.0.6@aar'
+    api 'com.ali.auth.sdk:alibabauth_ext:2.0.0.6@aar'
+    //zxing二维码
+    api 'com.google.zxing:core:3.2.1'
+    api 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    api 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+
+}

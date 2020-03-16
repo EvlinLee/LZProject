@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_content_bg">
+
+        <include
+            android:id="@+id/actionbar_phone_login"
+            layout="@layout/actionbar_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/bind_phone_tv"
+            style="@style/default_text_title_style"
+            android:layout_marginLeft="@dimen/d_23"
+            android:layout_marginTop="@dimen/d_45"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/login_bind_phone_text"
+            android:textColor="@color/color_111111"
+            android:textSize="@dimen/s_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionbar_phone_login"/>
+
+
+        <EditText
+            android:id="@+id/login_phone_input_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_30"
+            android:layout_marginRight="@dimen/d_23"
+            android:background="@drawable/shape_et_underline"
+            android:hint="@string/login_bind_phone_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:textSize="@dimen/s_18"
+            android:paddingBottom="@dimen/d_14"
+            android:textCursorDrawable="@drawable/cursor_bg_size"
+            app:layout_constraintLeft_toLeftOf="@+id/bind_phone_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bind_phone_tv"/>
+
+        <TextView
+            android:id="@+id/login_phone_error_tv"
+            style="@style/default_text_major_important_style"
+            android:layout_marginTop="@dimen/d_08"
+            android:text="@string/login_bind_phone_error"
+            android:textColor="@color/color_EF1818"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="@id/login_phone_input_et"
+            app:layout_constraintTop_toBottomOf="@id/login_phone_input_et"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/login_phone_next_tv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d_53"
+            android:layout_marginLeft="@dimen/d_18"
+            android:layout_marginTop="@dimen/d_50"
+            android:layout_marginRight="@dimen/d_18"
+            android:background="@drawable/login_next_selector"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/login_next_step"
+            android:includeFontPadding="false"
+            android:textColor="@color/login_button_text_color_selector"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_phone_input_et"/>
+
+
+        <TextView
+            android:id="@+id/login_phone_link_tv"
+            style="@style/default_text_major_important_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="@+id/login_phone_next_tv"
+            app:layout_constraintRight_toRightOf="@+id/login_phone_next_tv"
+            app:layout_constraintTop_toBottomOf="@+id/login_phone_next_tv"
+            tools:text="@string/login_agreement_privacy"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

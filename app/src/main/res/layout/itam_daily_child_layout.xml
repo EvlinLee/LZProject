@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:background="@drawable/shape_bg_white_8_full_corner"
+                                                   android:orientation="vertical"
+                                                   android:padding="@dimen/d_12">
+
+    <ImageView
+        android:id="@+id/item_daily_avatar_iv"
+        android:layout_width="@dimen/d_42"
+        android:layout_height="@dimen/d_42"
+        android:layout_marginTop="@dimen/d_04"
+        android:src="@drawable/default_face"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/item_daily_name_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginLeft="@dimen/d_10"
+        android:textSize="@dimen/s_16"
+        app:layout_constraintLeft_toRightOf="@id/item_daily_avatar_iv"
+        app:layout_constraintTop_toTopOf="@id/item_daily_avatar_iv"
+        tools:text="name"/>
+
+    <TextView
+        android:id="@+id/item_daily_time_tv"
+        style="@style/default_text_style"
+        android:textColor="@color/color_555555"
+        app:layout_constraintBottom_toBottomOf="@id/item_daily_avatar_iv"
+        app:layout_constraintLeft_toLeftOf="@+id/item_daily_name_tv"
+        tools:text="2018-02-12 12:02:12"/>
+
+    <TextView
+        android:id="@+id/item_daily_share_number_tv"
+        style="@style/default_text_style"
+        android:background="@drawable/shape_bg_daily_child_share_corner"
+        android:drawableLeft="@drawable/daily_share_red_pic"
+        android:drawablePadding="@dimen/d_05"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingTop="@dimen/d_05"
+        android:paddingRight="@dimen/d_10"
+        android:paddingBottom="@dimen/d_05"
+        android:textColor="@color/color_FFFF005F"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/item_daily_avatar_iv"
+        tools:text="20182"/>
+
+    <TextView
+        android:id="@+id/daily_content_tv"
+        style="@style/default_text_style"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/d_10"
+        android:textColor="@color/color_555555"
+        android:textSize="@dimen/s_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_daily_avatar_iv"
+        tools:text="文本内容"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/daily_inner_recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/daily_content_tv"/>
+
+    <com.dueeeke.videoplayer.player.VideoView
+        android:background="@color/white_100"
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_147"
+        android:layout_marginTop="@dimen/d_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daily_inner_recyclerView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/daily_bottom_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

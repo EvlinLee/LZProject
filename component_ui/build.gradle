@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    def app=rootProject.ext.dependencies
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':component_io')
+    api project(':message_box')
+    api project(':component_banner')
+    implementation project(':commponent_sdk')
+    api app.constraint_layout
+    api app.support_annotations
+    api app.desigin
+    api app.appcompat
+    api app.cardview
+    api app.multidex
+    api app.smartRefreshLayout
+    api app.recyclerview
+    api app.viewpager2
+   // api app.lottie
+
+    api app.Android_PickerView
+    implementation app.butterknife
+    annotationProcessor  app.butterknife_compiler
+
+    api app.MagicIndicator
+
+    api app.arouter_api
+    annotationProcessor app.arouter_compiler
+    //流布局
+    api app.flexbox
+    //阿里 七巧板
+    api ('com.alibaba.android:vlayout:1.2.31@aar') {
+        transitive = true
+    }
+    //OnActivityResult
+    api  app.ActivityLauncher
+
+    // 基础依赖包，必须要依赖
+    api 'com.gyf.immersionbar:immersionbar:3.0.0'
+    // fragment快速实现（可选）
+    api 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+    //查看大图
+    api 'com.github.SherlockGougou:BigImageViewPager:androidx-5.0.3'
+    //leakcanary
+    debugApi'com.squareup.leakcanary:leakcanary-android:1.6.2'
+    releaseApi'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+
+}

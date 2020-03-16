@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fans_detail_bg">
+
+        <com.by.lizhiyoupin.app.component_ui.weight.RoundImageView
+            android:id="@+id/fans_detail_photo_iv"
+            android:layout_width="@dimen/d_60"
+            android:layout_height="@dimen/d_60"
+            android:layout_marginTop="@dimen/d_16"
+            android:src="@drawable/default_face"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/fans_detail_close_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingTop="@dimen/d_12"
+            android:paddingRight="@dimen/d_12"
+            android:paddingBottom="@dimen/d_10"
+            android:src="@drawable/fans_detail_close"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/fans_detail_name_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s_18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fans_detail_photo_iv"
+            tools:text="name"/>
+
+        <TextView
+            android:id="@+id/fans_detail_code_tv"
+            style="@style/default_text_style"
+            android:drawablePadding="@dimen/d_08"
+            android:drawableRight="@drawable/fans_add_pic"
+            android:paddingTop="@dimen/d_05"
+            android:text="@string/fans_detail_code_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fans_detail_name_tv"/>
+
+        <TextView
+            android:id="@+id/fans_detail_all"
+            style="@style/default_medium_text_style"
+            android:layout_marginTop="@dimen/d_15"
+            android:text="@string/fans_detail_all_text"
+            android:textSize="@dimen/s_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fans_detail_code_tv"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/fans_detail_all_money_tv"
+            style="@style/default_medium_text_style"
+            android:paddingTop="@dimen/d_05"
+            app:type_bold="true"
+            android:paddingBottom="@dimen/d_10"
+            android:text="0.00"
+            android:textColor="@color/color_EF1818"
+            android:textSize="@dimen/s_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fans_detail_all"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <TextView
+            android:id="@+id/fans_last_month_for_me"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/fans_detail_last_month_for_me_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/guide_line"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/fans_yuan_tv"
+            style="@style/default_medium_text_style"
+            android:layout_marginTop="@dimen/d_08"
+            android:text="¥"
+            android:textColor="@color/color_EF1818"
+            android:textSize="@dimen/s_12"
+            app:layout_constraintBottom_toBottomOf="@+id/fans_last_month_for_me_tv"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/fans_last_month_for_me_tv"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/fans_last_month_for_me_tv"
+            style="@style/default_medium_text_style"
+            android:layout_marginLeft="@dimen/d_01"
+            android:layout_marginTop="@dimen/d_08"
+            app:type_bold="true"
+            android:text="0.00"
+            android:textColor="@color/color_EF1818"
+            android:textSize="@dimen/s_15"
+            app:layout_constraintLeft_toRightOf="@+id/fans_yuan_tv"
+            app:layout_constraintRight_toRightOf="@+id/guide_line"
+            app:layout_constraintTop_toBottomOf="@+id/fans_last_month_for_me"/>
+
+
+        <TextView
+            android:id="@+id/fans_this_month_for_me"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/fans_detail_this_month_for_me_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/fans_yuan2_tv"
+            style="@style/default_medium_text_style"
+            android:layout_marginTop="@dimen/d_08"
+            android:text="¥"
+            android:textColor="@color/color_EF1818"
+            android:textSize="@dimen/s_12"
+            app:layout_constraintBottom_toBottomOf="@+id/fans_last_month_for_me_tv"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line"
+            app:layout_constraintRight_toLeftOf="@+id/fans_this_month_for_me_tv"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/fans_this_month_for_me_tv"
+            style="@style/default_medium_text_style"
+            android:layout_marginLeft="@dimen/d_01"
+            android:layout_marginTop="@dimen/d_08"
+            app:type_bold="true"
+            android:text="0.00"
+            android:textColor="@color/color_EF1818"
+            android:textSize="@dimen/s_15"
+            app:layout_constraintLeft_toRightOf="@+id/fans_yuan2_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fans_this_month_for_me"/>
+
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_01"
+            android:layout_marginTop="@dimen/d_10"
+            android:background="@color/color_E8E8EB"
+            app:layout_constraintTop_toBottomOf="@+id/fans_last_month_for_me_tv"/>
+
+        <TextView
+            android:id="@+id/fans_detail_time_tv"
+            style="@style/default_text_333_style"
+            android:layout_height="@dimen/d_50"
+            android:gravity="center"
+            android:text="@string/fans_detail_registration_time_text"
+            android:textSize="@dimen/s_15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_view"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

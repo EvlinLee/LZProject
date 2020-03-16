@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".user.activity.InvateActivity">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        android:layout_alignParentTop="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:background="#FF0E0E0E"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/invate_bg"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/linear_invate"
+                    android:layout_width="@dimen/d_230"
+                    android:layout_height="@dimen/d_72"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/d_40"
+                    android:background="@drawable/invate_code"
+                    >
+
+                    <TextView
+                        android:id="@+id/invate_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_31"
+                        android:layout_marginTop="@dimen/d_22"
+                        android:text="我的邀请码"
+                        android:textColor="#ff713b01"
+                        android:textSize="@dimen/s_12"
+                        />
+
+                    <TextView
+                        android:id="@+id/invate_scode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/invate_code"
+                        android:layout_marginLeft="@dimen/d_31"
+                        android:text="QWERDF"
+                        android:textColor="#ff713b01"
+                        android:textSize="24sp"
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_304"
+                    android:layout_below="@+id/linear_invate"
+                    android:layout_marginLeft="@dimen/d_10"
+                    android:layout_marginTop="@dimen/d_30"
+                    android:layout_marginRight="@dimen/d_10"
+                    android:background="@drawable/invate_rule_bg"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d_27"
+                            android:src="@drawable/invate_rule_left"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/d_16"
+                            android:layout_marginTop="@dimen/d_20"
+                            android:text="邀请方式"
+                            android:textColor="#ffffe4bf"
+                            android:textSize="@dimen/s_18"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/d_16"
+                            android:layout_marginTop="@dimen/d_27"
+                            android:src="@drawable/invate_rule_right"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_12"
+                        android:layout_marginTop="@dimen/d_14"
+                        android:text="【方法一】 分享邀请链接给好友注册并下载APP"
+                        android:textColor="#ffffe4bf"
+                        android:textSize="@dimen/s_14"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_12"
+                        android:layout_marginTop="6dp"
+                        android:text="【方法二】 分享邀请海报，好友扫描注册并下载APP"
+                        android:textColor="#ffffe4bf"
+                        android:textSize="@dimen/s_14"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_12"
+                        android:layout_marginTop="6dp"
+                        android:text="【方法三】 告诉好友去应用市场下载APP，注册时填"
+                        android:textColor="#ffffe4bf"
+                        android:textSize="@dimen/s_14"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_12"
+                        android:text="                        写您的邀请码或手机号码"
+                        android:textColor="#ffffe4bf"
+                        android:textSize="@dimen/s_14"
+                        />
+
+                    <TextView
+                        android:layout_width="@dimen/d_323"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/d_20"
+                        android:gravity="center_horizontal"
+                        android:text="通过专属邀请码分享给身边的朋友\n
+只需对方在荔枝优品APP中输入您的专属邀请码\n
+并成功注册成为会员\n
+Ta将永久成为您的专属粉丝\n
+未来Ta通过推广商品产生的订单佣金您都有奖励\n
+会自动计入您的账户中！"
+                        android:textColor="#ffa4957c"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_114"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_30"
+                android:layout_marginRight="@dimen/d_10"
+                android:background="@drawable/invate_rule_bg"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d_27"
+                        android:src="@drawable/invate_rule_left"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_16"
+                        android:layout_marginTop="@dimen/d_20"
+                        android:text="专属客服"
+                        android:textColor="#ffffe4bf"
+                        android:textSize="@dimen/s_18"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_16"
+                        android:layout_marginTop="@dimen/d_27"
+                        android:src="@drawable/invate_rule_right"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_36"
+                        android:layout_marginTop="@dimen/d_30"
+                        android:text="客服微信号："
+                        android:textColor="#ffffe4bf"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/custom_wx"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d_30"
+                        android:layout_weight="1"
+                        android:text="XXXXXXXXX"
+                        android:textColor="#ffffe4bf"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/custom_wxcopy"
+                        android:layout_width="@dimen/d_64"
+                        android:layout_height="@dimen/d_24"
+                        android:layout_marginTop="@dimen/d_30"
+                        android:layout_marginRight="@dimen/d_36"
+                        android:background="@drawable/shape_bg_kefu"
+                        android:gravity="center"
+                        android:text="复制"
+                        android:textColor="#ffffe4bf"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_10"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_27"
+                    android:src="@drawable/invate_rule_left"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_16"
+                    android:layout_marginTop="@dimen/d_20"
+                    android:text="邀请好友"
+                    android:textColor="#ffffe4bf"
+                    android:textSize="@dimen/s_18"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_16"
+                    android:layout_marginTop="@dimen/d_27"
+                    android:src="@drawable/invate_rule_right"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_480"
+                android:layout_marginTop="@dimen/d_20"
+                android:background="#FF0E0E0E"
+                android:gravity="center"
+                >
+
+                <com.by.lizhiyoupin.app.component_banner.Banner
+                    android:id="@+id/top_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_480"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/d_315"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/d_14"
+                android:layout_marginBottom="@dimen/d_115"
+                android:background="@drawable/shape_bg_kefu"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_20"
+                    android:layout_marginTop="@dimen/d_20"
+                    >
+
+                <TextView
+                    android:id="@+id/invate_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 荔枝优品网罗全球尖端好货,\n
+可领全网95%的优惠券。\n
+花低价也能买到大牌商品,\n
+让你省钱买买买。\n
+开心赚赚赚！"
+                    android:textColor="#ffcfb99c"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="@dimen/d_12"
+                    />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/text_copy"
+                    android:layout_width="@dimen/d_44"
+                    android:layout_height="@dimen/d_44"
+                    android:layout_marginTop="@dimen/d_38"
+                    android:background="@drawable/shape_bg_invate_fuzhi"
+                    android:gravity="center"
+                    android:text="复制\n文案"
+                    android:textColor="#FFFFE4BF"
+                    android:layout_marginRight="@dimen/d_16"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_100"
+        android:layout_alignParentBottom="true"
+        android:background="#ff232323"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/share_link"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/nihao"
+                android:layout_width="@dimen/d_44"
+                android:layout_height="@dimen/d_44"
+                android:src="@drawable/share_invate_link"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享邀请链接"
+                android:textColor="#ffffffff"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_poster"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/d_44"
+                android:layout_height="@dimen/d_44"
+                android:src="@drawable/share_invate_poster"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享邀请海报"
+                android:textColor="#ffffffff"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

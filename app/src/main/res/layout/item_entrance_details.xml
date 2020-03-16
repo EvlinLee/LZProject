@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF2F2F5"
+    android:orientation="vertical"
+    tools:context=".user.activity.WithdrawDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_236"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_10"
+        android:background="@drawable/withdraw_item_radius_8dp"
+        android:orientation="vertical"
+        >
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

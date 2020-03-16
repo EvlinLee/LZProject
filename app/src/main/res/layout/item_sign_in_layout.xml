@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:id="@+id/red_item"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="@dimen/d_127"
+                                                   android:background="@drawable/shape_bg_white_4_full_corner"
+                                                   android:orientation="vertical"
+                                                   android:paddingLeft="@dimen/d_10"
+                                                   android:paddingTop="@dimen/d_12"
+                                                   android:paddingRight="@dimen/d_10">
+
+    <TextView
+        android:id="@+id/day_left_tv"
+        style="@style/default_medium_text_style"
+        android:textColor="@color/color_BF4335"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="昨日"/>
+
+    <TextView
+        android:id="@+id/day_right_tv"
+        style="@style/default_medium_text_style"
+        android:drawableRight="@drawable/sign_in_receive"
+        android:textColor="@color/color_F45E4D"
+        android:textSize="@dimen/s_11"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="明天领"/>
+
+    <ImageView
+        android:id="@+id/red_bg_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/d_91"
+        android:src="@drawable/red_open_pic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/showGroup"
+        app:constraint_referenced_ids="red_time_tv,red_time_stop_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/sign_in_get_price_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginTop="@dimen/d_11"
+        android:text="@string/sign_in_get_price"
+        android:textColor="@color/color_BF4335"
+        android:textSize="@dimen/s_13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/red_bg_iv"/>
+
+
+    <com.by.lizhiyoupin.app.component_ui.weight.SignCountTimeView
+        android:id="@+id/red_time_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginTop="@dimen/d_37"
+        android:textColor="@color/color_FFE6B5"
+        android:textSize="@dimen/s_11"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/red_bg_iv"
+        tools:text="23:54:14"/>
+
+    <TextView
+        android:id="@+id/red_time_stop_tv"
+        style="@style/default_medium_text_style"
+        android:textColor="@color/color_FFE6B5"
+        android:textSize="@dimen/s_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/red_time_tv"
+        android:text="后停止翻倍"/>
+
+
+    <TextView
+        android:id="@+id/red_envelopes_tv"
+        style="@style/default_medium_text_style"
+        android:layout_marginBottom="@dimen/d_17"
+        android:textColor="@color/color_FFE6B5"
+        app:layout_constraintBottom_toBottomOf="@+id/red_bg_iv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="荔枝红包"/>
+
+    <TextView
+        android:id="@+id/double_tv"
+        style="@style/default_medium_text_style"
+        android:layout_width="@dimen/d_91"
+        android:layout_height="@dimen/d_25"
+        android:background="@drawable/shape_bg_signin_gradient_ffe26a_ffc03e"
+        android:gravity="center"
+        android:textColor="@color/color_A61048"
+        android:textSize="@dimen/s_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="立即翻倍"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

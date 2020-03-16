@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginRight="@dimen/d_15">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            style="@style/default_text_style"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/cancel_txt"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/s_14"/>
+
+        <TextView
+            style="@style/default_text_style"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="选择推送内容"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/s_16"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            style="@style/default_text_style"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/finish_txt"
+            android:textColor="@color/color_3388FF"
+            android:textSize="@dimen/s_14"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/list_line_style"/>
+
+    <com.contrarywind.view.WheelView
+        android:id="@+id/wheelView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_200"
+        app:wheelview_lineSpacingMultiplier="2.6"
+        app:wheelview_textSize="@dimen/d_16"/>
+
+</LinearLayout>

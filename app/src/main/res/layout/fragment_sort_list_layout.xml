@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_sort_layout"/>
+
+    <View
+        style="@style/list_line_style"/>
+
+    <RelativeLayout
+        android:id="@+id/switch_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44">
+
+        <TextView
+            style="@style/default_text_style"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/d_10"
+            android:text="@string/show_only_coupon_items_text"
+            android:textColor="@color/color_555555"/>
+
+        <CheckBox
+            android:id="@+id/switch_box"
+            style="@style/push_setting_checkbox_style"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="false"/>
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_content_gray_bg"
+        android:orientation="vertical">
+        <!--渐变 背景-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_100"
+            android:background="@drawable/shape_bg_gradual_change"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smartRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <TextView
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/product_empty"
+            android:drawablePadding="@dimen/d_30"
+            android:gravity="center"
+            android:paddingTop="@dimen/d_100"
+            android:text="没有匹配的商品，请重新搜索"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <include
+            layout="@layout/fail_retry_fullscreen"
+            android:visibility="gone"/>
+
+        <include
+            layout="@layout/loading_layout_center"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

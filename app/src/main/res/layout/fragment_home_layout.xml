@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_lt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <include layout="@layout/actionbar_layout"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/home_search_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_34"
+                android:layout_marginLeft="@dimen/d_10"
+                android:layout_marginTop="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_10"
+                android:background="@drawable/edit_corners_four_shape"
+                android:drawableLeft="@drawable/actionbar_search_iv"
+                android:drawablePadding="@dimen/d_06"
+                android:gravity="center_vertical"
+                android:hint="@string/home_search_top_hint_text"
+                android:paddingLeft="@dimen/d_15"
+                android:singleLine="true"
+                android:textColorHint="@color/color_CCCCCC"
+                android:textSize="@dimen/s_14"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tab_header_cl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_36"
+                android:layout_marginLeft="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_20">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/home_tabLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="@dimen/d_05"
+                    android:overScrollMode="never"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/etc_other"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabBackground="@color/transparent"
+                    app:tabIndicatorColor="@color/white_100"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorHeight="@dimen/d_02"
+                    app:tabMaxWidth="@dimen/d_80"
+                    app:tabMinWidth="@dimen/d_25"
+                    app:tabMode="scrollable"
+                    app:tabPaddingEnd="@dimen/d_10"
+                    app:tabPaddingStart="@dimen/d_10"
+                    app:tabRippleColor="@android:color/transparent"
+                    app:tabSelectedTextColor="@color/white_100"
+                    app:tabTextAppearance="@style/tab_layout_size_style"
+                    app:tabTextColor="@color/white_100"/>
+
+                <ImageView
+                    android:id="@+id/etc_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/etc_other"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/home_tabLayout"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_F2F2F5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/home_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

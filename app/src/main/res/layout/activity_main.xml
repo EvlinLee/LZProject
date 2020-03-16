@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_main"
+    tools:context="com.by.lizhiyoupin.app.main.MainActivity">
+
+
+    <!-- tab content -->
+    <FrameLayout
+        android:id="@+id/tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tab_home_tv"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <!-- tab controller -->
+    <RadioButton
+        android:id="@+id/tab_home_tv"
+        style="@style/main_tab_bar_button_style"
+        android:background="@color/bg_navigation_bar"
+        android:drawableTop="@drawable/main_tab_home_selector"
+        android:paddingBottom="@dimen/d_05"
+        android:text="@string/main_tab_home_home"
+        android:textColor="@color/main_bottom_tab_bar_text_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tab_entrance_tv"/>
+
+
+    <RadioButton
+        android:id="@+id/tab_entrance_tv"
+        style="@style/main_tab_bar_button_style"
+        android:background="@color/bg_navigation_bar"
+        android:drawableTop="@drawable/main_tab_entrance_selector"
+        android:paddingBottom="@dimen/d_05"
+        android:text="@string/main_tab_name_entrance"
+        android:textColor="@color/main_bottom_tab_bar_text_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tab_home_tv"
+        app:layout_constraintRight_toLeftOf="@+id/tab_vip_tv"/>
+
+
+    <!--对tab_vip_tv 背景-->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/d_50"
+        android:background="@color/bg_navigation_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tab_entrance_tv"
+        app:layout_constraintRight_toLeftOf="@+id/tab_find_tv"/>
+
+    <RadioButton
+        android:id="@+id/tab_vip_tv"
+        style="@style/main_tab_bar_button_style"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:clipChildren="false"
+        android:drawableTop="@drawable/main_tab_vip_selector"
+        android:focusable="true"
+        android:paddingBottom="@dimen/d_05"
+        android:text="@string/main_tab_name_vip"
+        android:textColor="@color/main_bottom_tab_bar_text_selector"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tab_home_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tab_entrance_tv"
+        app:layout_constraintRight_toLeftOf="@+id/tab_find_tv"/>
+
+
+    <RadioButton
+        android:id="@+id/tab_find_tv"
+        style="@style/main_tab_bar_button_style"
+        android:background="@color/bg_navigation_bar"
+        android:drawableTop="@drawable/main_tab_find_selector"
+        android:paddingBottom="@dimen/d_05"
+        android:text="@string/main_tab_name_find"
+        android:textColor="@color/main_bottom_tab_bar_text_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tab_vip_tv"
+        app:layout_constraintRight_toRightOf="@id/tab_user_tv"/>
+
+
+    <RadioButton
+        android:id="@+id/tab_user_tv"
+        style="@style/main_tab_bar_button_style"
+        android:background="@color/bg_navigation_bar"
+        android:drawableTop="@drawable/main_tab_user_selector"
+        android:paddingBottom="@dimen/d_05"
+        android:text="@string/main_tab_name_user"
+        android:textColor="@color/main_bottom_tab_bar_text_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tab_find_tv"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

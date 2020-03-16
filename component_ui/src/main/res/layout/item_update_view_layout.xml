@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingTop="@dimen/d_05"
+                android:paddingRight="@dimen/d_15"
+                android:paddingBottom="@dimen/d_05">
+
+    <View
+        android:id="@+id/dot"
+        android:layout_width="@dimen/d_05"
+        android:layout_height="@dimen/d_05"
+        android:layout_centerVertical="true"
+        android:background="@drawable/dot_update"/>
+
+    <TextView
+        android:id="@+id/tip_tv"
+        style="@style/default_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_toRightOf="@+id/dot"
+        android:textColor="@color/white_100"
+        tools:text="更新提示1个"/>
+
+</RelativeLayout>

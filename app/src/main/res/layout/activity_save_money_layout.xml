@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_100"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linear_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        android:background="@color/color_F2F2F5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/default_text_333_style"
+            android:drawableLeft="@drawable/save_money_boll"
+            android:drawablePadding="@dimen/d_08"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingRight="@dimen/d_10"
+            android:text="@string/save_money_total_text"
+            android:textSize="@dimen/s_18"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/save_money_total_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="02dp"
+            android:textColor="@color/color_EF1818"
+            android:textSize="@dimen/s_18"
+            tools:text="1230.10"/>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F2F2F5">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/save_money_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"/>
+
+        <TextView
+            android:id="@+id/save_money_empty_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/empty_save_money_pic"
+            android:drawablePadding="@dimen/d_20"
+            android:gravity="center"
+            android:text="@string/save_money_item_empty_text"
+            android:textColor="@color/color_666666"
+            android:layout_marginBottom="@dimen/d_40"
+            android:visibility="gone"
+           />
+
+        <include
+            layout="@layout/loading_layout_center"
+            android:visibility="gone"/>
+
+        <include
+            layout="@layout/fail_retry_fullscreen"
+            android:visibility="gone"/>
+    </FrameLayout>
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

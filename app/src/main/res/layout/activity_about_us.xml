@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFF2F2F5"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_44"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/icon_tv"
+        android:layout_width="@dimen/d_65"
+        android:layout_height="@dimen/d_65"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="38dp"
+        android:background="@mipmap/launch_logo"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="当前版本"
+            android:textColor="#ff333333"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="V1.0"
+            android:textColor="#ff333333"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/yinsizhengce"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="隐私政策"
+            android:textColor="#ff333333"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/fans_goto_right_pic"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userxieyi"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="用户注册服务协议"
+            android:textColor="#ff333333"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/fans_goto_right_pic"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/jiaoyixieyi"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="平台服务协议和交易规则"
+            android:textColor="#ff333333"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/fans_goto_right_pic"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/service_ip_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/d_01"
+        android:background="@color/white_100"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/d_15"
+            android:text="切换服务器环境"
+            android:textColor="#ff333333"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/name_ip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/d_15"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_EF1818"
+            android:textSize="15sp"
+            tools:text="正式"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/container"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/play_btn"
+        android:layout_width="@dimen/dkplayer_play_btn_size"
+        android:layout_height="@dimen/dkplayer_play_btn_size"
+        android:layout_gravity="center"
+        android:background="@drawable/dkplayer_shape_play_bg"
+        android:padding="@dimen/dkplayer_default_spacing"
+        android:src="@drawable/dkplayer_selector_play_button"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85"/>
+
+        <TextView
+            android:id="@+id/shake_coupon_love_tv"
+            style="@style/default_text_style"
+            android:drawableTop="@drawable/shake_thumbs_love_click_selector"
+            android:drawablePadding="@dimen/d_05"
+            android:gravity="center"
+            android:text="@string/text_init_number_0"
+            android:shadowRadius="10"
+            android:shadowColor="@color/black_40"
+            android:textColor="@color/white_100"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line_v1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line"/>
+
+        <TextView
+            android:id="@+id/shake_coupon_text_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_18"
+            android:drawableTop="@drawable/shake_coupon_text_pic"
+            android:drawablePadding="@dimen/d_05"
+            android:gravity="center"
+            android:text="@string/shake_coupon_copy_writing_text"
+            android:shadowRadius="10"
+            android:shadowColor="@color/black_40"
+            android:textColor="@color/white_100"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line_v1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shake_coupon_love_tv"/>
+
+        <TextView
+            android:id="@+id/shake_coupon_share_tv"
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_18"
+            android:drawableTop="@drawable/shake_coupon_share"
+            android:drawablePadding="@dimen/d_05"
+            android:gravity="center"
+            android:text="@string/text_init_number_0"
+            android:shadowRadius="10"
+            android:shadowColor="@color/black_40"
+            android:textColor="@color/white_100"
+            app:layout_constraintLeft_toLeftOf="@+id/guide_line_v1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shake_coupon_text_tv"/>
+
+        <include
+            android:id="@+id/detail_view"
+            layout="@layout/shake_coupon_main_detail_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_95"
+            android:layout_marginLeft="@dimen/d_10"
+            android:layout_marginRight="@dimen/d_10"
+            android:layout_marginBottom="@dimen/d_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.recyclerview.CannotScrollRecyclerView
+            android:id="@+id/barrage_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_128"
+            android:layout_marginBottom="@dimen/d_30"
+            app:layout_constraintBottom_toTopOf="@id/detail_view"
+            app:layout_constraintLeft_toLeftOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

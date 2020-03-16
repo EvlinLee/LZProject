@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d_10"
+        android:paddingRight="@dimen/d_10">
+
+        <TextView
+            android:id="@+id/data_time_tv"
+            style="@style/default_text_333_style"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/s_18"
+            tools:text="08月14日日报"/>
+
+        <ImageView
+            android:id="@+id/income_select_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingTop="@dimen/d_05"
+            android:paddingBottom="@dimen/d_05"
+            android:src="@drawable/income_select_icon"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/default_medium_text_style"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/d_22"
+        android:layout_marginTop="@dimen/d_33"
+        android:text="@string/income_data_total_revenue_text"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/s_18"/>
+
+    <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+        android:id="@+id/income_data_total_tv"
+        style="@style/default_text_style"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/d_22"
+        android:layout_marginTop="@dimen/d_05"
+        android:text="@string/text_init_number_0"
+        android:textColor="@color/color_EF1818"
+        android:textSize="@dimen/s_25"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_123"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_05"
+        android:layout_marginRight="@dimen/d_10"
+        android:background="@drawable/shape_bg_commission_full_corner"
+        android:padding="@dimen/d_12">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <TextView
+            style="@style/default_text_style"
+            android:text="@string/income_data_shopping_guide_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/data_shopping_guide_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginBottom="@dimen/d_03"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintBottom_toBottomOf="@id/guide_line_h"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:type_bold="true"/>
+
+
+        <TextView
+            style="@style/default_text_style"
+            android:text="@string/income_data_taobao_order_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/data_taobao_order_tv"
+            style="@style/default_medium_text_333_style"
+            android:layout_marginBottom="@dimen/d_03"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintBottom_toBottomOf="@id/guide_line_h"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v"
+            app:type_bold="true"/>
+
+        <TextView
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_02"
+            android:text="@string/income_data_jingd_order_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_h"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/data_jingd_order_tv"
+            style="@style/default_medium_text_333_style"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:type_bold="true"/>
+
+
+        <TextView
+            style="@style/default_text_style"
+            android:layout_marginTop="@dimen/d_02"
+            android:text="@string/income_data_pindd_order_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v"
+            app:layout_constraintTop_toBottomOf="@+id/guide_line_h"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/data_pindd_order_tv"
+            style="@style/default_medium_text_333_style"
+            android:text="@string/text_init_number_0"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guide_line_v"
+            app:type_bold="true"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_12"
+        android:layout_marginRight="@dimen/d_10"
+        android:background="@drawable/shape_bg_commission_full_corner"
+        android:padding="@dimen/d_12">
+
+        <TextView
+            android:id="@+id/data_optimization_text"
+            style="@style/default_text_style"
+            android:text="@string/income_data_optimization_order_text"
+            android:textColor="@color/color_999999"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.by.lizhiyoupin.app.component_ui.weight.MoneyTextView
+            android:id="@+id/data_optimization_tv"
+            style="@style/default_medium_text_style"
+            android:layout_marginTop="@dimen/d_10"
+            android:text="@string/text_init_number_0"
+            android:textColor="@color/color_EF1818"
+            android:textSize="@dimen/s_17"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/data_optimization_text"
+            app:type_bold="true"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
